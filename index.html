@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Seguros - Estilo Duolingo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .app-container {
+            max-width: 800px;
+            width: 90%;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: rgba(255,255,255,0.3);
+            border-radius: 4px;
+            margin-top: 15px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: #fff;
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+
+        .content {
+            padding: 30px;
+            position: relative;
+        }
+
+        .question-counter {
+            text-align: center;
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .subtopic {
+            text-align: center;
+            color: #667eea;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            padding: 8px 16px;
+            background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%);
+            border-radius: 10px;
+            display: none;
+            box-shadow: 0 2px 8px rgba(102, 126, 234, 0.1);
+        }
+        
+        .question {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .option {
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: 12px;
+            padding: 15px 20px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 16px;
+            position: relative;
+        }
+
+        .option:hover {
+            border-color: #4facfe;
+            background: #f0f8ff;
+        }
+
+        .option.selected {
+            border-color: #4facfe;
+            background: #e3f2fd;
+        }
+
+        .option.correct {
+            border-color: #4caf50;
+            background: #e8f5e8;
+            color: #2e7d32;
+        }
+
+        .option.incorrect {
+            border-color: #f44336;
+            background: #ffebee;
+            color: #c62828;
+        }
+
+        .option.disabled {
+            cursor: not-allowed;
+            opacity: 0.7;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-primary {
+            background: #4facfe;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #2196f3;
+        }
+
+        .btn-primary:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .score {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-weight: 600;
+        }
+
+        .score-correct {
+            color: #4caf50;
+        }
+
+        .score-incorrect {
+            color: #f44336;
+        }
+
+        .feedback {
+            margin: 15px 0;
+            padding: 15px;
+            border-radius: 8px;
+            font-weight: 500;
+        }
+
+        .feedback.correct {
+            background: #e8f5e8;
+            color: #2e7d32;
+            border: 1px solid #4caf50;
+        }
+
+        .feedback.incorrect {
+            background: #ffebee;
+            color: #c62828;
+            border: 1px solid #f44336;
+        }
+
+        .start-screen, .end-screen {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .start-screen h2, .end-screen h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .start-screen p, .end-screen p {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .module-selector {
+            margin: 30px 0;
+        }
+
+        .module-option {
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 10px 0;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .module-option:hover {
+            border-color: #4facfe;
+            background: #f0f8ff;
+        }
+
+        .module-option.selected {
+            border-color: #4facfe;
+            background: #e3f2fd;
+        }
+
+        .module-title {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .module-description {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .final-score {
+            font-size: 48px;
+            font-weight: bold;
+            color: #4facfe;
+            margin: 20px 0;
+        }
+
+        .performance-message {
+            font-size: 18px;
+            margin: 20px 0;
+        }
+
+        .performance-excellent { color: #4caf50; }
+        .performance-good { color: #ff9800; }
+        .performance-needs-improvement { color: #f44336; }
+
+        .animation-overlay {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 80px;
+            z-index: 1000;
+            pointer-events: none;
+            opacity: 0;
+            animation: popAnimation 0.8s ease-out;
+        }
+
+        .check-mark {
+            color: #4caf50;
+        }
+
+        .x-mark {
+            color: #f44336;
+        }
+
+        @keyframes popAnimation {
+            0% {
+                opacity: 0;
+                transform: translate(-50%, -50%) scale(0.5);
+            }
+            50% {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1.2);
+            }
+            100% {
+                opacity: 0;
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+
+        .quiz-settings {
+            margin: 20px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 12px;
+        }
+
+        .setting-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px 0;
+        }
+
+        .setting-label {
+            font-weight: 500;
+            color: #333;
+        }
+
+        .setting-input {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px 20px;
+            color: #666;
+        }
+
+        .error {
+            text-align: center;
+            padding: 40px 20px;
+            color: #f44336;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <div class="header">
+            <h1>📚 Quiz de Seguros</h1>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div id="loadingScreen" class="loading">
+                <h2>Cargando preguntas...</h2>
+                <p>Por favor espera mientras cargamos la base de datos.</p>
+            </div>
+
+            <div id="errorScreen" class="error" style="display: none;">
+                <h2>Error al cargar preguntas</h2>
+                <p>No se pudo cargar la base de datos de preguntas.</p>
+                <button class="btn btn-primary" onclick="location.reload()">Reintentar</button>
+            </div>
+
+            <div id="startScreen" class="start-screen" style="display: none;">
+                <h2>¡Bienvenido al Quiz de Seguros!</h2>
+                <p>Elige un módulo para comenzar tu práctica.</p>
+                
+                <div class="module-selector">
+                    <div class="module-option" data-module="teoria-riesgo">
+                        <div class="module-title">Módulo I: Aspectos Generales - Teoría del Riesgo</div>
+                        <div class="module-description" id="module1-count">Cargando...</div>
+                    </div>
+                    <div class="module-option" data-module="riesgos-individuales">
+                        <div class="module-title">Módulo II: Riesgos Individuales del Seguro de Personas</div>
+                        <div class="module-description" id="module2-count">Cargando...</div>
+                    </div>
+                    <div class="module-option" data-module="sistema-financiero">
+                        <div class="module-title">Módulo III: Sistema y Mercados Financieros</div>
+                        <div class="module-description" id="module3-count">Cargando...</div>
+                    </div>
+                </div>
+
+                <div class="quiz-settings">
+                    <div class="setting-row">
+                        <span class="setting-label">Número de preguntas:</span>
+                        <select id="numQuestions" class="setting-input">
+                            <option value="10">10 preguntas</option>
+                            <option value="20" selected>20 preguntas</option>
+                            <option value="30">30 preguntas</option>
+                            <option value="50">50 preguntas</option>
+                            <option value="all">Todas las preguntas</option>
+                        </select>
+                    </div>
+                    <div class="setting-row">
+                        <span class="setting-label">Sonidos:</span>
+                        <input type="checkbox" id="soundEnabled" checked>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" id="startBtn" disabled>Comenzar Quiz</button>
+            </div>
+
+            <div id="questionScreen" style="display: none;">
+                <div class="question-counter" id="questionCounter"></div>
+                <div class="subtopic" id="subtopicText"></div>
+                <div class="question" id="questionText"></div>
+                <div class="options" id="optionsContainer"></div>
+                <div id="feedback" class="feedback" style="display: none;"></div>
+                <div class="controls">
+                    <div class="score">
+                        <span class="score-correct">✓ <span id="correctCount">0</span></span>
+                        <span class="score-incorrect">✗ <span id="incorrectCount">0</span></span>
+                    </div>
+                    <button class="btn btn-primary" id="nextBtn" disabled>Siguiente</button>
+                </div>
+            </div>
+
+            <div id="endScreen" class="end-screen" style="display: none;">
+                <h2>🎉 ¡Quiz Completado!</h2>
+                <div class="final-score" id="finalScore"></div>
+                <div class="performance-message" id="performanceMessage"></div>
+                <p id="detailedResults"></p>
+                <button class="btn btn-primary" id="restartBtn">Nuevo Quiz</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
