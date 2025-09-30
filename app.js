@@ -1,316 +1,403 @@
-// Variables globales
-let questionDatabase = {};
-let currentModule = '';
-let currentQuestions = [];
-let currentQuestionIndex = 0;
-let selectedOption = null;
-let score = { correct: 0, incorrect: 0 };
+
+// app.final.js — Quiz Seguros (Duolingo-like)
+// Reemplaza tu app.js con este archivo
+
+// === Global State ===
+let ALL_QUESTIONS = [];
+let currentModule = null;
+let sessionQuestions = [];
+let qIndex = 0;
+let selectedIdx = null;
 let answered = false;
+let score = { correct: 0, incorrect: 0 };
 let soundEnabled = true;
-let numQuestionsToShow = 20;
+let batchSize = 20;
 
-// Elementos del DOM
+// === DOM ===
 const loadingScreen = document.getElementById('loadingScreen');
-const errorScreen = document.getElementById('errorScreen');
-const startScreen = document.getElementById('startScreen');
-const questionScreen = document.getElementById('questionScreen');
-const endScreen = document.getElementById('endScreen');
-const moduleOptions = document.querySelectorAll('.module-option');
-const startBtn = document.getElementById('startBtn');
-const questionCounter = document.getElementById('questionCounter');
-const questionText = document.getElementById('questionText');
-const optionsContainer = document.getElementById('optionsContainer');
-const feedback = document.getElementById('feedback');
-const nextBtn = document.getElementById('nextBtn');
-const correctCount = document.getElementById('correctCount');
-const incorrectCount = document.getElementById('incorrectCount');
-const progressFill = document.getElementById('progressFill');
-const finalScore = document.getElementById('finalScore');
+const startScreen   = document.getElementById('startScreen');
+const questionScreen= document.getElementById('questionScreen');
+const endScreen     = document.getElementById('endScreen');
+
+const moduleList    = document.getElementById('moduleList');
+const startBtn      = document.getElementById('startBtn');
+const numSel        = document.getElementById('numQuestions');
+const soundChk      = document.getElementById('soundEnabled');
+
+const difficultyBadge = document.getElementById('difficultyBadge');
+const subtopicText  = document.getElementById('subtopicText');
+const questionText  = document.getElementById('questionText');
+const optionsWrap   = document.getElementById('optionsContainer');
+const feedbackBox   = document.getElementById('feedback');
+const nextBtn       = document.getElementById('nextBtn');
+const progressFill  = document.getElementById('progressFill');
+const counterText   = document.getElementById('questionCounter');
+
+const correctCount  = document.getElementById('correctCount');
+const incorrectCount= document.getElementById('incorrectCount');
+const finalScore    = document.getElementById('finalScore');
 const performanceMessage = document.getElementById('performanceMessage');
-const detailedResults = document.getElementById('detailedResults');
-const restartBtn = document.getElementById('restartBtn');
-const numQuestionsSelect = document.getElementById('numQuestions');
-const soundEnabledCheckbox = document.getElementById('soundEnabled');
+const detailedResults= document.getElementById('detailedResults');
+const restartBtn    = document.getElementById('restartBtn');
 
-// Cargar base de datos de preguntas
-async function loadQuestions() {
-    try {
-        const response = await fetch('questions.json');
-        if (!response.ok) {
-            throw new Error('No se pudo cargar el archivo de preguntas');
-        }
-        questionDatabase = await response.json();
-        
-        // Actualizar contadores de preguntas
-        document.getElementById('module1-count').textContent = 
-            `${questionDatabase['teoria-riesgo'].length} preguntas sobre conceptos básicos, tipos de riesgo, agentes y regulación`;
-        document.getElementById('module2-count').textContent = 
-            `${questionDatabase['riesgos-individuales'].length} preguntas sobre vida individual, planes básicos, beneficios adicionales, accidentes personales, gastos médicos y salud`;
-        document.getElementById('module3-count').textContent = 
-            `${questionDatabase['sistema-financiero'].length} preguntas sobre teoría de finanzas, conceptos básicos, matemáticas financieras e instrumentos financieros`;
-        
-        // Mostrar pantalla de inicio
-        loadingScreen.style.display = 'none';
-        startScreen.style.display = 'block';
-        
-        setupEventListeners();
-    } catch (error) {
-        console.error('Error cargando preguntas:', error);
-        loadingScreen.style.display = 'none';
-        errorScreen.style.display = 'block';
-    }
+// === Utils ===
+function shuffle(arr, rng=Math) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor((rng.random ? rng.random() : Math.random()) * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
 }
 
-// Configurar event listeners
-function setupEventListeners() {
-    moduleOptions.forEach(option => {
-        option.addEventListener('click', () => {
-            moduleOptions.forEach(opt => opt.classList.remove('selected'));
-            option.classList.add('selected');
-            currentModule = option.dataset.module;
-            startBtn.disabled = false;
-        });
+function shuffleOptions(q) {
+  const opts = q.options.map((t,i)=>({t,i}));
+  shuffle(opts);
+  const newOptions = opts.map(o=>o.t);
+  const newCorrect = opts.findIndex(o=>o.i===q.correct);
+  return {...q, options: newOptions, correct: newCorrect};
+}
+
+// === Data Loading ===
+async function loadAll() {
+  try {
+    const resQ = await fetch('questions_all.json');
+    if (!resQ.ok) throw new Error('No se pudo cargar questions_all.json');
+    const data = await resQ.json();
+    ALL_QUESTIONS = data.questions;
+
+    const resI = await fetch('questions_index.json');
+    const idx = await resI.json();
+
+    // Render módulos disponibles
+    renderModules(idx.by_module);
+
+    loadingScreen.style.display = 'none';
+    startScreen.style.display = 'block';
+  } catch (e) {
+    console.error(e);
+    alert('Error cargando preguntas.');
+  }
+}
+
+// === Module UI ===
+function renderModules(rows) {
+  moduleList.innerHTML = '';
+  rows.forEach(row => {
+    const card = document.createElement('div');
+    card.className = 'module-option';
+    card.dataset.module = row.module;
+    const desc = moduleDescription(row.module);
+    card.innerHTML = `
+      <div class="module-title">${row.module}</div>
+      <div class="module-description">${row.count} preguntas · ${desc}</div>
+    `;
+    card.addEventListener('click', () => {
+      [...moduleList.children].forEach(c => c.classList.remove('selected'));
+      card.classList.add('selected');
+      currentModule = row.module;
+      startBtn.disabled = false;
     });
+    moduleList.appendChild(card);
+  });
 
-    startBtn.addEventListener('click', startQuiz);
-    nextBtn.addEventListener('click', nextQuestion);
-    restartBtn.addEventListener('click', restart);
-
-    numQuestionsSelect.addEventListener('change', (e) => {
-        numQuestionsToShow = e.target.value === 'all' ? 'all' : parseInt(e.target.value);
-    });
-
-    soundEnabledCheckbox.addEventListener('change', (e) => {
-        soundEnabled = e.target.checked;
-    });
+  startBtn.addEventListener('click', startQuiz);
+  restartBtn.addEventListener('click', restart);
+  nextBtn.addEventListener('click', nextQuestion);
+  numSel.addEventListener('change', e => batchSize = e.target.value==='all' ? 'all' : parseInt(e.target.value));
+  soundChk.addEventListener('change', e=> soundEnabled = e.target.checked);
 }
 
-// Generar sonidos sintéticos
-function createBeep(frequency, duration, type = 'sine') {
-    try {
-        const audioContext = new (window.AudioContext || window.webkitAudioContext)();
-        const oscillator = audioContext.createOscillator();
-        const gainNode = audioContext.createGain();
-        
-        oscillator.connect(gainNode);
-        gainNode.connect(audioContext.destination);
-        
-        oscillator.frequency.value = frequency;
-        oscillator.type = type;
-        
-        gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
-        gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + duration);
-        
-        oscillator.start(audioContext.currentTime);
-        oscillator.stop(audioContext.currentTime + duration);
-    } catch (error) {
-        console.log('Audio no disponible');
-    }
+function moduleDescription(name) {
+  if (name.includes('Aspectos Generales')) return 'conceptos base, contrato, autoridades, sanciones, PLD/FT';
+  if (name.includes('Riesgos Individuales de Seguro de Daños')) return 'autos, hogar, RC, exclusiones, siniestros';
+  if (name.includes('Riesgos Individuales de Seguro de Personas')) return 'vida, GM, accidentes, bases técnicas, beneficios';
+  if (name.includes('Sistema y Mercados Financieros')) return 'sistema financiero, mercado de valores, tasas e instrumentos';
+  return '';
 }
 
-function playCorrectSound() {
-    createBeep(523, 0.15);
-    setTimeout(() => createBeep(659, 0.15), 100);
-    setTimeout(() => createBeep(784, 0.2), 200);
+// === Local Storage Tracking ===
+// Guardamos últimas 100 respuestas por módulo para ponderar subtemas
+function historyKey(module){ return `qp_hist_${module}`; }
+function seenKey(module){ return `qp_seen_${module}`; } // para evitar repetir hasta agotar
+
+function pushHistory(module, entry) {
+  const key = historyKey(module);
+  const arr = JSON.parse(localStorage.getItem(key) || '[]');
+  arr.unshift(entry); // más reciente al inicio
+  const trimmed = arr.slice(0,100);
+  localStorage.setItem(key, JSON.stringify(trimmed));
 }
 
-function playIncorrectSound() {
-    createBeep(400, 0.15);
-    setTimeout(() => createBeep(350, 0.15), 100);
-    setTimeout(() => createBeep(300, 0.2), 200);
+function subtopicStats(module) {
+  const arr = JSON.parse(localStorage.getItem(historyKey(module)) || '[]');
+  const by = {};
+  arr.forEach(e=>{
+    const k = e.subtopic || 'General';
+    if(!by[k]) by[k] = {correct:0,total:0};
+    by[k].total += 1;
+    by[k].correct += e.correct ? 1 : 0;
+  });
+  // calcular accuracy y peso inverso
+  const stats = Object.entries(by).map(([sub, v]) => {
+    const acc = v.total ? (v.correct/v.total) : 0.0;
+    // peso: entre 0.3 (si acc=1) y 1.0 (si acc=0)
+    const w = 0.3 + (1.0 - acc) * 0.7;
+    return { subtopic: sub, total: v.total, accuracy: acc, weight: w };
+  });
+  return stats;
 }
 
-function showAnimation(isCorrect) {
-    const animation = document.createElement('div');
-    animation.className = `animation-overlay ${isCorrect ? 'check-mark' : 'x-mark'}`;
-    animation.textContent = isCorrect ? '✓' : '✗';
-    document.body.appendChild(animation);
-    
-    setTimeout(() => {
-        document.body.removeChild(animation);
-    }, 800);
+function nextBatchFromModule(module, size) {
+  const pool = ALL_QUESTIONS.filter(q => q.module === module);
+
+  // No repetir hasta agotar: exclude "seen"
+  const seen = new Set(JSON.parse(localStorage.getItem(seenKey(module)) || '[]'));
+  let candidates = pool.filter(q => !seen.has(q.id));
+
+  // Si agotado, reset "seen"
+  if (candidates.length === 0) {
+    localStorage.setItem(seenKey(module), JSON.stringify([]));
+    candidates = pool.slice();
+  }
+
+  // Calcular ponderación por subtema (a partir del historial)
+  const stats = subtopicStats(module);
+  const wBySub = Object.fromEntries(stats.map(s => [s.subtopic, s.weight]));
+  const defaultW = 0.6; // si no hay historial de ese subtema
+
+  // Construir lote ponderado manteniendo diversidad
+  shuffle(candidates);
+  const N = size === 'all' ? candidates.length : Math.min(size, candidates.length);
+  const take = [];
+  const perSubCount = {};
+  let guard = 0;
+  while (take.length < N && guard < 5000) {
+    guard++;
+    const pick = weightedPick(candidates, q => (wBySub[q.subtopic] ?? defaultW));
+    if (!pick) break;
+    // evitar saturar un subtema: límite blando de N/2
+    const limit = Math.ceil(N/2);
+    if ((perSubCount[pick.subtopic] || 0) >= limit) continue;
+    take.push(pick);
+    perSubCount[pick.subtopic] = (perSubCount[pick.subtopic] || 0) + 1;
+    // quita pick de candidates
+    candidates = candidates.filter(x => x.id !== pick.id);
+  }
+  // Si faltan, completa aleatorio
+  while (take.length < N && candidates.length) {
+    take.push(candidates.pop());
+  }
+
+  // marca como vistos
+  const newSeen = new Set(JSON.parse(localStorage.getItem(seenKey(module)) || '[]'));
+  take.forEach(q => newSeen.add(q.id));
+  localStorage.setItem(seenKey(module), JSON.stringify(Array.from(newSeen)));
+
+  return shuffle(take).map(q => shuffleOptions(q));
 }
 
+function weightedPick(arr, weightFn) {
+  if (!arr.length) return null;
+  const weights = arr.map(weightFn);
+  const sum = weights.reduce((a,b)=>a+b,0);
+  if (sum <= 0) return arr[Math.floor(Math.random()*arr.length)];
+  let r = Math.random()*sum;
+  for (let i=0;i<arr.length;i++) {
+    r -= weights[i];
+    if (r <= 0) return arr[i];
+  }
+  return arr[arr.length-1];
+}
+
+// === Quiz Flow ===
 function startQuiz() {
-    if (!currentModule) return;
+  if (!currentModule) return;
+  score = {correct:0, incorrect:0};
+  qIndex = 0;
+  answered = false;
+  batchSize = (numSel.value==='all') ? 'all' : parseInt(numSel.value || '20');
 
-    let allQuestions = [...questionDatabase[currentModule]];
-    shuffleArray(allQuestions);
-    
-    if (numQuestionsToShow === 'all') {
-        currentQuestions = allQuestions;
-    } else {
-        currentQuestions = allQuestions.slice(0, Math.min(numQuestionsToShow, allQuestions.length));
-    }
-    
-    currentQuestionIndex = 0;
-    score = { correct: 0, incorrect: 0 };
-    
-    startScreen.style.display = 'none';
-    questionScreen.style.display = 'block';
-    
-    showQuestion();
+  sessionQuestions = nextBatchFromModule(currentModule, batchSize);
+
+  startScreen.style.display = 'none';
+  questionScreen.style.display = 'block';
+  renderQuestion();
 }
 
-function showQuestion() {
-    const question = currentQuestions[currentQuestionIndex];
-    
-    questionCounter.textContent = `Pregunta ${currentQuestionIndex + 1} de ${currentQuestions.length}`;
-    questionText.textContent = question.question;
+function renderQuestion() {
+  const q = sessionQuestions[qIndex];
+  counterText.textContent = `Pregunta ${qIndex+1} de ${sessionQuestions.length}`;
+  questionText.textContent = q.question;
+  subtopicText.textContent = q.subtopic || '';
+  subtopicText.style.display = q.subtopic ? 'block' : 'none';
 
-    // Mostrar subtema si existe
-    const subtopicElement = document.getElementById('subtopicText');
-    if (question.subtopic) {
-        subtopicElement.textContent = question.subtopic;
-        subtopicElement.style.display = 'block';
-    } else {
-        subtopicElement.style.display = 'none';
-    }
-    
-    const progress = ((currentQuestionIndex) / currentQuestions.length) * 100;
-    progressFill.style.width = progress + '%';
-    
-    optionsContainer.innerHTML = '';
-    const shuffledOptions = [...question.options];
-    const correctAnswer = question.options[question.correct];
-    shuffleArray(shuffledOptions);
-    const newCorrectIndex = shuffledOptions.indexOf(correctAnswer);
-    
-    shuffledOptions.forEach((option, index) => {
-        const optionElement = document.createElement('div');
-        optionElement.className = 'option';
-        optionElement.textContent = option;
-        optionElement.addEventListener('click', () => selectOption(index, optionElement, newCorrectIndex));
-        optionsContainer.appendChild(optionElement);
-    });
-    
-    selectedOption = null;
-    answered = false;
-    nextBtn.disabled = true;
-    feedback.style.display = 'none';
-    
-    correctCount.textContent = score.correct;
-    incorrectCount.textContent = score.incorrect;
+  // Difficulty badge
+  difficultyBadge.textContent = difficultyLabel(q.difficulty);
+  difficultyBadge.className = 'difficulty-badge ' + difficultyClass(q.difficulty);
+
+  // Progress
+  progressFill.style.width = `${(qIndex/sessionQuestions.length)*100}%`;
+
+  // Options
+  optionsWrap.innerHTML = '';
+  q.options.forEach((opt, idx) => {
+    const btn = document.createElement('div');
+    btn.className = 'option';
+    btn.textContent = opt;
+    btn.addEventListener('click', () => onSelect(idx));
+    optionsWrap.appendChild(btn);
+  });
+
+  feedbackBox.textContent = '';
+  feedbackBox.className = 'feedback';
+  nextBtn.disabled = true;
+  selectedIdx = null;
+  answered = false;
+
+  // Score on header
+  correctCount.textContent = score.correct;
+  incorrectCount.textContent = score.incorrect;
 }
 
-function selectOption(index, element, correctIndex) {
-    if (answered) return;
-    
-    document.querySelectorAll('.option').forEach(opt => {
-        opt.classList.remove('selected');
-    });
-    
-    element.classList.add('selected');
-    selectedOption = index;
-    nextBtn.disabled = false;
-    element.dataset.correctIndex = correctIndex;
+function difficultyLabel(d) {
+  if (d==='basic') return 'Básica';
+  if (d==='intermediate') return 'Media';
+  if (d==='advanced') return 'Difícil';
+  return d || '';
+}
+function difficultyClass(d) {
+  if (d==='basic') return 'diff-basic';
+  if (d==='intermediate') return 'diff-intermediate';
+  if (d==='advanced') return 'diff-advanced';
+  return 'diff-basic';
+}
+
+function onSelect(idx) {
+  if (answered) return;
+  selectedIdx = idx;
+  [...optionsWrap.children].forEach((el,i) => {
+    el.classList.toggle('selected', i===idx);
+  });
+  // Auto-submit on select
+  submitAnswer();
+}
+
+function submitAnswer() {
+  const q = sessionQuestions[qIndex];
+  if (selectedIdx==null) return;
+
+  answered = true;
+  const isCorrect = (selectedIdx === q.correct);
+  score[isCorrect ? 'correct' : 'incorrect']++;
+
+  // Visual feedback
+  [...optionsWrap.children].forEach((el,i)=>{
+    el.classList.remove('selected');
+    if (i===q.correct) el.classList.add('correct');
+    if (i===selectedIdx && !isCorrect) el.classList.add('incorrect');
+    el.classList.add('disabled');
+  });
+
+  // Explanation
+  feedbackBox.textContent = (isCorrect ? '¡Correcto! ' : 'Respuesta incorrecta. ') + (q.explanation || '');
+  feedbackBox.className = 'feedback ' + (isCorrect ? 'correct' : 'incorrect');
+
+  // Sounds
+  if (soundEnabled) {
+    if (isCorrect) playCorrectSound(); else playIncorrectSound();
+  }
+
+  // Push history for weighting
+  pushHistory(currentModule, {
+    id: q.id,
+    subtopic: q.subtopic || 'General',
+    difficulty: q.difficulty || 'basic',
+    correct: isCorrect,
+    ts: Date.now()
+  });
+
+  nextBtn.disabled = false;
+
+  // Update score header
+  correctCount.textContent = score.correct;
+  incorrectCount.textContent = score.incorrect;
 }
 
 function nextQuestion() {
-    if (selectedOption === null) return;
-    
-    // Si ya se respondió esta pregunta, avanzar a la siguiente
-    if (answered) {
-        currentQuestionIndex++;
-        showQuestion();
-        return;
-    }
-    
-    const correctIndex = parseInt(document.querySelector('.option.selected').dataset.correctIndex);
-    const isCorrect = selectedOption === correctIndex;
-    
-    const options = document.querySelectorAll('.option');
-    options.forEach((opt, index) => {
-        opt.classList.add('disabled');
-        if (index === correctIndex) {
-            opt.classList.add('correct');
-        } else if (index === selectedOption && !isCorrect) {
-            opt.classList.add('incorrect');
-        }
-    });
-    
-    feedback.style.display = 'block';
-    if (isCorrect) {
-        feedback.className = 'feedback correct';
-        feedback.textContent = '¡Correcto! Excelente trabajo.';
-        score.correct++;
-        if (soundEnabled) playCorrectSound();
-        showAnimation(true);
-    } else {
-        feedback.className = 'feedback incorrect';
-        feedback.textContent = `Incorrecto. La respuesta correcta es: ${options[correctIndex].textContent}`;
-        score.incorrect++;
-        if (soundEnabled) playIncorrectSound();
-        showAnimation(false);
-    }
-    
-    answered = true;
-    correctCount.textContent = score.correct;
-    incorrectCount.textContent = score.incorrect;
-    
-    if (currentQuestionIndex < currentQuestions.length - 1) {
-        nextBtn.textContent = 'Siguiente';
-    } else {
-        nextBtn.textContent = 'Ver Resultados';
-        nextBtn.onclick = showResults;
-    }
+  if (qIndex < sessionQuestions.length - 1) {
+    qIndex++;
+    renderQuestion();
+  } else {
+    finishQuiz();
+  }
 }
 
-function showResults() {
-    const totalQuestions = currentQuestions.length;
-    const percentage = Math.round((score.correct / totalQuestions) * 100);
-    
-    questionScreen.style.display = 'none';
-    endScreen.style.display = 'block';
-    
-    finalScore.textContent = `${percentage}%`;
-    
-    let performanceClass = '';
-    let message = '';
-    
-    if (percentage >= 90) {
-        performanceClass = 'performance-excellent';
-        message = '¡Excelente! Dominas muy bien el tema.';
-    } else if (percentage >= 70) {
-        performanceClass = 'performance-good';
-        message = '¡Buen trabajo! Tienes un conocimiento sólido.';
-    } else {
-        performanceClass = 'performance-needs-improvement';
-        message = 'Necesitas repasar más. ¡Sigue practicando!';
-    }
-    
-    performanceMessage.className = `performance-message ${performanceClass}`;
-    performanceMessage.textContent = message;
-    
-    detailedResults.textContent = `Respondiste correctamente ${score.correct} de ${totalQuestions} preguntas.`;
-    
-    progressFill.style.width = '100%';
+function finishQuiz() {
+  questionScreen.style.display = 'none';
+  endScreen.style.display = 'block';
+  const total = sessionQuestions.length;
+  const pct = Math.round((score.correct/total)*100);
+  finalScore.textContent = `${pct}%`;
+  performanceMessage.textContent = performanceText(pct);
+
+  // Detailed results by subtopic from this session
+  const agg = {};
+  const lastIds = new Set(sessionQuestions.map(q=>q.id));
+  const hist = JSON.parse(localStorage.getItem(historyKey(currentModule)) || '[]').filter(h=>lastIds.has(h.id));
+  hist.forEach(h => {
+    const s = h.subtopic || 'General';
+    if(!agg[s]) agg[s]={correct:0,total:0};
+    agg[s].total += 1;
+    agg[s].correct += h.correct ? 1 : 0;
+  });
+
+  detailedResults.innerHTML = '';
+  Object.entries(agg).forEach(([sub,v])=>{
+    const p = v.total? Math.round((v.correct/v.total)*100) : 0;
+    const row = document.createElement('div');
+    row.textContent = `${sub}: ${v.correct}/${v.total} (${p}%)`;
+    detailedResults.appendChild(row);
+  });
 }
 
 function restart() {
-    currentModule = '';
-    currentQuestions = [];
-    currentQuestionIndex = 0;
-    selectedOption = null;
-    score = { correct: 0, incorrect: 0 };
-    answered = false;
-    
-    endScreen.style.display = 'none';
-    startScreen.style.display = 'block';
-    
-    moduleOptions.forEach(opt => opt.classList.remove('selected'));
-    startBtn.disabled = true;
-    nextBtn.textContent = 'Siguiente';
-    nextBtn.onclick = nextQuestion;
-    progressFill.style.width = '0%';
+  endScreen.style.display = 'none';
+  startScreen.style.display = 'block';
 }
 
-function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
+// === Beeps ===
+function createBeep(f, d, type='sine') {
+  try {
+    const Ctx = window.AudioContext || window.webkitAudioContext;
+    const ctx = new Ctx();
+    const osc = ctx.createOscillator();
+    const g = ctx.createGain();
+    osc.connect(g); g.connect(ctx.destination);
+    osc.frequency.value = f; osc.type = type;
+    g.gain.setValueAtTime(0.3, ctx.currentTime);
+    g.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + d);
+    osc.start(ctx.currentTime);
+    osc.stop(ctx.currentTime + d);
+  } catch(e){}
+}
+function playCorrectSound() {
+  createBeep(523, 0.15);
+  setTimeout(()=>createBeep(659, 0.15), 100);
+  setTimeout(()=>createBeep(784, 0.2), 200);
+}
+function playIncorrectSound() {
+  createBeep(400, 0.15);
+  setTimeout(()=>createBeep(350, 0.15), 100);
+  setTimeout(()=>createBeep(300, 0.2), 200);
 }
 
-// Inicializar aplicación
-loadQuestions();
+// === Boot ===
+document.addEventListener('DOMContentLoaded', loadAll);
+
+// Aux: simple performance message
+function performanceText(p){ 
+  if(p>=90) return "¡Excelente!"; 
+  if(p>=75) return "¡Muy bien!"; 
+  if(p>=60) return "Vas por buen camino"; 
+  return "A repasar los subtemas débiles";
+}
