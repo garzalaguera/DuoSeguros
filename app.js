@@ -256,14 +256,15 @@ function showStatsDetail(module, type) {
     const last = lastStats[sub] || { correct: 0, total: 0 };
     const avg = avg100Stats[sub] || { correct: 0, total: 0 };
     
-    const lastPct = last.total > 0 ? Math.round((last.correct / last.total) * 100) : 0;
-    const avgPct = avg.total > 0 ? Math.round((avg.correct / avg.total) * 100) : 0;
+    const lastPct = last.total > 0 ? Math.round((last.correct / last.total) * 100) : null;
+    const avgPct = avg.total > 0 ? Math.round((avg.correct / avg.total) * 100) : null;
     
     const lastDisplay = last.total > 0 ? `${last.correct}/${last.total} (${lastPct}%)` : '—';
     const avgDisplay = avg.total > 0 ? `${avg.correct}/${avg.total} (${avgPct}%)` : '—';
     
-    const lastClass = lastPct >= 80 ? 'perf-good' : lastPct >= 60 ? 'perf-ok' : lastPct > 0 ? 'perf-bad' : '';
-    const avgClass = avgPct >= 80 ? 'perf-good' : avgPct >= 60 ? 'perf-ok' : avgPct > 0 ? 'perf-bad' : '';
+    // Aplicar color SOLO si hay datos (lastPct !== null)
+    const lastClass = lastPct !== null ? (lastPct >= 80 ? 'perf-good' : lastPct >= 60 ? 'perf-ok' : 'perf-bad') : '';
+    const avgClass = avgPct !== null ? (avgPct >= 80 ? 'perf-good' : avgPct >= 60 ? 'perf-ok' : 'perf-bad') : '';
     
     tableHTML += `
       <tr>
@@ -277,12 +278,39 @@ function showStatsDetail(module, type) {
   tableHTML += `
       </tbody>
     </table>
+    <div style="margin-top: 20px; text-align: center;">
+      <button id="resetModuleBtn" class="btn" style="background: #ef4444;" data-module="${module}">
+        🗑️ Resetear estadísticas de este módulo
+      </button>
+    </div>
   `;
   
   statsTableContainer.innerHTML = tableHTML;
   
+  // Agregar evento al botón de reset
+  document.getElementById('resetModuleBtn').addEventListener('click', function() {
+    const mod = this.dataset.module;
+    if (confirm(`¿Estás seguro de que quieres borrar TODAS las estadísticas de "${moduleInfo.title}"?\n\nEsto incluye:\n- Historial de últimas 100 preguntas\n- Última sesión\n- Preguntas vistas\n\nEsta acción NO se puede deshacer.`)) {
+      resetModuleStats(mod);
+      alert('Estadísticas reseteadas exitosamente.');
+      // Volver a la pantalla principal y recargar módulos
+      statsDetailScreen.style.display = 'none';
+      startScreen.style.display = 'block';
+      renderModules(QUESTIONS_INDEX.modules);
+    }
+  });
+  
   startScreen.style.display = 'none';
   statsDetailScreen.style.display = 'block';
+}
+
+function resetModuleStats(module) {
+  // Borrar historial de últimas 100
+  localStorage.removeItem(historyKey(module));
+  // Borrar última sesión
+  localStorage.removeItem(lastSessionKey(module));
+  // Borrar preguntas vistas (para que vuelva a barajar todo el banco)
+  localStorage.removeItem(seenKey(module));
 }
 
 function subtopicStats(module) {
