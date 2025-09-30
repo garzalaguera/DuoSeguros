@@ -1,0 +1,3849 @@
+{
+  "questions": [
+    {
+      "id": "AG-L3-CPT-001",
+      "question": "'Subrogación' permite a la aseguradora:",
+      "options": [
+        "Cobrar IVA adicional",
+        "Repetir contra el tercero responsable después de indemnizar al asegurado",
+        "Rescindir sin causa",
+        "Reemplazar al beneficiario"
+      ],
+      "correct": 1,
+      "subtopic": "Subrogación",
+      "difficulty": "intermediate",
+      "explanation": "La aseguradora asume los derechos del asegurado contra el tercero responsable.",
+      "source": "Cap. 4 – El Contrato de Seguros, síntesis",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-L3-CTR-001",
+      "question": "La 'subrogación' procede cuando:",
+      "options": [
+        "El asegurado no paga la prima",
+        "La aseguradora indemniza y ejerce derechos contra tercero responsable",
+        "Existe sobreseguro",
+        "Hay reemplazo de póliza"
+      ],
+      "correct": 1,
+      "subtopic": "Subrogación",
+      "difficulty": "intermediate",
+      "explanation": "El pago transfiere al asegurador los derechos de repetición del asegurado.",
+      "source": "Cap. 4 – El Contrato de Seguros, elementos del contrato",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-L3-CPT-002",
+      "question": "La póliza debe incluir, entre otros:",
+      "options": [
+        "Datos de partes, objeto, riesgos, suma, vigencia y prima",
+        "Copia certificada del acta de nacimiento",
+        "Firma del reasegurador",
+        "Firma del ajustador"
+      ],
+      "correct": 0,
+      "subtopic": "Póliza: elementos",
+      "difficulty": "basic",
+      "explanation": "La ley establece elementos esenciales que deben constar en la póliza.",
+      "source": "Cap. 4 – El Contrato de Seguros, síntesis",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-L3-CPT-003",
+      "question": "En conciliación de CONDUSEF, el convenio:",
+      "options": [
+        "Es solo referencial",
+        "Se formaliza y obliga a las partes",
+        "Debe validarlo la SHCP",
+        "No se ejecuta"
+      ],
+      "correct": 1,
+      "subtopic": "Conciliación y arbitraje",
+      "difficulty": "intermediate",
+      "explanation": "Los convenios pueden ser ejecutables conforme a la normativa aplicable.",
+      "source": "Cap. 7 – CONDUSEF, síntesis",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-L3-AUT-001",
+      "question": "Función de CONDUSEF en controversias:",
+      "options": [
+        "Conciliación y arbitraje entre usuarios y entidades",
+        "Aplicar reaseguro obligatorio",
+        "Autorizar ramos",
+        "Fijar primas técnicas"
+      ],
+      "correct": 0,
+      "subtopic": "Conciliación y arbitraje",
+      "difficulty": "basic",
+      "explanation": "Atiende reclamaciones con mecanismos alternativos de solución.",
+      "source": "Cap. 7 – CONDUSEF, competencias",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-L3-CPT-004",
+      "question": "'Revocación' de autorización implica:",
+      "options": [
+        "Archivo del expediente",
+        "Suspensión temporal",
+        "Pérdida definitiva de la autorización para operar o ejercer",
+        "Solo multa"
+      ],
+      "correct": 2,
+      "subtopic": "Sanciones",
+      "difficulty": "advanced",
+      "explanation": "Es la consecuencia más severa en el catálogo de sanciones administrativas.",
+      "source": "Cap. 6 – Sanciones e Infracciones, síntesis",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-L3-CPT-027",
+      "question": "En materia sancionadora, ’amonestación’ es:",
+      "options": [
+        "Suspensión inmediata",
+        "Revocación definitiva",
+        "Multa económica",
+        "Llamado de atención formal por incumplimiento menor"
+      ],
+      "correct": 3,
+      "subtopic": "Sanciones",
+      "difficulty": "basic",
+      "explanation": "Es la medida menos gravosa frente a otras sanciones como multas o suspensión.",
+      "source": "Cap. 6 – Sanciones e Infracciones, síntesis",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-L3-AUT-003",
+      "question": "La 'inhabilitación' como sanción significa:",
+      "options": [
+        "Imposibilidad temporal de ejercer la actividad",
+        "Solo amonestación",
+        "Multa simbólica",
+        "Revocación definitiva"
+      ],
+      "correct": 0,
+      "subtopic": "Sanciones",
+      "difficulty": "intermediate",
+      "explanation": "Se diferencia de la revocación, que es definitiva.",
+      "source": "Cap. 6 – Sanciones e Infracciones, competencias",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-L3-CPT-005",
+      "question": "¿En términos de seguros, Qué es el 'riesgo asegurable'?",
+      "options": [
+        "Un evento cierto y determinístico",
+        "Cualquier situación sin consecuencias económicas",
+        "Un riesgo incierto, lícito, objetivo y con contenido económico",
+        "Una apuesta con expectativas de ganancia"
+      ],
+      "correct": 2,
+      "subtopic": "Características del riesgo asegurable",
+      "difficulty": "basic",
+      "explanation": "Debe ser incierto/aleatorio, posible, lícito, fortuito, objetivable y con impacto económico.",
+      "source": "Cap. 1 – El Riesgo y el Seguro, síntesis",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-L3-CPT-006",
+      "question": "Una causa de cancelación de autorización de agente:",
+      "options": [
+        "No alcanzar metas comerciales",
+        "Negarse a vender un producto",
+        "Infracciones graves a la normativa aplicable",
+        "Tomar vacaciones"
+      ],
+      "correct": 2,
+      "subtopic": "Cancelación de autorización",
+      "difficulty": "advanced",
+      "explanation": "Las causales están previstas en la normativa y reglamento de agentes.",
+      "source": "Cap. 5 – Intermediación y Comercialización del Seguro, síntesis",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-L3-CPT-007",
+      "question": "La 'prima de tarifa' incluye:",
+      "options": [
+        "Únicamente reservas matemáticas",
+        "Solo impuestos",
+        "Solo prima pura",
+        "Prima pura más recargos por gastos, reservas e impuestos aplicables"
+      ],
+      "correct": 3,
+      "subtopic": "Tipos de prima",
+      "difficulty": "intermediate",
+      "explanation": "Es la prima comercial cobrada al cliente e integra los componentes operativos y prudenciales.",
+      "source": "Cap. 2 – Bases Técnicas, síntesis",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-L3-CPT-009",
+      "question": "Debida diligencia reforzada procede si:",
+      "options": [
+        "Siempre por defecto",
+        "No hay riesgo",
+        "Riesgo bajo",
+        "Hay factores de alto riesgo (p. ej., PEP o jurisdicción de alto riesgo)"
+      ],
+      "correct": 3,
+      "subtopic": "Debida diligencia",
+      "difficulty": "intermediate",
+      "explanation": "Mayor riesgo exige medidas reforzadas de identificación y monitoreo.",
+      "source": "Cap. 8 – PLD/FT, síntesis",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-L3-CPT-010",
+      "question": "La póliza de E&O del agente cubre:",
+      "options": [
+        "Reclamaciones por errores u omisiones profesionales en la intermediación",
+        "Dolo del cliente",
+        "Daños al vehículo del agente",
+        "Pérdida de comisiones"
+      ],
+      "correct": 0,
+      "subtopic": "Responsabilidad civil E&O",
+      "difficulty": "basic",
+      "explanation": "Cubre negligencia profesional en el ejercicio de la intermediación.",
+      "source": "Cap. 5 – Intermediación y Comercialización del Seguro, síntesis",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-L3-CPT-011",
+      "question": "Función principal de la CNSF:",
+      "options": [
+        "Conciliar controversias individuales",
+        "Supervisar, vigilar y sancionar al sector para preservar su solvencia y legalidad",
+        "Emitir billetes",
+        "Autorizar PEP"
+      ],
+      "correct": 1,
+      "subtopic": "Autoridades",
+      "difficulty": "basic",
+      "explanation": "La CNSF realiza supervisión prudencial y de conducta conforme a la LISF.",
+      "source": "Cap. 3 – La Actividad Aseguradora, síntesis",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-L3-AUT-006",
+      "question": "Autoridad máxima en materia de seguros en México:",
+      "options": [
+        "CONDUSEF",
+        "Banxico",
+        "SHCP",
+        "CNSF"
+      ],
+      "correct": 2,
+      "subtopic": "Autoridades",
+      "difficulty": "basic",
+      "explanation": "La SHCP es autoridad máxima; la CNSF supervisa y vigila.",
+      "source": "Cap. 3 – La Actividad Aseguradora, competencias",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-L3-CPT-015",
+      "question": "'Operación inusual' en PLD:",
+      "options": [
+        "Siempre es de alto monto",
+        "Es cualquier transferencia internacional",
+        "Es un pago con tarjeta",
+        "No corresponde al perfil del cliente o carece de sustento económico aparente"
+      ],
+      "correct": 3,
+      "subtopic": "Operaciones inusuales",
+      "difficulty": "advanced",
+      "explanation": "Se detecta comparando con el perfil transaccional esperado del cliente.",
+      "source": "Cap. 8 – PLD/FT, síntesis",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-L3-CPT-017",
+      "question": "El contrato de seguro es típicamente:",
+      "options": [
+        "Bilateral, oneroso, aleatorio y de buena fe",
+        "A título gratuito y conmutativo",
+        "Gratuito y unilateral",
+        "Real y gratuito"
+      ],
+      "correct": 0,
+      "subtopic": "Características del contrato",
+      "difficulty": "basic",
+      "explanation": "Se perfecciona por consentimiento y requiere máxima buena fe entre las partes.",
+      "source": "Cap. 4 – El Contrato de Seguros, síntesis",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-L3-CPT-019",
+      "question": "Misión principal de CONDUSEF:",
+      "options": [
+        "Proteger y defender los derechos de usuarios de servicios financieros",
+        "Determinar solvencia prudencial",
+        "Emitir la tarifa única",
+        "Autorizar aseguradoras"
+      ],
+      "correct": 0,
+      "subtopic": "Facultades de CONDUSEF",
+      "difficulty": "basic",
+      "explanation": "Provee orientación, conciliación y arbitraje; impulsa educación financiera.",
+      "source": "Cap. 7 – CONDUSEF, síntesis",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-L3-CPT-026",
+      "question": "El agente debe brindar:",
+      "options": [
+        "Servicios médicos",
+        "Solo la póliza física",
+        "Información clara, veraz y suficiente sobre coberturas, exclusiones y obligaciones",
+        "Asesoría legal gratuita"
+      ],
+      "correct": 2,
+      "subtopic": "Deber de información",
+      "difficulty": "basic",
+      "explanation": "La transparencia y la idoneidad del producto son obligaciones centrales del agente.",
+      "source": "Cap. 5 – Intermediación y Comercialización del Seguro, síntesis",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-L3-CPT-033",
+      "question": "’Propietario real’ (beneficial owner) es:",
+      "options": [
+        "Persona física que en última instancia posee o controla al cliente",
+        "Representante legal",
+        "Ajustador",
+        "Agente de seguros"
+      ],
+      "correct": 0,
+      "subtopic": "Propietario real",
+      "difficulty": "intermediate",
+      "explanation": "Identificarlo es clave para PLD/FT y conocer la titularidad final.",
+      "source": "Cap. 8 – PLD/FT, síntesis",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-L3-CPT-034",
+      "question": "Operación de Accidentes y Enfermedades incluye:",
+      "options": [
+        "Transporte marítimo",
+        "Gastos por RC",
+        "Gastos Médicos Mayores y Accidentes Personales",
+        "Automóviles y Hogar"
+      ],
+      "correct": 2,
+      "subtopic": "Operaciones y ramos",
+      "difficulty": "basic",
+      "explanation": "A&E abarca coberturas de salud y accidentes personales.",
+      "source": "Cap. 3 – La Actividad Aseguradora, síntesis",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-L3-CPT-044",
+      "question": "¿Cuál es la diferencia clave entre riesgo puro y especulativo?",
+      "options": [
+        "El especulativo carece de incertidumbre",
+        "No hay diferencia relevante",
+        "El puro siempre genera ganancia",
+        "El puro solo admite pérdida; el especulativo admite pérdida o ganancia"
+      ],
+      "correct": 3,
+      "subtopic": "Clasificación del riesgo",
+      "difficulty": "basic",
+      "explanation": "El seguro cubre riesgos puros, no los especulativos que pueden producir ganancias.",
+      "source": "Cap. 1 – El Riesgo y el Seguro, síntesis",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-L3-CPT-072",
+      "question": "La 'Ley de los Grandes Números' permite:",
+      "options": [
+        "Aumentar la severidad de pérdidas",
+        "Eliminar por completo el riesgo",
+        "Reducir la variabilidad relativa y mejorar la precisión de estimaciones",
+        "Fijar primas sin datos"
+      ],
+      "correct": 2,
+      "subtopic": "Ley de los grandes números",
+      "difficulty": "basic",
+      "explanation": "Con más observaciones, las medias empíricas se acercan al valor esperado y hay mayor estabilidad.",
+      "source": "Cap. 2 – Bases Técnicas, síntesis",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-L3-CPT-074",
+      "question": "'Homogeneidad' del grupo asegurable implica:",
+      "options": [
+        "Mezclar máximo contraste de riesgos",
+        "Asegurar solo catastróficos",
+        "Asegurar solo PM",
+        "Riesgos con características similares para tarificar con equidad"
+      ],
+      "correct": 3,
+      "subtopic": "Homogeneidad",
+      "difficulty": "basic",
+      "explanation": "Grupos comparables permiten proyectar probabilidades y costos con mayor estabilidad.",
+      "source": "Cap. 2 – Bases Técnicas, síntesis",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-L3-PLD-001",
+      "question": "Para Persona Moral, en KYC se requiere:",
+      "options": [
+        "Solo RFC",
+        "Comprobante de domicilio del agente",
+        "INE del contador",
+        "Contrato social, poderes, estructura accionaria y beneficiario controlador"
+      ],
+      "correct": 3,
+      "subtopic": "KYC Persona Moral",
+      "difficulty": "intermediate",
+      "explanation": "La PM exige conocer constitución, poderes y beneficiario controlador, entre otros.",
+      "source": "Cap. 8 – PLD/FT, guía KYC",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-L3-PLD-002",
+      "question": "El enfoque basado en riesgos (PLD) implica:",
+      "options": [
+        "Solo confiar en referencias",
+        "Ajustar intensidad de medidas según el riesgo del cliente/operación",
+        "Aplicar controles idénticos a todos",
+        "Eliminar identificación"
+      ],
+      "correct": 1,
+      "subtopic": "Enfoque basado en riesgo",
+      "difficulty": "intermediate",
+      "explanation": "Se gradúan medidas de identificación, monitoreo y documentación según el riesgo.",
+      "source": "Cap. 8 – PLD/FT, guía KYC",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-L3-PLD-003",
+      "question": "Una señal de alerta típica es:",
+      "options": [
+        "Actualización anual de datos",
+        "Pago propio por SPEI",
+        "Domiciliación de primas",
+        "Fraccionamiento de operaciones para eludir umbrales"
+      ],
+      "correct": 3,
+      "subtopic": "Señales de alerta",
+      "difficulty": "advanced",
+      "explanation": "La 'estructuración' busca eludir controles de identificación y reporte.",
+      "source": "Cap. 8 – PLD/FT, guía KYC",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-L3-CTR-004",
+      "question": "¿Cuándo se perfecciona el contrato de seguro?",
+      "options": [
+        "Cuando el proponente conoce la aceptación de la aseguradora",
+        "Cuando lo valida CONDUSEF",
+        "Cuando paga la primera prima",
+        "Solo con la póliza impresa"
+      ],
+      "correct": 0,
+      "subtopic": "Perfeccionamiento",
+      "difficulty": "advanced",
+      "explanation": "Se perfecciona con el conocimiento de aceptación; la entrega física es probatoria.",
+      "source": "Cap. 4 – El Contrato de Seguros, elementos del contrato",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-L3-CTR-006",
+      "question": "El 'contratante' es quien:",
+      "options": [
+        "Celebra el contrato y asume el pago de la prima",
+        "Solo elabora endosos",
+        "Ajusta siniestros",
+        "Siempre es el beneficiario"
+      ],
+      "correct": 0,
+      "subtopic": "Sujetos del contrato",
+      "difficulty": "basic",
+      "explanation": "Puede coincidir o no con el asegurado; asume obligaciones de pago.",
+      "source": "Cap. 4 – El Contrato de Seguros, elementos del contrato",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-NEW-0002",
+      "question": "La selección adversa ocurre cuando:",
+      "options": [
+        "Se elimina la evaluación",
+        "No hay variación en primas",
+        "Solo entran riesgos bajos",
+        "Ingresan más riesgos altos por fallas de segmentación"
+      ],
+      "correct": 3,
+      "subtopic": "Selección adversa",
+      "difficulty": "advanced",
+      "explanation": "La tarificación y suscripción adecuadas la mitigan.",
+      "source": "Cap. 2 – Bases Técnicas",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-NEW-0003",
+      "question": "La subrogación faculta a la aseguradora para:",
+      "options": [
+        "Repetir contra el tercero responsable tras indemnizar",
+        "Modificar al beneficiario",
+        "Exigir prima doble",
+        "Cancelar por mora sin aviso"
+      ],
+      "correct": 0,
+      "subtopic": "Subrogación",
+      "difficulty": "intermediate",
+      "explanation": "La aseguradora asume derechos del asegurado frente al causante.",
+      "source": "Cap. 4 – El Contrato de Seguros",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-NEW-0004",
+      "question": "Se considera 'riesgo asegurable' aquel que es:",
+      "options": [
+        "Cierto y con fecha",
+        "Incierto, lícito y cuantificable económicamente",
+        "No económico",
+        "Especulativo con ganancia"
+      ],
+      "correct": 1,
+      "subtopic": "Características del riesgo asegurable",
+      "difficulty": "basic",
+      "explanation": "Debe existir incertidumbre y valoración económica del daño.",
+      "source": "Cap. 1 – El Riesgo y el Seguro",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-NEW-0013",
+      "question": "CONDUSEF puede:",
+      "options": [
+        "Conciliar y arbitrar controversias con usuarios",
+        "Emitir moneda",
+        "Autorizar ramos",
+        "Fijar reservas técnicas"
+      ],
+      "correct": 0,
+      "subtopic": "CONDUSEF – funciones",
+      "difficulty": "basic",
+      "explanation": "Mecanismos alternativos de solución de controversias.",
+      "source": "Cap. 7 – CONDUSEF",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-THEO-0001",
+      "question": "La SHCP en el sector seguros:",
+      "options": [
+        "Tarifa pólizas individualmente",
+        "Conciliación de quejas",
+        "Ajusta siniestros",
+        "Es autoridad máxima y emite regulación financiera aplicable"
+      ],
+      "correct": 3,
+      "subtopic": "SHCP – rol",
+      "difficulty": "intermediate",
+      "explanation": "Define marco y políticas financieras del sector.",
+      "source": "Cap. 3 – La Actividad Aseguradora",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-THEO-0003",
+      "question": "El 'riesgo moral' se mitiga principalmente con:",
+      "options": [
+        "Aumentar comisiones",
+        "Eliminar cuestionarios",
+        "Deducibles, coaseguros y exclusiones razonables",
+        "Pagar reclamos sin verificación"
+      ],
+      "correct": 2,
+      "subtopic": "Riesgo moral",
+      "difficulty": "intermediate",
+      "explanation": "Mecanismos contractuales y de control reducen incentivos a reclamar indebidamente.",
+      "source": "Cap. 1 – El Riesgo y el Seguro",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-THEO-0005",
+      "question": "Beneficiario controlador se entiende como:",
+      "options": [
+        "Auditor externo",
+        "Persona física que posee o controla en última instancia al cliente",
+        "Representante legal",
+        "Agente"
+      ],
+      "correct": 1,
+      "subtopic": "PLD – beneficiario controlador",
+      "difficulty": "intermediate",
+      "explanation": "Elemento clave de identificación y evaluación de riesgo.",
+      "source": "Cap. 8 – PLD/FT",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-THEO-0008",
+      "question": "La 'amonestación' es:",
+      "options": [
+        "Una sanción menor por incumplimiento leve",
+        "Multa gravísima",
+        "Revocación",
+        "Inhabilitación definitiva"
+      ],
+      "correct": 0,
+      "subtopic": "Sanciones – amonestación",
+      "difficulty": "basic",
+      "explanation": "Forma parte del catálogo sancionador; menos gravosa que revocación o suspensión.",
+      "source": "Cap. 6 – Sanciones e Infracciones",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-THEO-0010",
+      "question": "La cláusula de indisputabilidad implica que:",
+      "options": [
+        "Tras 2 años continuos no se discute por omisiones salvo supuestos legales",
+        "Exime del pago de primas",
+        "Nunca se puede discutir",
+        "Se aplica desde el día 1"
+      ],
+      "correct": 0,
+      "subtopic": "Indisputabilidad",
+      "difficulty": "intermediate",
+      "explanation": "Limita la controversia por inexactitudes transcurrido el plazo legal.",
+      "source": "Cap. 4 – El Contrato de Seguros",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-THEO-0012",
+      "question": "¿Cuál es el propósito de la Ley de los Grandes Números en seguros?",
+      "options": [
+        "Aumentar la severidad",
+        "Estabilizar resultados y mejorar la estimación de siniestralidad",
+        "Sustituir el reaseguro",
+        "Eliminar el riesgo por completo"
+      ],
+      "correct": 1,
+      "subtopic": "Ley de los grandes números",
+      "difficulty": "basic",
+      "explanation": "Con más observaciones, la media se aproxima al valor esperado y reduce la variabilidad relativa.",
+      "source": "Cap. 2 – Bases Técnicas",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-THEO-0013",
+      "question": "El contrato de seguro es, por regla general:",
+      "options": [
+        "Conmutativo y gratuito",
+        "Gratuito y unilateral",
+        "Real y gratuito",
+        "Bilateral, oneroso, aleatorio y de buena fe"
+      ],
+      "correct": 3,
+      "subtopic": "Naturaleza del contrato",
+      "difficulty": "basic",
+      "explanation": "Requiere máxima buena fe y se perfecciona por consentimiento.",
+      "source": "Cap. 4 – El Contrato de Seguros",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-THEO-0014",
+      "question": "El 'interés asegurable' significa que:",
+      "options": [
+        "Necesidad de ser beneficiario",
+        "Existe un interés económico legítimo en que no ocurra el siniestro",
+        "Cualquier expectativa de lucro",
+        "Solo interés moral"
+      ],
+      "correct": 1,
+      "subtopic": "Interés asegurable",
+      "difficulty": "basic",
+      "explanation": "Sin interés asegurable no procede la indemnización en daños.",
+      "source": "Cap. 4 – El Contrato de Seguros",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-THEO-0016",
+      "question": "En PLD, 'operación inusual' es aquella que:",
+      "options": [
+        "No corresponde al perfil del cliente o carece de sustento económico",
+        "Es internacional por definición",
+        "Se realiza en efectivo",
+        "Se paga con tarjeta"
+      ],
+      "correct": 0,
+      "subtopic": "PLD – operaciones inusuales",
+      "difficulty": "advanced",
+      "explanation": "Requiere análisis y, en su caso, reporte interno.",
+      "source": "Cap. 8 – PLD/FT",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-THEO-0017",
+      "question": "La 'selección adversa' se reduce con:",
+      "options": [
+        "Eliminar exámenes",
+        "Prima única para todos",
+        "Segmentación, suscripción y tarificación por riesgo",
+        "Aceptación indiscriminada"
+      ],
+      "correct": 2,
+      "subtopic": "Selección adversa",
+      "difficulty": "advanced",
+      "explanation": "Segregar por riesgo esperado reduce asimetrías de información.",
+      "source": "Cap. 2 – Bases Técnicas",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-THEO-0027",
+      "question": "Obligación del agente frente al cliente:",
+      "options": [
+        "Ofrecer asesoría legal gratuita",
+        "Modificar exclusiones a voluntad",
+        "Garantizar rendimiento",
+        "Brindar información clara, veraz y suficiente sobre coberturas y obligaciones"
+      ],
+      "correct": 3,
+      "subtopic": "Deber de información del agente",
+      "difficulty": "basic",
+      "explanation": "Se exige idoneidad del producto y transparencia.",
+      "source": "Cap. 5 – Intermediación y Comercialización del Seguro",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-THEO-0030",
+      "question": "La CNSF tiene como función principal:",
+      "options": [
+        "Conciliar controversias individuales",
+        "Registrar contratos colectivos laborales",
+        "Supervisar solvencia y disciplina del mercado asegurador",
+        "Emitir moneda"
+      ],
+      "correct": 2,
+      "subtopic": "CNSF – funciones",
+      "difficulty": "basic",
+      "explanation": "Órgano supervisor prudencial del sector asegurador.",
+      "source": "Cap. 3 – La Actividad Aseguradora",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-THEO-0035",
+      "question": "La 'revocación' de autorización implica:",
+      "options": [
+        "Suspensión temporal",
+        "Amonestación",
+        "Pérdida definitiva de la autorización para operar",
+        "Multa simbólica"
+      ],
+      "correct": 2,
+      "subtopic": "Sanciones – revocación",
+      "difficulty": "advanced",
+      "explanation": "Sanción más severa del catálogo.",
+      "source": "Cap. 6 – Sanciones e Infracciones",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-L3-CAL-001",
+      "question": "Regla proporcional (infraseguro). Valor real del bien: $200,000. Suma asegurada: $120,000. Daño: $40,000. ¿Indemnización aproximada?",
+      "options": [
+        "$24,000",
+        "$40,000",
+        "$19,200",
+        "$40,000"
+      ],
+      "correct": 0,
+      "subtopic": "Regla proporcional",
+      "difficulty": "advanced",
+      "explanation": "Indemnización = (Suma Asegurada / Valor Real) × Daño = (120000/200000)×40000 ≈ $24,000.",
+      "source": "Cap. 1 – El Riesgo y el Seguro, Regla proporcional",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-L3-CAL-002",
+      "question": "Regla proporcional (infraseguro). Valor real del bien: $750,000. Suma asegurada: $600,000. Daño: $112,500. ¿Indemnización aproximada?",
+      "options": [
+        "$72,000",
+        "$112,500",
+        "$112,500",
+        "$90,000"
+      ],
+      "correct": 3,
+      "subtopic": "Regla proporcional",
+      "difficulty": "advanced",
+      "explanation": "Indemnización = (Suma Asegurada / Valor Real) × Daño = (600000/750000)×112500 ≈ $90,000.",
+      "source": "Cap. 1 – El Riesgo y el Seguro, Regla proporcional",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-L3-CAL-003",
+      "question": "Regla proporcional (infraseguro). Valor real del bien: $750,000. Suma asegurada: $675,000. Daño: $75,000. ¿Indemnización aproximada?",
+      "options": [
+        "$67,500",
+        "$75,000",
+        "$75,000",
+        "$54,000"
+      ],
+      "correct": 0,
+      "subtopic": "Regla proporcional",
+      "difficulty": "advanced",
+      "explanation": "Indemnización = (Suma Asegurada / Valor Real) × Daño = (675000/750000)×75000 ≈ $67,500.",
+      "source": "Cap. 1 – El Riesgo y el Seguro, Regla proporcional",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-L3-CAL-004",
+      "question": "Regla proporcional (infraseguro). Valor real del bien: $1,000,000. Suma asegurada: $600,000. Daño: $200,000. ¿Indemnización aproximada?",
+      "options": [
+        "$200,000",
+        "$120,000",
+        "$200,000",
+        "$96,000"
+      ],
+      "correct": 1,
+      "subtopic": "Regla proporcional",
+      "difficulty": "advanced",
+      "explanation": "Indemnización = (Suma Asegurada / Valor Real) × Daño = (600000/1000000)×200000 ≈ $120,000.",
+      "source": "Cap. 1 – El Riesgo y el Seguro, Regla proporcional",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-L3-CAL-005",
+      "question": "Regla proporcional (infraseguro). Valor real del bien: $400,000. Suma asegurada: $320,000. Daño: $40,000. ¿Indemnización aproximada?",
+      "options": [
+        "$32,000",
+        "$25,600",
+        "$40,000",
+        "$40,000"
+      ],
+      "correct": 0,
+      "subtopic": "Regla proporcional",
+      "difficulty": "advanced",
+      "explanation": "Indemnización = (Suma Asegurada / Valor Real) × Daño = (320000/400000)×40000 ≈ $32,000.",
+      "source": "Cap. 1 – El Riesgo y el Seguro, Regla proporcional",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-L3-CAL-006",
+      "question": "Regla proporcional (infraseguro). Valor real del bien: $500,000. Suma asegurada: $400,000. Daño: $150,000. ¿Indemnización aproximada?",
+      "options": [
+        "$120,000",
+        "$96,000",
+        "$150,000",
+        "$150,000"
+      ],
+      "correct": 0,
+      "subtopic": "Regla proporcional",
+      "difficulty": "advanced",
+      "explanation": "Indemnización = (Suma Asegurada / Valor Real) × Daño = (400000/500000)×150000 ≈ $120,000.",
+      "source": "Cap. 1 – El Riesgo y el Seguro, Regla proporcional",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-L3-CPT-025",
+      "question": "El 'interés asegurable' en daños es:",
+      "options": [
+        "Interés económico en que no ocurra el siniestro sobre un bien o derecho",
+        "Interés moral sin valor económico",
+        "Simple expectativa de lucro",
+        "Interés del agente"
+      ],
+      "correct": 0,
+      "subtopic": "Interés asegurable",
+      "difficulty": "basic",
+      "explanation": "Sin interés asegurable no procede la indemnización por daños.",
+      "source": "Cap. 4 – El Contrato de Seguros, síntesis",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-L3-CPT-037",
+      "question": "El 'deducible' es:",
+      "options": [
+        "Parte de la pérdida a cargo del asegurado antes de aplicar la cobertura",
+        "Un impuesto",
+        "Un endoso obligatorio",
+        "La suma asegurada"
+      ],
+      "correct": 0,
+      "subtopic": "Deducible",
+      "difficulty": "basic",
+      "explanation": "Ayuda a mitigar riesgo moral y contener frecuencia de reclamaciones menores.",
+      "source": "Cap. 4 – El Contrato de Seguros, síntesis",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-L3-CPT-081",
+      "question": "La 'franquicia' en daños opera como:",
+      "options": [
+        "Porción siempre a cargo del asegurado",
+        "Recargo por fraccionamiento",
+        "Umbral por debajo del cual no hay pago y por encima se paga la pérdida total",
+        "Impuesto a la prima"
+      ],
+      "correct": 2,
+      "subtopic": "Distribución del riesgo",
+      "difficulty": "intermediate",
+      "explanation": "A diferencia del deducible, la franquicia no se descuenta si se supera su umbral.",
+      "source": "Cap. 1 – El Riesgo y el Seguro, síntesis",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-NEW-0001",
+      "question": "El objetivo del deducible es:",
+      "options": [
+        "Aumentar la prima por ley",
+        "Reducir reclamaciones menores y alinear incentivos",
+        "Eliminar coaseguro",
+        "Duplicar la suma asegurada"
+      ],
+      "correct": 1,
+      "subtopic": "Deducible",
+      "difficulty": "basic",
+      "explanation": "Disuade siniestros de baja cuantía y mitiga riesgo moral.",
+      "source": "Cap. 4 – El Contrato de Seguros",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-THEO-0009",
+      "question": "El principio de indemnización busca:",
+      "options": [
+        "Otorgar ganancia",
+        "Duplicar la suma asegurada",
+        "Siempre pagar valor nuevo",
+        "Restituir el estado previo sin lucro"
+      ],
+      "correct": 3,
+      "subtopic": "Principios del seguro",
+      "difficulty": "basic",
+      "explanation": "Pago limitado al daño real sufrido.",
+      "source": "Cap. 1 – El Riesgo y el Seguro",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-THEO-0001",
+      "question": "Una sanción de mayor gravedad es:",
+      "options": [
+        "Multa ligera",
+        "Revocación de autorización",
+        "Advertencia verbal",
+        "Amonestación"
+      ],
+      "correct": 1,
+      "subtopic": "Sanciones – revocación",
+      "difficulty": "advanced",
+      "explanation": "Implica pérdida definitiva de la autorización.",
+      "source": "Cap. 6 – Sanciones e Infracciones",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-THEO-0002",
+      "question": "¿Qué es el interés asegurable en seguros de daños?",
+      "options": [
+        "Interés económico legítimo en la conservación del bien o derecho",
+        "Deseo moral sin valor económico",
+        "Simple expectativa de lucro",
+        "Interés del agente"
+      ],
+      "correct": 0,
+      "subtopic": "Interés asegurable",
+      "difficulty": "basic",
+      "explanation": "Sin interés asegurable no procede indemnización en daños.",
+      "source": "Cap. 4 – El Contrato de Seguros",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-THEO-0003",
+      "question": "¿Qué describe mejor el principio de indemnización?",
+      "options": [
+        "Otorgar ganancia por el siniestro",
+        "Pagar valor nuevo siempre",
+        "Restituir al asegurado sin generar enriquecimiento",
+        "Duplicar automáticamente la suma asegurada"
+      ],
+      "correct": 2,
+      "subtopic": "Principios del contrato",
+      "difficulty": "basic",
+      "explanation": "El pago se limita al daño real.",
+      "source": "Cap. 1 – El Riesgo y el Seguro",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-THEO-0004",
+      "question": "¿Cuál es una condición esencial del riesgo asegurable?",
+      "options": [
+        "Que sea incierto, lícito y mensurable económicamente",
+        "Que garantice ganancia",
+        "Que sea seguro y fechado",
+        "Que no tenga efectos económicos"
+      ],
+      "correct": 0,
+      "subtopic": "Características del riesgo asegurable",
+      "difficulty": "basic",
+      "explanation": "La incertidumbre y la cuantificación son requisitos imprescindibles.",
+      "source": "Cap. 1 – El Riesgo y el Seguro",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-THEO-0007",
+      "question": "La CONDUSEF puede:",
+      "options": [
+        "Conciliar y, en su caso, arbitrar controversias con usuarios",
+        "Emitir moneda",
+        "Autorizar ramos de operación",
+        "Fijar capital de solvencia"
+      ],
+      "correct": 0,
+      "subtopic": "CONDUSEF – atribuciones",
+      "difficulty": "basic",
+      "explanation": "Defiende derechos de usuarios y promueve educación financiera.",
+      "source": "Cap. 7 – CONDUSEF",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-THEO-0008",
+      "question": "¿Qué función cumple la reserva técnica?",
+      "options": [
+        "Garantizar obligaciones futuras frente a los asegurados",
+        "Reemplazar el reaseguro",
+        "Aumentar utilidades del agente",
+        "Cubrir solo gastos de administración"
+      ],
+      "correct": 0,
+      "subtopic": "Reservas técnicas",
+      "difficulty": "intermediate",
+      "explanation": "Proveen solvencia y estabilidad para el cumplimiento de compromisos.",
+      "source": "Cap. 2 – Bases Técnicas",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-THEO-0011",
+      "question": "La reticencia en la solicitud puede dar lugar a:",
+      "options": [
+        "Exención de deducibles",
+        "Rescisión o nulidad relativa si afectó la suscripción",
+        "Aumento de suma asegurada sin costo",
+        "Pago automático del siniestro"
+      ],
+      "correct": 1,
+      "subtopic": "Declaración del riesgo",
+      "difficulty": "advanced",
+      "explanation": "Omisiones relevantes habilitan ajustes o rescisión.",
+      "source": "Cap. 4 – El Contrato de Seguros",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-THEO-0014",
+      "question": "En PLD/FT, una operación inusual es:",
+      "options": [
+        "Toda transferencia internacional",
+        "Todo pago con tarjeta",
+        "Todo pago en efectivo",
+        "Incongruente con el perfil del cliente o sin sustento económico aparente"
+      ],
+      "correct": 3,
+      "subtopic": "PLD – operaciones inusuales",
+      "difficulty": "advanced",
+      "explanation": "Se analiza y, en su caso, se reporta conforme a la normatividad.",
+      "source": "Cap. 8 – PLD/FT",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-THEO-0017",
+      "question": "La CNSF tiene por objeto:",
+      "options": [
+        "Emitir sentencias judiciales",
+        "Regular la profesión médica",
+        "Autorizar bancos de desarrollo",
+        "Supervisar y sancionar al sector asegurador para preservar su solvencia"
+      ],
+      "correct": 3,
+      "subtopic": "CNSF – funciones",
+      "difficulty": "basic",
+      "explanation": "Órgano supervisor prudencial del mercado de seguros.",
+      "source": "Cap. 3 – La Actividad Aseguradora",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "AG-THEO-0018",
+      "question": "Una finalidad del deducible/coaseguro es:",
+      "options": [
+        "Garantizar utilidad al agente",
+        "Mitigar riesgo moral y desalentar reclamos de baja cuantía",
+        "Duplicar primas",
+        "Eliminar exclusiones"
+      ],
+      "correct": 1,
+      "subtopic": "Distribución del riesgo",
+      "difficulty": "intermediate",
+      "explanation": "Comparte el costo residual y alinea incentivos.",
+      "source": "Cap. 4 – El Contrato de Seguros",
+      "module": "Aspectos Generales"
+    },
+    {
+      "id": "RID-0236",
+      "question": "El endoso de Fenómenos Hidrometeorológicos ampara",
+      "options": [
+        "Terremoto y erupción",
+        "Humo y tizne",
+        "Huracán, inundación, granizo, marejada y vientos tempestuosos",
+        "Colisión de naves"
+      ],
+      "correct": 2,
+      "subtopic": "Hogar – FH",
+      "difficulty": "intermediate",
+      "explanation": "Rige cuando está contratado y aparece amparado en carátula.",
+      "source": "Hogar – FH",
+      "module": "Riesgos Individuales de Seguro de Daños"
+    },
+    {
+      "id": "RID-0128",
+      "question": "La póliza de hogar suele operar como",
+      "options": [
+        "Prorrata pura",
+        "Segundo riesgo obligatorio",
+        "Exceso estricto",
+        "Seguro a primer riesgo"
+      ],
+      "correct": 3,
+      "subtopic": "Hogar – Estructura",
+      "difficulty": "intermediate",
+      "explanation": "Coberturas por secciones a primer riesgo.",
+      "source": "Hogar – Estructura",
+      "module": "Riesgos Individuales de Seguro de Daños"
+    },
+    {
+      "id": "RID-0187",
+      "question": "La reinstalación automática de SA aplica en",
+      "options": [
+        "Únicamente DM",
+        "DM, RC, GMM ocupantes y adaptaciones/conversiones",
+        "Equipo especial y RT",
+        "Solo RC"
+      ],
+      "correct": 1,
+      "subtopic": "Autos – Cláusulas al siniestro",
+      "difficulty": "intermediate",
+      "explanation": "No aplica a equipo especial, carga y RT.",
+      "source": "Autos – Reinstalación",
+      "module": "Riesgos Individuales de Seguro de Daños"
+    },
+    {
+      "id": "RID-0132",
+      "question": "En RC Familiar, se considera 'tercero' a",
+      "options": [
+        "Personal doméstico en labores",
+        "Cónyuge",
+        "Quien no depende civil o económicamente del asegurado",
+        "Hijos menores estudiantes"
+      ],
+      "correct": 2,
+      "subtopic": "Hogar – RC Familiar",
+      "difficulty": "advanced",
+      "explanation": "Cubre daños a terceros ajenos a los asegurados y dependientes.",
+      "source": "Hogar – Sección IV",
+      "module": "Riesgos Individuales de Seguro de Daños"
+    },
+    {
+      "id": "RID-0194",
+      "question": "En Robo Total, si no se contrató DM, quedan cubiertos además",
+      "options": [
+        "Robo parcial en cualquier caso",
+        "Incendio, rayo, explosión y fenómenos meteorológicos",
+        "Colisión y vuelco siempre",
+        "Cristales siempre"
+      ],
+      "correct": 1,
+      "subtopic": "Autos – Robo total (limitada)",
+      "difficulty": "intermediate",
+      "explanation": "RT puede incluir ciertos riesgos accidentales cuando no hay DM.",
+      "source": "Autos – RT limitada",
+      "module": "Riesgos Individuales de Seguro de Daños"
+    },
+    {
+      "id": "RID-RP-05",
+      "question": "Infraseguro (Regla Proporcional): VR=$800,000, SA=$720,000, daño=$80,000. ¿Pago aproximado?",
+      "options": [
+        "$67,000",
+        "$80,000",
+        "$72,000",
+        "$80,000"
+      ],
+      "correct": 2,
+      "subtopic": "Autos – Regla proporcional (infraseguro)",
+      "difficulty": "advanced",
+      "explanation": "Pago ≈ (SA/VR)×Daño = (720000/800000)×80000 ≈ $72,000.",
+      "source": "Autos – RP",
+      "module": "Riesgos Individuales de Seguro de Daños"
+    },
+    {
+      "id": "RID-RP-03",
+      "question": "Infraseguro (Regla Proporcional): VR=$450,000, SA=$270,000, daño=$90,000. ¿Pago aproximado?",
+      "options": [
+        "$90,000",
+        "$54,000",
+        "$90,000",
+        "$49,000"
+      ],
+      "correct": 1,
+      "subtopic": "Autos – Regla proporcional (infraseguro)",
+      "difficulty": "advanced",
+      "explanation": "Pago ≈ (SA/VR)×Daño = (270000/450000)×90000 ≈ $54,000.",
+      "source": "Autos – RP",
+      "module": "Riesgos Individuales de Seguro de Daños"
+    },
+    {
+      "id": "RID-RP-06",
+      "question": "Infraseguro (Regla Proporcional): VR=$300,000, SA=$150,000, daño=$60,000. ¿Pago aproximado?",
+      "options": [
+        "$60,000",
+        "$60,000",
+        "$30,000",
+        "$25,000"
+      ],
+      "correct": 2,
+      "subtopic": "Autos – Regla proporcional (infraseguro)",
+      "difficulty": "advanced",
+      "explanation": "Pago ≈ (SA/VR)×Daño = (150000/300000)×60000 ≈ $30,000.",
+      "source": "Autos – RP",
+      "module": "Riesgos Individuales de Seguro de Daños"
+    },
+    {
+      "id": "RID-RP-01",
+      "question": "Infraseguro (Regla Proporcional): VR=$1,000,000, SA=$500,000, daño=$250,000. ¿Pago aproximado?",
+      "options": [
+        "$250,000",
+        "$125,000",
+        "$120,000",
+        "$250,000"
+      ],
+      "correct": 1,
+      "subtopic": "Autos – Regla proporcional (infraseguro)",
+      "difficulty": "advanced",
+      "explanation": "Pago ≈ (SA/VR)×Daño = (500000/1000000)×250000 ≈ $125,000.",
+      "source": "Autos – RP",
+      "module": "Riesgos Individuales de Seguro de Daños"
+    },
+    {
+      "id": "RID-RP-02",
+      "question": "Infraseguro (Regla Proporcional): VR=$1,000,000, SA=$500,000, daño=$100,000. ¿Pago aproximado?",
+      "options": [
+        "$50,000",
+        "$100,000",
+        "$45,000",
+        "$100,000"
+      ],
+      "correct": 0,
+      "subtopic": "Autos – Regla proporcional (infraseguro)",
+      "difficulty": "advanced",
+      "explanation": "Pago ≈ (SA/VR)×Daño = (500000/1000000)×100000 ≈ $50,000.",
+      "source": "Autos – RP",
+      "module": "Riesgos Individuales de Seguro de Daños"
+    },
+    {
+      "id": "RID-RP-04",
+      "question": "Infraseguro (Regla Proporcional): VR=$600,000, SA=$480,000, daño=$120,000. ¿Pago aproximado?",
+      "options": [
+        "$120,000",
+        "$120,000",
+        "$96,000",
+        "$91,000"
+      ],
+      "correct": 2,
+      "subtopic": "Autos – Regla proporcional (infraseguro)",
+      "difficulty": "advanced",
+      "explanation": "Pago ≈ (SA/VR)×Daño = (480000/600000)×120000 ≈ $96,000.",
+      "source": "Autos – RP",
+      "module": "Riesgos Individuales de Seguro de Daños"
+    },
+    {
+      "id": "RID-0172",
+      "question": "Una exclusión frecuente de Daños Materiales es",
+      "options": [
+        "Fallas mecánicas y desgaste",
+        "Colisión y vuelco",
+        "Incendio y explosión",
+        "Huelgas y alborotos"
+      ],
+      "correct": 0,
+      "subtopic": "Autos – Daños materiales (exclusiones)",
+      "difficulty": "intermediate",
+      "explanation": "DM cubre eventos súbitos; desgaste/fallas quedan fuera.",
+      "source": "Autos – DM exclusiones",
+      "module": "Riesgos Individuales de Seguro de Daños"
+    },
+    {
+      "id": "RID-0222",
+      "question": "Obligación del asegurado tras un siniestro",
+      "options": [
+        "Vender el vehículo sin avisar",
+        "Avisar a la compañía y mitigar el daño",
+        "No presentar documentos",
+        "Reparar por su cuenta sin valuación"
+      ],
+      "correct": 1,
+      "subtopic": "Autos – Obligaciones del asegurado",
+      "difficulty": "advanced",
+      "explanation": "Aviso oportuno y medidas de mitigación son esenciales.",
+      "source": "Autos – Siniestros",
+      "module": "Riesgos Individuales de Seguro de Daños"
+    },
+    {
+      "id": "RID-0188",
+      "question": "'Incendio Todo Riesgo' incluye, entre otros",
+      "options": [
+        "Falta de mantenimiento",
+        "Explosión, humo súbito, colisión de vehículos, vandalismo",
+        "Deficiencias constructivas",
+        "Guerra y expropiación"
+      ],
+      "correct": 1,
+      "subtopic": "Hogar – Incendio T.R.",
+      "difficulty": "intermediate",
+      "explanation": "Cubre todo daño salvo exclusiones y adicionales no contratados.",
+      "source": "Hogar – Incendio TR",
+      "module": "Riesgos Individuales de Seguro de Daños"
+    },
+    {
+      "id": "RID-0106",
+      "question": "En hogar, 'valor real' significa",
+      "options": [
+        "Costo nuevo sin depreciación",
+        "Costo de reconstrucción menos depreciación",
+        "Avalúo fiscal",
+        "Precio de mercado del terreno"
+      ],
+      "correct": 1,
+      "subtopic": "Hogar – Valores",
+      "difficulty": "basic",
+      "explanation": "Valor real descuenta depreciación por uso/antigüedad.",
+      "source": "Hogar – Definiciones",
+      "module": "Riesgos Individuales de Seguro de Daños"
+    },
+    {
+      "id": "RID-0217",
+      "question": "'Valor de reposición' implica",
+      "options": [
+        "Costo con depreciación fija",
+        "Reconstrucción/reposición a nuevo sin depreciación",
+        "Precio catastral",
+        "Valor acordado por conveniencia"
+      ],
+      "correct": 1,
+      "subtopic": "Hogar – Valores",
+      "difficulty": "basic",
+      "explanation": "Se indemniza a costo nuevo de características equivalentes.",
+      "source": "Hogar – Definiciones",
+      "module": "Riesgos Individuales de Seguro de Daños"
+    },
+    {
+      "id": "RID-0129",
+      "question": "En Sección I (inmuebles) se cubren",
+      "options": [
+        "Vehículos con placa",
+        "Edificio, anexos e instalaciones fijas (no el terreno)",
+        "Terreno y suelos",
+        "Drenaje público"
+      ],
+      "correct": 1,
+      "subtopic": "Hogar – Sección I",
+      "difficulty": "basic",
+      "explanation": "Incluye bardas, rejas, instalaciones; excluye terreno.",
+      "source": "Hogar – Sección I",
+      "module": "Riesgos Individuales de Seguro de Daños"
+    },
+    {
+      "id": "RID-0190",
+      "question": "'Extensión de RC' protege cuando el conductor principal maneja",
+      "options": [
+        "Otra unidad de características equivalentes",
+        "Auto de renta diaria",
+        "Cualquier vehículo sin límite",
+        "Transporte pesado siempre"
+      ],
+      "correct": 0,
+      "subtopic": "Autos – Extensión RC",
+      "difficulty": "basic",
+      "explanation": "Debe ser unidad equivalente y respeta exclusiones típicas.",
+      "source": "Autos – Extensión RC",
+      "module": "Riesgos Individuales de Seguro de Daños"
+    },
+    {
+      "id": "RID-0249",
+      "question": "Se devuelven primas no devengadas cuando",
+      "options": [
+        "Cambia el domicilio",
+        "Termina el contrato anticipadamente o hay pérdida total",
+        "A petición del agente",
+        "Finaliza vigencia sin siniestros"
+      ],
+      "correct": 1,
+      "subtopic": "Autos – Devolución de primas",
+      "difficulty": "intermediate",
+      "explanation": "La devolución requiere solicitud en plazo conforme condiciones.",
+      "source": "Autos – Devolución",
+      "module": "Riesgos Individuales de Seguro de Daños"
+    },
+    {
+      "id": "RID-0175",
+      "question": "La aseguradora, con expediente completo, debe indemnizar en",
+      "options": [
+        "Al cierre de la vigencia",
+        "Inmediatamente al aviso",
+        "Hasta 30 días",
+        "72 horas"
+      ],
+      "correct": 2,
+      "subtopic": "Autos – Obligaciones de la compañía",
+      "difficulty": "basic",
+      "explanation": "El retraso genera interés moratorio según condiciones.",
+      "source": "Autos – Siniestros",
+      "module": "Riesgos Individuales de Seguro de Daños"
+    },
+    {
+      "id": "RID-0235",
+      "question": "'Gastos extraordinarios' cubren",
+      "options": [
+        "Pago de hipoteca",
+        "Mantenimiento preventivo",
+        "Renta temporal, mudanza y almacenaje por siniestro cubierto",
+        "Mejoras y ampliaciones"
+      ],
+      "correct": 2,
+      "subtopic": "Hogar – Pérdidas consecuenciales",
+      "difficulty": "basic",
+      "explanation": "Opera por daños amparados en la póliza.",
+      "source": "Hogar – Sección III",
+      "module": "Riesgos Individuales de Seguro de Daños"
+    },
+    {
+      "id": "RID-0186",
+      "question": "'Remoción de escombros' indemniza",
+      "options": [
+        "Daños no asegurados",
+        "Fallas por mala construcción",
+        "Demolición, limpieza y acarreos necesarios tras daño cubierto",
+        "Cambios estéticos"
+      ],
+      "correct": 2,
+      "subtopic": "Hogar – Pérdidas consecuenciales",
+      "difficulty": "advanced",
+      "explanation": "Solo si deriva de riesgos cubiertos.",
+      "source": "Hogar – Sección III",
+      "module": "Riesgos Individuales de Seguro de Daños"
+    },
+    {
+      "id": "RID-0176",
+      "question": "'Equipo especial' se entiende como",
+      "options": [
+        "Garantías del fabricante",
+        "Mantenimiento preventivo",
+        "Refacciones originales",
+        "Accesorios no de fábrica instalados por solicitud (p. ej. audio, rines, blindaje)"
+      ],
+      "correct": 3,
+      "subtopic": "Autos – Equipo especial",
+      "difficulty": "intermediate",
+      "explanation": "Se ampara por riesgos DM/RT; blindaje suele requerir convenio expreso.",
+      "source": "Autos – Equipo especial",
+      "module": "Riesgos Individuales de Seguro de Daños"
+    },
+    {
+      "id": "RID-0010",
+      "question": "En Sección II (contenidos) se cubren",
+      "options": [
+        "Muebles, enseres, ropa y equipo electrodoméstico/electrónico",
+        "Vehículos con placa",
+        "Dinero sin límite",
+        "Planos industriales"
+      ],
+      "correct": 0,
+      "subtopic": "Hogar – Sección II",
+      "difficulty": "basic",
+      "explanation": "Contenidos domésticos y cristales de contenidos.",
+      "source": "Hogar – Sección II",
+      "module": "Riesgos Individuales de Seguro de Daños"
+    },
+    {
+      "id": "RID-0231",
+      "question": "La territorialidad típica de RC Autos es",
+      "options": [
+        "México, EUA y Canadá",
+        "Solo en el estado de emplacamiento",
+        "Solo territorio nacional",
+        "Cobertura mundial"
+      ],
+      "correct": 2,
+      "subtopic": "Autos – Territorialidad",
+      "difficulty": "basic",
+      "explanation": "DM/RT/GMM: MX-USA-CAN; RC: solo México, según condiciones.",
+      "source": "Autos – Territorialidad",
+      "module": "Riesgos Individuales de Seguro de Daños"
+    },
+    {
+      "id": "RID-0185",
+      "question": "'Valor convenido' se usa típicamente para",
+      "options": [
+        "Joyas, arte, antigüedades u objetos únicos",
+        "Ropa y libros",
+        "Electrodomésticos comunes",
+        "Muebles estándar"
+      ],
+      "correct": 0,
+      "subtopic": "Hogar – Valores convenidos",
+      "difficulty": "intermediate",
+      "explanation": "Se fija por acuerdo, usualmente con avalúo pericial.",
+      "source": "Hogar – Avalúos",
+      "module": "Riesgos Individuales de Seguro de Daños"
+    },
+    {
+      "id": "RID-DC-04",
+      "question": "Cálculo: Daño $90,000, Deducible $20,000, Coaseguro 10%. ¿Indemnización?",
+      "options": [
+        "$81,000",
+        "$58,000",
+        "$63,000",
+        "$70,000"
+      ],
+      "correct": 2,
+      "subtopic": "Autos – Deducible y coaseguro",
+      "difficulty": "intermediate",
+      "explanation": "Base = 90,000 − 20,000 = $70,000; Indemnización = Base×(1−10%) = $63,000.",
+      "source": "Autos – Deducible/Coaseguro",
+      "module": "Riesgos Individuales de Seguro de Daños"
+    },
+    {
+      "id": "RID-DC-06",
+      "question": "Cálculo: Daño $130,000, Deducible $10,000, Coaseguro 20%. ¿Indemnización?",
+      "options": [
+        "$96,000",
+        "$120,000",
+        "$104,000",
+        "$91,000"
+      ],
+      "correct": 0,
+      "subtopic": "Autos – Deducible y coaseguro",
+      "difficulty": "intermediate",
+      "explanation": "Base = 130,000 − 10,000 = $120,000; Indemnización = Base×(1−20%) = $96,000.",
+      "source": "Autos – Deducible/Coaseguro",
+      "module": "Riesgos Individuales de Seguro de Daños"
+    },
+    {
+      "id": "RID-DC-05",
+      "question": "Cálculo: Daño $180,000, Deducible $20,000, Coaseguro 20%. ¿Indemnización?",
+      "options": [
+        "$123,000",
+        "$128,000",
+        "$144,000",
+        "$160,000"
+      ],
+      "correct": 1,
+      "subtopic": "Autos – Deducible y coaseguro",
+      "difficulty": "intermediate",
+      "explanation": "Base = 180,000 − 20,000 = $160,000; Indemnización = Base×(1−20%) = $128,000.",
+      "source": "Autos – Deducible/Coaseguro",
+      "module": "Riesgos Individuales de Seguro de Daños"
+    },
+    {
+      "id": "RID-DC-01",
+      "question": "Cálculo: Daño $90,000, Deducible $10,000, Coaseguro 20%. ¿Indemnización?",
+      "options": [
+        "$72,000",
+        "$64,000",
+        "$59,000",
+        "$80,000"
+      ],
+      "correct": 1,
+      "subtopic": "Autos – Deducible y coaseguro",
+      "difficulty": "intermediate",
+      "explanation": "Base = 90,000 − 10,000 = $80,000; Indemnización = Base×(1−20%) = $64,000.",
+      "source": "Autos – Deducible/Coaseguro",
+      "module": "Riesgos Individuales de Seguro de Daños"
+    },
+    {
+      "id": "RID-DC-03",
+      "question": "Cálculo: Daño $180,000, Deducible $5,000, Coaseguro 20%. ¿Indemnización?",
+      "options": [
+        "$175,000",
+        "$144,000",
+        "$140,000",
+        "$135,000"
+      ],
+      "correct": 2,
+      "subtopic": "Autos – Deducible y coaseguro",
+      "difficulty": "intermediate",
+      "explanation": "Base = 180,000 − 5,000 = $175,000; Indemnización = Base×(1−20%) = $140,000.",
+      "source": "Autos – Deducible/Coaseguro",
+      "module": "Riesgos Individuales de Seguro de Daños"
+    },
+    {
+      "id": "RID-DC-02",
+      "question": "Cálculo: Daño $60,000, Deducible $20,000, Coaseguro 10%. ¿Indemnización?",
+      "options": [
+        "$31,000",
+        "$36,000",
+        "$54,000",
+        "$40,000"
+      ],
+      "correct": 1,
+      "subtopic": "Autos – Deducible y coaseguro",
+      "difficulty": "intermediate",
+      "explanation": "Base = 60,000 − 20,000 = $40,000; Indemnización = Base×(1−10%) = $36,000.",
+      "source": "Autos – Deducible/Coaseguro",
+      "module": "Riesgos Individuales de Seguro de Daños"
+    },
+    {
+      "id": "RID-0075",
+      "question": "En Autos, ¿cuáles son coberturas básicas del paquete?",
+      "options": [
+        "Equipo especial, RC en extranjero, auto sustituto, extensión RC",
+        "Cristales, robo parcial, ambulancia, asistencia mecánica",
+        "Daños materiales, Robo total, RC, GMM a ocupantes",
+        "Todo riesgo, vandalismo, terremoto, lucro cesante"
+      ],
+      "correct": 2,
+      "subtopic": "Autos – Coberturas básicas",
+      "difficulty": "basic",
+      "explanation": "Las cuatro bases del ramo autos son DM, RT, RC y GMM ocupantes.",
+      "source": "Autos – Tipos de coberturas",
+      "module": "Riesgos Individuales de Seguro de Daños"
+    },
+    {
+      "id": "RID-0184",
+      "question": "El endoso de Terremoto ampara",
+      "options": [
+        "Sismo, erupción, lava y ceniza",
+        "Hundimiento paulatino",
+        "Asentamientos normales",
+        "Marejada e inundaciones"
+      ],
+      "correct": 0,
+      "subtopic": "Hogar – Terremoto",
+      "difficulty": "intermediate",
+      "explanation": "Excluye marejada; no cubre asentamientos normales no repentinos.",
+      "source": "Hogar – Terremoto",
+      "module": "Riesgos Individuales de Seguro de Daños"
+    },
+    {
+      "id": "RID-NEW-0001",
+      "question": "RC Autos ampara principalmente:",
+      "options": [
+        "Bienes bajo custodia",
+        "Daños a ocupantes del propio vehículo",
+        "Daños a terceros en sus bienes o persona imputables al asegurado",
+        "Multas administrativas"
+      ],
+      "correct": 2,
+      "subtopic": "Autos – RC",
+      "difficulty": "basic",
+      "explanation": "Terceros: ajenos a los asegurados y dependientes.",
+      "source": "Autos – RC",
+      "module": "Riesgos Individuales de Seguro de Daños"
+    },
+    {
+      "id": "RID-NEW-0002",
+      "question": "Fenómenos hidrometeorológicos comprenden:",
+      "options": [
+        "Huracán, inundación, granizo, marejada y vientos tempestuosos",
+        "Humo y tizne",
+        "Terremoto y erupción",
+        "Asentamientos normales"
+      ],
+      "correct": 0,
+      "subtopic": "Hogar – FH",
+      "difficulty": "intermediate",
+      "explanation": "Aplica si el endoso está contratado.",
+      "source": "Hogar – FH",
+      "module": "Riesgos Individuales de Seguro de Daños"
+    },
+    {
+      "id": "RID-NEW-0003",
+      "question": "En Autos, 'equipo especial' es:",
+      "options": [
+        "Refacciones en garantía",
+        "Partes de serie",
+        "Accesorios no de fábrica instalados a petición",
+        "Pintura estética"
+      ],
+      "correct": 2,
+      "subtopic": "Autos – Equipo especial",
+      "difficulty": "intermediate",
+      "explanation": "Suele ampararse bajo DM/RT con condiciones específicas.",
+      "source": "Autos – Equipo especial",
+      "module": "Riesgos Individuales de Seguro de Daños"
+    },
+    {
+      "id": "RID-NEW-0004",
+      "question": "Obligación del asegurado ante siniestro:",
+      "options": [
+        "Negarse a declarar",
+        "Enajenar el bien",
+        "Reparar sin autorización",
+        "Avisar y mitigar el daño razonablemente"
+      ],
+      "correct": 3,
+      "subtopic": "Siniestros – Obligaciones del asegurado",
+      "difficulty": "basic",
+      "explanation": "Aviso oportuno y cooperación con la compañía.",
+      "source": "Condiciones generales",
+      "module": "Riesgos Individuales de Seguro de Daños"
+    },
+    {
+      "id": "RID-NEW-0008",
+      "question": "En hogar, 'valor real' equivale a:",
+      "options": [
+        "Precio del terreno",
+        "Costo de reconstrucción menos depreciación",
+        "Costo nuevo sin depreciación",
+        "Avalúo fiscal"
+      ],
+      "correct": 1,
+      "subtopic": "Hogar – Valores",
+      "difficulty": "basic",
+      "explanation": "Valor real descuenta depreciación por uso y antigüedad.",
+      "source": "Hogar – Definiciones",
+      "module": "Riesgos Individuales de Seguro de Daños"
+    },
+    {
+      "id": "RID-NEW-0009",
+      "question": "Pérdidas consecuenciales en hogar incluyen:",
+      "options": [
+        "Lucro por mejoras",
+        "Reparaciones voluntarias",
+        "Mantenimiento preventivo",
+        "Gastos extraordinarios y remoción de escombros"
+      ],
+      "correct": 3,
+      "subtopic": "Hogar – Pérdidas consecuenciales",
+      "difficulty": "basic",
+      "explanation": "Derivadas de siniestro cubierto por la póliza.",
+      "source": "Hogar – Sección III",
+      "module": "Riesgos Individuales de Seguro de Daños"
+    },
+    {
+      "id": "SMF-0007",
+      "question": "Tasa real es:",
+      "options": [
+        "Aproximadamente tasa nominal menos inflación (ajustada por inflación)",
+        "Tasa pasiva",
+        "Tasa de recuperación",
+        "Tasa de impuestos"
+      ],
+      "correct": 0,
+      "subtopic": "Tasas – real",
+      "difficulty": "basic",
+      "explanation": "Mide rendimiento descontando inflación.",
+      "source": "Cap. 4 – Tasas y conceptos (nominal/efectiva/real; interés simple/compuesto)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-0041",
+      "question": "La CNSF supervisa a:",
+      "options": [
+        "AFORES y SIEFORES",
+        "Bancos múltiples",
+        "Instituciones de seguros y fianzas",
+        "Casas de bolsa y operadoras"
+      ],
+      "correct": 2,
+      "subtopic": "Comisiones – CNSF",
+      "difficulty": "basic",
+      "explanation": "Vigilancia de seguros y fianzas.",
+      "source": "Cap. 1 – Sistema Financiero (SHCP, Banxico, CNBV, CNSF, CONSAR, CONDUSEF)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-0111",
+      "question": "Certificados de participación representan:",
+      "options": [
+        "Depósitos a la vista",
+        "Licencias de corretaje",
+        "Derecho de voto en la SHCP",
+        "Derecho a parte alícuota de rendimientos de un fideicomiso"
+      ],
+      "correct": 3,
+      "subtopic": "Instrumentos – certificados de participación",
+      "difficulty": "intermediate",
+      "explanation": "Ordinarios o inmobiliarios; nominativos.",
+      "source": "Cap. 2 – Mercado de Valores (definiciones, clasificación, instrumentos)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-0181",
+      "question": "Tasa activa vs. pasiva:",
+      "options": [
+        "Siempre iguales",
+        "Activa > pasiva; diferencia es el margen de intermediación",
+        "Sin relación",
+        "Pasiva > activa"
+      ],
+      "correct": 1,
+      "subtopic": "Tasas – activa/pasiva",
+      "difficulty": "intermediate",
+      "explanation": "Activa: colocación; pasiva: captación.",
+      "source": "Cap. 4 – Tasas y conceptos (nominal/efectiva/real; interés simple/compuesto)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-0100",
+      "question": "Obligaciones de empresa son:",
+      "options": [
+        "Acciones ordinarias",
+        "Bonos del IPAB",
+        "Títulos de deuda a cargo del emisor, usualmente con garantía",
+        "Vales de despensa"
+      ],
+      "correct": 2,
+      "subtopic": "Instrumentos empresariales – obligaciones",
+      "difficulty": "intermediate",
+      "explanation": "Crédito colectivo con flujos pactados.",
+      "source": "Cap. 2 – Mercado de Valores (definiciones, clasificación, instrumentos)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-0182",
+      "question": "Tasa nominal es:",
+      "options": [
+        "La tasa después de comisiones",
+        "La tasa efectiva con capitalización",
+        "La tasa de mora judicial",
+        "La tasa convenida sin considerar inflación"
+      ],
+      "correct": 3,
+      "subtopic": "Tasas – nominal",
+      "difficulty": "basic",
+      "explanation": "Usualmente expresada anual.",
+      "source": "Cap. 4 – Tasas y conceptos (nominal/efectiva/real; interés simple/compuesto)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-0096",
+      "question": "Sociedades mutualistas de seguros se distinguen porque:",
+      "options": [
+        "Los clientes son socios y pueden participar en dividendos",
+        "No requieren reservas técnicas",
+        "No pueden operar vida",
+        "Sólo operan en mercado bursátil"
+      ],
+      "correct": 0,
+      "subtopic": "Sector Seguros – mutualistas",
+      "difficulty": "intermediate",
+      "explanation": "Modelo mutual con reparto de beneficios.",
+      "source": "Cap. 1 – Sistema Financiero (SHCP, Banxico, CNBV, CNSF, CONSAR, CONDUSEF)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-0073",
+      "question": "Instituciones de fianzas garantizan:",
+      "options": [
+        "Pago de dividendos bursátiles",
+        "Emisión de deuda pública",
+        "Cumplimiento de obligaciones; si no, indemnizan al beneficiario",
+        "Tipo de cambio fijo"
+      ],
+      "correct": 2,
+      "subtopic": "Sector Fianzas – función",
+      "difficulty": "basic",
+      "explanation": "Garantías por obligaciones contractuales o legales.",
+      "source": "Cap. 1 – Sistema Financiero (SHCP, Banxico, CNBV, CNSF, CONSAR, CONDUSEF)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-0134",
+      "question": "El Sistema Financiero Mexicano está integrado por instituciones que:",
+      "options": [
+        "Fijan salarios mínimos",
+        "Producen bienes tangibles para exportación",
+        "Captan, administran y canalizan ahorro hacia la inversión",
+        "Únicamente otorgan subsidios"
+      ],
+      "correct": 2,
+      "subtopic": "Sistema financiero – concepto",
+      "difficulty": "basic",
+      "explanation": "Articula ahorro e inversión con intermediación y regulación.",
+      "source": "Cap. 1 – Sistema Financiero (SHCP, Banxico, CNBV, CNSF, CONSAR, CONDUSEF)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-0118",
+      "question": "La SHCP dentro del sistema financiero es:",
+      "options": [
+        "Bolsa de valores mexicana",
+        "Banco central con monopolio de emisión",
+        "Órgano de conciliación con usuarios",
+        "Máxima autoridad que regula y vigila solvencia y autoriza organización/operación"
+      ],
+      "correct": 3,
+      "subtopic": "Autoridades – SHCP",
+      "difficulty": "intermediate",
+      "explanation": "Conduce política financiera y coordina supervisión.",
+      "source": "Cap. 1 – Sistema Financiero (SHCP, Banxico, CNBV, CNSF, CONSAR, CONDUSEF)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-0082",
+      "question": "PRLV son:",
+      "options": [
+        "Pagarés bancarios con rendimiento liquidable al vencimiento",
+        "Bonos perpetuos del gobierno",
+        "Pagarés sin rendimiento",
+        "Acciones ordinarias"
+      ],
+      "correct": 0,
+      "subtopic": "Instrumentos bancarios – PRLV",
+      "difficulty": "basic",
+      "explanation": "Instrumento de captación bancaria.",
+      "source": "Cap. 2 – Mercado de Valores (definiciones, clasificación, instrumentos)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-0043",
+      "question": "Mercado secundario es:",
+      "options": [
+        "Emisiones nuevas del gobierno",
+        "Colocación privada inicial",
+        "Operaciones sólo OTC",
+        "Negociación de valores ya emitidos entre inversionistas"
+      ],
+      "correct": 3,
+      "subtopic": "Clasificación – secundario",
+      "difficulty": "basic",
+      "explanation": "No entran recursos al emisor.",
+      "source": "Cap. 2 – Mercado de Valores (definiciones, clasificación, instrumentos)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-0029",
+      "question": "Costo de oportunidad es:",
+      "options": [
+        "Lo que se deja de ganar por elegir una alternativa sobre otra",
+        "Impuesto a la utilidad",
+        "Costo fijo contable",
+        "Gasto hundido"
+      ],
+      "correct": 0,
+      "subtopic": "Costo de oportunidad – concepto",
+      "difficulty": "intermediate",
+      "explanation": "Comparación contra la mejor alternativa.",
+      "source": "Cap. 3 – Riesgo financiero (diversificación, liquidez, rentabilidad)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-0171",
+      "question": "Inflación es:",
+      "options": [
+        "Aumento sostenido y generalizado del nivel de precios",
+        "Aumento de producción",
+        "Deflación puntual",
+        "Apreciación cambiaria"
+      ],
+      "correct": 0,
+      "subtopic": "Inflación – concepto",
+      "difficulty": "basic",
+      "explanation": "Erosiona poder adquisitivo.",
+      "source": "Cap. 3 – Riesgo financiero (diversificación, liquidez, rentabilidad)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-0027",
+      "question": "Riesgo financiero implica:",
+      "options": [
+        "Certeza de retorno fijo siempre",
+        "Garantía estatal universal",
+        "Ausencia total de volatilidad",
+        "Incertidumbre en resultados, con posibilidad de pérdidas o ganancias"
+      ],
+      "correct": 3,
+      "subtopic": "Riesgo – definición",
+      "difficulty": "basic",
+      "explanation": "Mayor riesgo ↔ mayor rendimiento esperado.",
+      "source": "Cap. 3 – Riesgo financiero (diversificación, liquidez, rentabilidad)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-0163",
+      "question": "Casa de bolsa ofrece:",
+      "options": [
+        "Aseguramiento de autos",
+        "Intermediación en mercado de valores entre emisores e inversionistas",
+        "Depósitos a la vista y cheques",
+        "Garantías de fianzas"
+      ],
+      "correct": 1,
+      "subtopic": "Sector Bursátil – casas de bolsa",
+      "difficulty": "basic",
+      "explanation": "Canaliza ahorro hacia emisores mediante valores.",
+      "source": "Cap. 1 – Sistema Financiero (SHCP, Banxico, CNBV, CNSF, CONSAR, CONDUSEF)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-NL-12",
+      "question": "Si la tasa nominal es 9% y la inflación 6%, ¿cuál es la tasa real aproximada?",
+      "options": [
+        "Aproximadamente 15%",
+        "Aproximadamente 3%",
+        "No puede calcularse",
+        "Aproximadamente 6%"
+      ],
+      "correct": 1,
+      "subtopic": "Tasas – real (aproximación)",
+      "difficulty": "intermediate",
+      "explanation": "Real ≈ Nominal − Inflación = 9% − 6% ≈ 3%.",
+      "source": "Cap. 4 – Tasas y conceptos (nominal/efectiva/real; interés simple/compuesto)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-NL-03",
+      "question": "Si la tasa nominal es 8% y la inflación 7%, ¿cuál es la tasa real aproximada?",
+      "options": [
+        "Aproximadamente 7%",
+        "Aproximadamente 15%",
+        "Aproximadamente 1%",
+        "No puede calcularse"
+      ],
+      "correct": 2,
+      "subtopic": "Tasas – real (aproximación)",
+      "difficulty": "intermediate",
+      "explanation": "Real ≈ Nominal − Inflación = 8% − 7% ≈ 1%.",
+      "source": "Cap. 4 – Tasas y conceptos (nominal/efectiva/real; interés simple/compuesto)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-NL-09",
+      "question": "Si la tasa nominal es 6% y la inflación 5%, ¿cuál es la tasa real aproximada?",
+      "options": [
+        "Aproximadamente 1%",
+        "Aproximadamente 11%",
+        "Aproximadamente 5%",
+        "No puede calcularse"
+      ],
+      "correct": 0,
+      "subtopic": "Tasas – real (aproximación)",
+      "difficulty": "intermediate",
+      "explanation": "Real ≈ Nominal − Inflación = 6% − 5% ≈ 1%.",
+      "source": "Cap. 4 – Tasas y conceptos (nominal/efectiva/real; interés simple/compuesto)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-NL-02",
+      "question": "Si la tasa nominal es 5% y la inflación 4%, ¿cuál es la tasa real aproximada?",
+      "options": [
+        "No puede calcularse",
+        "Aproximadamente 1%",
+        "Aproximadamente 4%",
+        "Aproximadamente 9%"
+      ],
+      "correct": 1,
+      "subtopic": "Tasas – real (aproximación)",
+      "difficulty": "intermediate",
+      "explanation": "Real ≈ Nominal − Inflación = 5% − 4% ≈ 1%.",
+      "source": "Cap. 4 – Tasas y conceptos (nominal/efectiva/real; interés simple/compuesto)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-NL-10",
+      "question": "Si la tasa nominal es 8% y la inflación 6%, ¿cuál es la tasa real aproximada?",
+      "options": [
+        "No puede calcularse",
+        "Aproximadamente 2%",
+        "Aproximadamente 6%",
+        "Aproximadamente 14%"
+      ],
+      "correct": 1,
+      "subtopic": "Tasas – real (aproximación)",
+      "difficulty": "intermediate",
+      "explanation": "Real ≈ Nominal − Inflación = 8% − 6% ≈ 2%.",
+      "source": "Cap. 4 – Tasas y conceptos (nominal/efectiva/real; interés simple/compuesto)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-NL-11",
+      "question": "Si la tasa nominal es 7% y la inflación 5%, ¿cuál es la tasa real aproximada?",
+      "options": [
+        "Aproximadamente 2%",
+        "No puede calcularse",
+        "Aproximadamente 12%",
+        "Aproximadamente 5%"
+      ],
+      "correct": 0,
+      "subtopic": "Tasas – real (aproximación)",
+      "difficulty": "intermediate",
+      "explanation": "Real ≈ Nominal − Inflación = 7% − 5% ≈ 2%.",
+      "source": "Cap. 4 – Tasas y conceptos (nominal/efectiva/real; interés simple/compuesto)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-NL-05",
+      "question": "Si la tasa nominal es 4% y la inflación 3%, ¿cuál es la tasa real aproximada?",
+      "options": [
+        "Aproximadamente 1%",
+        "Aproximadamente 7%",
+        "No puede calcularse",
+        "Aproximadamente 3%"
+      ],
+      "correct": 0,
+      "subtopic": "Tasas – real (aproximación)",
+      "difficulty": "intermediate",
+      "explanation": "Real ≈ Nominal − Inflación = 4% − 3% ≈ 1%.",
+      "source": "Cap. 4 – Tasas y conceptos (nominal/efectiva/real; interés simple/compuesto)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-0062",
+      "question": "UMS (bonos soberanos externos) son:",
+      "options": [
+        "Fideicomisos privados de vivienda",
+        "Bonos municipales",
+        "Acciones listadas en BMV",
+        "Deuda del Gobierno Federal colocada en mercados internacionales"
+      ],
+      "correct": 3,
+      "subtopic": "Instrumentos – UMS",
+      "difficulty": "intermediate",
+      "explanation": "Refinancian deuda externa; tasa fija o variable.",
+      "source": "Cap. 2 – Mercado de Valores (definiciones, clasificación, instrumentos)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-0160",
+      "question": "Liquidez se refiere a:",
+      "options": [
+        "Facilidad para convertir un activo en efectivo sin pérdida significativa",
+        "Nivel de deuda de una empresa",
+        "Inflación esperada",
+        "Margen neto"
+      ],
+      "correct": 0,
+      "subtopic": "Liquidez – definición",
+      "difficulty": "basic",
+      "explanation": "Mayor liquidez suele ↔ menor rendimiento.",
+      "source": "Cap. 3 – Riesgo financiero (diversificación, liquidez, rentabilidad)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-0009",
+      "question": "Mercado de deuda (renta fija) implica que:",
+      "options": [
+        "No hay obligación de pago",
+        "El rendimiento depende sólo del precio de la acción",
+        "Siempre hay dividendos",
+        "El emisor paga flujos fijos o determinables hasta vencimiento"
+      ],
+      "correct": 3,
+      "subtopic": "Clasificación – deuda",
+      "difficulty": "basic",
+      "explanation": "Renta fija por contrato.",
+      "source": "Cap. 2 – Mercado de Valores (definiciones, clasificación, instrumentos)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-0066",
+      "question": "Clasificación por plazo distingue:",
+      "options": [
+        "Renta fija y renta variable",
+        "Mercado de dinero (≤1 año) y mercado de capitales (>1 año/sin vencimiento)",
+        "Mercado spot y a futuro",
+        "Mercado primario y secundario"
+      ],
+      "correct": 1,
+      "subtopic": "Clasificación – por plazo",
+      "difficulty": "basic",
+      "explanation": "Corto vs. largo plazo.",
+      "source": "Cap. 2 – Mercado de Valores (definiciones, clasificación, instrumentos)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-0052",
+      "question": "CEDES son:",
+      "options": [
+        "Acciones preferentes",
+        "Obligaciones convertibles",
+        "Papel comercial",
+        "Certificados de depósito bancario que pagan interés periódico"
+      ],
+      "correct": 3,
+      "subtopic": "Instrumentos bancarios – CEDES",
+      "difficulty": "basic",
+      "explanation": "Plazos pactados; interés periódico.",
+      "source": "Cap. 2 – Mercado de Valores (definiciones, clasificación, instrumentos)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-0144",
+      "question": "Modalidad de sociedad de inversión abierta:",
+      "options": [
+        "Carece de límites regulatorios",
+        "Sólo invierte en derivados",
+        "Tiene prohibido recomprar acciones",
+        "Puede recomprar sus propias acciones conforme a su prospecto"
+      ],
+      "correct": 3,
+      "subtopic": "Sociedades de inversión – abiertas vs. cerradas",
+      "difficulty": "intermediate",
+      "explanation": "La cerrada no recompra salvo LMV.",
+      "source": "Cap. 1 – Sistema Financiero (SHCP, Banxico, CNBV, CNSF, CONSAR, CONDUSEF)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-0069",
+      "question": "Interés compuesto significa:",
+      "options": [
+        "Reinversión de intereses para generar intereses sobre intereses",
+        "Tasa nominal fija sin capitalizar",
+        "Prohibición de capitalizar",
+        "Sólo pago de cupones"
+      ],
+      "correct": 0,
+      "subtopic": "Interés – compuesto",
+      "difficulty": "basic",
+      "explanation": "Capitaliza por periodos.",
+      "source": "Cap. 4 – Tasas y conceptos (nominal/efectiva/real; interés simple/compuesto)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-0095",
+      "question": "Una SOFOM realiza:",
+      "options": [
+        "Supervisión prudencial del sistema",
+        "Operaciones de arrendamiento y factoraje financiero en una sola entidad",
+        "Captación de depósitos a la vista",
+        "Emisión de billetes"
+      ],
+      "correct": 1,
+      "subtopic": "Auxiliares – SOFOM",
+      "difficulty": "intermediate",
+      "explanation": "Integra arrendamiento y factoraje; no capta como banco.",
+      "source": "Cap. 1 – Sistema Financiero (SHCP, Banxico, CNBV, CNSF, CONSAR, CONDUSEF)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-0173",
+      "question": "Tipo de cambio fijo se caracteriza por:",
+      "options": [
+        "Variar libremente por mercado",
+        "Vincular la moneda a un referente internacional",
+        "Ser igual al tipo interbancario",
+        "Eliminar la inflación"
+      ],
+      "correct": 1,
+      "subtopic": "Tipo de cambio – fijo vs. flexible",
+      "difficulty": "intermediate",
+      "explanation": "Flexible: determinado por oferta y demanda.",
+      "source": "Cap. 4 – Tasas y conceptos (nominal/efectiva/real; interés simple/compuesto)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-0128",
+      "question": "La CNBV supervisa principalmente a:",
+      "options": [
+        "Bancos, casas de bolsa y sociedades de inversión",
+        "Usuarios finales y sus quejas",
+        "Sistemas de ahorro para el retiro",
+        "Aseguradoras y afianzadoras"
+      ],
+      "correct": 0,
+      "subtopic": "Comisiones – CNBV",
+      "difficulty": "basic",
+      "explanation": "Inspecciona banca, bursátil y auxiliares de crédito.",
+      "source": "Cap. 1 – Sistema Financiero (SHCP, Banxico, CNBV, CNSF, CONSAR, CONDUSEF)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-0104",
+      "question": "Un intermediario financiero se caracteriza por:",
+      "options": [
+        "Emitir moneda de curso legal",
+        "Intermediar entre ahorradores e inversionistas, transformando plazos y riesgos",
+        "Emitir leyes fiscales",
+        "Legislar sobre políticas monetarias"
+      ],
+      "correct": 1,
+      "subtopic": "Intermediarios – definición",
+      "difficulty": "basic",
+      "explanation": "Media entre oferentes y demandantes de recursos.",
+      "source": "Cap. 1 – Sistema Financiero (SHCP, Banxico, CNBV, CNSF, CONSAR, CONDUSEF)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-0164",
+      "question": "Mercado accionario (renta variable) significa:",
+      "options": [
+        "Vencimiento forzoso a corto plazo",
+        "Interés fijo pactado",
+        "Remuneración variable según resultados y precio de mercado",
+        "Garantía gubernamental total"
+      ],
+      "correct": 2,
+      "subtopic": "Clasificación – accionario",
+      "difficulty": "basic",
+      "explanation": "Acciones: dividendos y plusvalías/pérdidas.",
+      "source": "Cap. 2 – Mercado de Valores (definiciones, clasificación, instrumentos)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-0055",
+      "question": "Mercado primario se refiere a:",
+      "options": [
+        "Mercado interbancario de divisas",
+        "Reventa entre inversionistas",
+        "Operaciones de derivados exclusivamente",
+        "Colocación inicial de valores; recursos van al emisor"
+      ],
+      "correct": 3,
+      "subtopic": "Clasificación – primario",
+      "difficulty": "basic",
+      "explanation": "Primera emisión al público.",
+      "source": "Cap. 2 – Mercado de Valores (definiciones, clasificación, instrumentos)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-0033",
+      "question": "Una SIEFORE es:",
+      "options": [
+        "Banco de segundo piso",
+        "Fondo de garantía gubernamental",
+        "Sociedad de inversión a través de la cual invierte la AFORE",
+        "Unidad de inspección de la CNBV"
+      ],
+      "correct": 2,
+      "subtopic": "SAR – SIEFORES",
+      "difficulty": "basic",
+      "explanation": "Invierte recursos con límites CONSAR.",
+      "source": "Cap. 1 – Sistema Financiero (SHCP, Banxico, CNBV, CNSF, CONSAR, CONDUSEF)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-0139",
+      "question": "UDIBONOS se caracterizan por:",
+      "options": [
+        "Ser acciones preferentes",
+        "Estar denominados en UDIS y ofrecer tasa real (ligados al INPC)",
+        "Tener tasa flotante en dólares",
+        "Carecer de intereses"
+      ],
+      "correct": 1,
+      "subtopic": "Instrumentos – UDIBONOS",
+      "difficulty": "intermediate",
+      "explanation": "Protegen contra inflación.",
+      "source": "Cap. 2 – Mercado de Valores (definiciones, clasificación, instrumentos)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-0099",
+      "question": "Devaluación es:",
+      "options": [
+        "Reducción del valor de una moneda frente a otras",
+        "Caída general de precios",
+        "Aumento de la tasa real",
+        "Crecimiento del PIB"
+      ],
+      "correct": 0,
+      "subtopic": "Tipo de cambio – devaluación",
+      "difficulty": "basic",
+      "explanation": "Abarata exportaciones; encarece importaciones.",
+      "source": "Cap. 3 – Riesgo financiero (diversificación, liquidez, rentabilidad)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-0093",
+      "question": "Papel comercial es:",
+      "options": [
+        "Certificado de depósito a la vista",
+        "Obligación del gobierno estatal",
+        "Deuda de corto plazo emitida por empresas",
+        "Acción con voto limitado"
+      ],
+      "correct": 2,
+      "subtopic": "Instrumentos empresariales – papel comercial",
+      "difficulty": "basic",
+      "explanation": "Mayor rendimiento, menor liquidez.",
+      "source": "Cap. 2 – Mercado de Valores (definiciones, clasificación, instrumentos)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-0001",
+      "question": "El Mercado de Valores es el espacio donde:",
+      "options": [
+        "Se fijan impuestos a emisoras",
+        "Se realizan operaciones de comercio exterior",
+        "Se otorgan licencias de conducir",
+        "Se negocian, de forma organizada, valores para canalizar recursos a proyectos"
+      ],
+      "correct": 3,
+      "subtopic": "Mercado de Valores – definición",
+      "difficulty": "basic",
+      "explanation": "Organiza compraventa de valores.",
+      "source": "Cap. 2 – Mercado de Valores (definiciones, clasificación, instrumentos)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-0158",
+      "question": "ABS (aceptaciones bancarias) son:",
+      "options": [
+        "Bonos hipotecarios del gobierno",
+        "Títulos de capital de riesgo",
+        "Tarjetas de crédito",
+        "Letras aceptadas por un banco para financiar capital de trabajo a corto plazo"
+      ],
+      "correct": 3,
+      "subtopic": "Instrumentos bancarios – ABS",
+      "difficulty": "intermediate",
+      "explanation": "Vencimientos 7–182 días.",
+      "source": "Cap. 2 – Mercado de Valores (definiciones, clasificación, instrumentos)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-0092",
+      "question": "Tasa efectiva es:",
+      "options": [
+        "Siempre igual a la nominal",
+        "La que realmente actúa sobre el capital considerando capitalización",
+        "Sólo la fija por ley",
+        "Únicamente mensual"
+      ],
+      "correct": 1,
+      "subtopic": "Tasas – efectiva",
+      "difficulty": "basic",
+      "explanation": "Rendimiento real por periodo.",
+      "source": "Cap. 4 – Tasas y conceptos (nominal/efectiva/real; interés simple/compuesto)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-0047",
+      "question": "Una AFORE es:",
+      "options": [
+        "Autoridad de supervisión",
+        "Casa de bolsa estatal",
+        "Sociedad mutualista",
+        "Empresa privada que administra cuentas individuales de retiro"
+      ],
+      "correct": 3,
+      "subtopic": "SAR – AFORES",
+      "difficulty": "basic",
+      "explanation": "Administra ahorro para retiro (IMSS/ISSSTE).",
+      "source": "Cap. 1 – Sistema Financiero (SHCP, Banxico, CNBV, CNSF, CONSAR, CONDUSEF)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-0048",
+      "question": "Diversificar significa:",
+      "options": [
+        "Invertir en un solo emisor",
+        "Repartir inversiones en activos distintos para reducir riesgo conjunto",
+        "Evitar cualquier inversión",
+        "Vender todo en efectivo"
+      ],
+      "correct": 1,
+      "subtopic": "Diversificación – concepto",
+      "difficulty": "basic",
+      "explanation": "No elimina riesgo sistémico.",
+      "source": "Cap. 3 – Riesgo financiero (diversificación, liquidez, rentabilidad)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-0131",
+      "question": "La CONDUSEF tiene por objeto:",
+      "options": [
+        "Emitir billetes y monedas",
+        "Autorizar emisión de valores",
+        "Conciliar y proteger a los usuarios de servicios financieros",
+        "Fijar capital de solvencia obligatorio"
+      ],
+      "correct": 2,
+      "subtopic": "Usuarios – CONDUSEF",
+      "difficulty": "basic",
+      "explanation": "Prevención y corrección: educación y reclamaciones.",
+      "source": "Cap. 1 – Sistema Financiero (SHCP, Banxico, CNBV, CNSF, CONSAR, CONDUSEF)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-0149",
+      "question": "BONDES son:",
+      "options": [
+        "Certificados bursátiles inmobiliarios",
+        "Bonos de Desarrollo del Gobierno Federal de mediano/largo plazo",
+        "Pagarés bancarios a 7 días",
+        "Acciones de crecimiento"
+      ],
+      "correct": 1,
+      "subtopic": "Instrumentos – BONDES",
+      "difficulty": "basic",
+      "explanation": "Pagan intereses periódicos.",
+      "source": "Cap. 2 – Mercado de Valores (definiciones, clasificación, instrumentos)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-0110",
+      "question": "Relación riesgo–rentabilidad:",
+      "options": [
+        "Sólo aplica en renta fija",
+        "Inversa siempre",
+        "Directa: a mayor riesgo, mayor rentabilidad esperada",
+        "Nula relación"
+      ],
+      "correct": 2,
+      "subtopic": "Riesgo–rentabilidad",
+      "difficulty": "basic",
+      "explanation": "El mercado compensa riesgo.",
+      "source": "Cap. 3 – Riesgo financiero (diversificación, liquidez, rentabilidad)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-0127",
+      "question": "CETES son:",
+      "options": [
+        "Acciones sin valor nominal",
+        "Certificados de la Tesorería emitidos por el Gobierno Federal a descuento",
+        "Bonos de empresas a tasa fija",
+        "Pagares bancarios con intereses mensuales"
+      ],
+      "correct": 1,
+      "subtopic": "Instrumentos – CETES",
+      "difficulty": "basic",
+      "explanation": "Alta liquidez; plazos desde 28 días.",
+      "source": "Cap. 2 – Mercado de Valores (definiciones, clasificación, instrumentos)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-0072",
+      "question": "Una finalidad principal de Banxico es:",
+      "options": [
+        "Determinar impuestos locales",
+        "Autorizar ramos de seguros",
+        "Fijar salarios mínimos",
+        "Proveer moneda nacional y aplicar la política monetaria"
+      ],
+      "correct": 3,
+      "subtopic": "Autoridades – Banxico",
+      "difficulty": "basic",
+      "explanation": "Propicia buen funcionamiento de pagos y sistema financiero.",
+      "source": "Cap. 1 – Sistema Financiero (SHCP, Banxico, CNBV, CNSF, CONSAR, CONDUSEF)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-0184",
+      "question": "Diferencia clave entre autoridad e intermediario financiero:",
+      "options": [
+        "La autoridad capta depósitos del público",
+        "Ambos otorgan licencias federales",
+        "La autoridad regula y supervisa; el intermediario opera y ofrece productos/servicios",
+        "Ambos emiten moneda"
+      ],
+      "correct": 2,
+      "subtopic": "Autoridades vs. intermediarios",
+      "difficulty": "basic",
+      "explanation": "Regulador vs. operador: funciones separadas.",
+      "source": "Cap. 1 – Sistema Financiero (SHCP, Banxico, CNBV, CNSF, CONSAR, CONDUSEF)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-0157",
+      "question": "Función típica de Banxico en crisis de liquidez:",
+      "options": [
+        "Administrar cuentas individuales de retiro",
+        "Garantizar utilidades a los bancos",
+        "Acreditante de última instancia para instituciones de crédito",
+        "Emitir acciones listadas"
+      ],
+      "correct": 2,
+      "subtopic": "Autoridades – Banxico (funciones)",
+      "difficulty": "intermediate",
+      "explanation": "Opera como reserva y estabilizador.",
+      "source": "Cap. 1 – Sistema Financiero (SHCP, Banxico, CNBV, CNSF, CONSAR, CONDUSEF)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-0113",
+      "question": "La CONSAR regula a:",
+      "options": [
+        "Bolsa Mexicana de Valores",
+        "Sistema de Ahorro para el Retiro (AFORES y SIEFORES)",
+        "Aseguradoras de autos",
+        "Usuarios financieros"
+      ],
+      "correct": 1,
+      "subtopic": "Comisiones – CONSAR",
+      "difficulty": "basic",
+      "explanation": "Regula y supervisa el SAR.",
+      "source": "Cap. 1 – Sistema Financiero (SHCP, Banxico, CNBV, CNSF, CONSAR, CONDUSEF)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-0185",
+      "question": "Los 'valores' son:",
+      "options": [
+        "Cheques al portador exclusivamente",
+        "Bienes de consumo duradero",
+        "Títulos de crédito objeto de oferta pública o intermediación",
+        "Contratos laborales"
+      ],
+      "correct": 2,
+      "subtopic": "Valores – definición",
+      "difficulty": "basic",
+      "explanation": "Incluyen acciones, obligaciones, bonos, certificados, etc.",
+      "source": "Cap. 2 – Mercado de Valores (definiciones, clasificación, instrumentos)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-0140",
+      "question": "Sociedad de inversión:",
+      "options": [
+        "Es siempre cerrada y sin liquidez",
+        "Capta recursos vendiendo acciones y los invierte en activos objeto de inversión",
+        "No puede recomprar acciones en ningún caso",
+        "Sólo invierte en inmuebles"
+      ],
+      "correct": 1,
+      "subtopic": "Sociedades de inversión – concepto",
+      "difficulty": "basic",
+      "explanation": "Permite acceso de pequeños inversionistas.",
+      "source": "Cap. 1 – Sistema Financiero (SHCP, Banxico, CNBV, CNSF, CONSAR, CONDUSEF)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-TOP-0034",
+      "question": "Interés simple significa:",
+      "options": [
+        "Interés cero",
+        "Tasa efectiva permanente",
+        "Interés sobre interés acumulado",
+        "Cálculo del interés sólo sobre el capital inicial"
+      ],
+      "correct": 3,
+      "subtopic": "Interés – simple",
+      "difficulty": "basic",
+      "explanation": "No capitaliza intereses.",
+      "source": "Cap. 4 – Tasas y conceptos (nominal/efectiva/real; interés simple/compuesto)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-TOP-0046",
+      "question": "Una aseguradora es:",
+      "options": [
+        "Autoridad que sanciona emisoras",
+        "Organismo público sin fines de lucro",
+        "Fideicomiso de fomento",
+        "Empresa que asume riesgos a cambio de una prima, mediante una póliza"
+      ],
+      "correct": 3,
+      "subtopic": "Sector Seguros – definición",
+      "difficulty": "basic",
+      "explanation": "Indemniza o paga suma por eventualidad prevista.",
+      "source": "Cap. 1 – Sistema Financiero (SHCP, Banxico, CNBV, CNSF, CONSAR, CONDUSEF)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-NEW2-0001",
+      "question": "El mercado primario se distingue por:",
+      "options": [
+        "Contratos de futuros exclusivamente",
+        "Reventa entre inversionistas",
+        "Colocar valores y entregar recursos al emisor",
+        "Operaciones interbancarias"
+      ],
+      "correct": 2,
+      "subtopic": "Mercado – primario",
+      "difficulty": "basic",
+      "explanation": "Primera emisión al público inversionista.",
+      "source": "Cap. 2 – Mercado de Valores (definiciones, clasificación, instrumentos)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-NEW2-0002",
+      "question": "La CNBV supervisa a:",
+      "options": [
+        "Empresas públicas descentralizadas",
+        "Aseguradoras y fianzas",
+        "Banca, casas de bolsa y sociedades de inversión",
+        "Usuarios y quejas"
+      ],
+      "correct": 2,
+      "subtopic": "Comisiones – CNBV",
+      "difficulty": "basic",
+      "explanation": "Vigilancia del sistema bancario y bursátil.",
+      "source": "Cap. 1 – Sistema Financiero (SHCP, Banxico, CNBV, CNSF, CONSAR, CONDUSEF)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-NEW2-0004",
+      "question": "Banxico, como banco central, se encarga de:",
+      "options": [
+        "Conciliar con usuarios financieros",
+        "Emitir normas fiscales",
+        "Proveer moneda nacional y operar la política monetaria",
+        "Autorizar ramos de seguros"
+      ],
+      "correct": 2,
+      "subtopic": "Autoridades – Banxico",
+      "difficulty": "basic",
+      "explanation": "También promueve buen funcionamiento de sistemas de pago.",
+      "source": "Cap. 1 – Sistema Financiero (SHCP, Banxico, CNBV, CNSF, CONSAR, CONDUSEF)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-NEW2-0006",
+      "question": "La función central de la intermediación financiera es:",
+      "options": [
+        "Canalizar ahorro hacia inversión reduciendo costos de transacción",
+        "Fijar impuestos",
+        "Emitir leyes",
+        "Sustituir supervisión"
+      ],
+      "correct": 0,
+      "subtopic": "Intermediación – función",
+      "difficulty": "basic",
+      "explanation": "Transforma plazos, riesgos y tamaños entre ahorradores e inversionistas.",
+      "source": "Cap. 1 – Sistema Financiero (SHCP, Banxico, CNBV, CNSF, CONSAR, CONDUSEF)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-NEW2-0009",
+      "question": "La tasa real mide:",
+      "options": [
+        "La tasa de impuestos",
+        "La tasa pasiva",
+        "La comisión bancaria",
+        "Rendimiento descontando el efecto de la inflación"
+      ],
+      "correct": 3,
+      "subtopic": "Tasas – real",
+      "difficulty": "basic",
+      "explanation": "Aproximación: nominal − inflación.",
+      "source": "Cap. 4 – Tasas y conceptos (nominal/efectiva/real; interés simple/compuesto)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-NEW2-0010",
+      "question": "Una sociedad de inversión abierta puede:",
+      "options": [
+        "Prohibir en todo caso la recompra",
+        "Fijar la tasa objetivo",
+        "Recomprar sus propias acciones conforme a prospecto",
+        "Emitir moneda"
+      ],
+      "correct": 2,
+      "subtopic": "Sociedades de inversión – abiertas",
+      "difficulty": "intermediate",
+      "explanation": "Liquidez vía recompra sujeta a reglas de LMV y prospecto.",
+      "source": "Cap. 2 – Mercado de Valores (definiciones, clasificación, instrumentos)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-NEW2-0011",
+      "question": "La tasa efectiva se define como:",
+      "options": [
+        "Tasa sin inflación",
+        "Rendimiento que incorpora la capitalización por periodo",
+        "Tasa fija mensual",
+        "Tasa nominal legal"
+      ],
+      "correct": 1,
+      "subtopic": "Tasas – efectiva",
+      "difficulty": "basic",
+      "explanation": "Es la tasa que realmente actúa sobre el capital.",
+      "source": "Cap. 4 – Tasas y conceptos (nominal/efectiva/real; interés simple/compuesto)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "SMF-NEW2-0017",
+      "question": "Diversificación de portafolio busca:",
+      "options": [
+        "Fijar precios de mercado",
+        "Disminuir riesgo no sistemático combinando activos distintos",
+        "Eliminar todo riesgo",
+        "Garantizar rendimientos"
+      ],
+      "correct": 1,
+      "subtopic": "Diversificación – objetivo",
+      "difficulty": "basic",
+      "explanation": "Reduce volatilidad idiosincrática, no el riesgo de mercado.",
+      "source": "Cap. 3 – Riesgo financiero (diversificación, liquidez, rentabilidad)",
+      "module": "Sistema y Mercados Financieros"
+    },
+    {
+      "id": "RI-CPT-001",
+      "question": "Vida Pagos Limitados implica que:",
+      "options": [
+        "Se pagan primas toda la vida",
+        "El pago de primas depende del siniestro",
+        "No hay reserva",
+        "Se pagan primas por un periodo determinado, pero la cobertura es vitalicia"
+      ],
+      "correct": 3,
+      "subtopic": "Vida pagos limitados",
+      "difficulty": "intermediate",
+      "explanation": "El asegurado paga 5, 10, 15, 20, 25 años o a edad alcanzada; cobertura sigue toda la vida.",
+      "source": "Cap. 2 – Planes Básicos y No Tradicionales",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-CPT-002",
+      "question": "Una opción de administración 'intereses exclusivamente' significa que:",
+      "options": [
+        "Solo recibe el capital inicial",
+        "No puede recuperar el capital",
+        "Recibe pagos decrecientes sin interés",
+        "El beneficiario recibe periódicamente intereses y al final recupera el capital"
+      ],
+      "correct": 3,
+      "subtopic": "Formas de liquidación/administración",
+      "difficulty": "intermediate",
+      "explanation": "La aseguradora administra la suma; se pagan intereses y al final se devuelve el principal.",
+      "source": "Cap. 4 – Reclamaciones y Administración",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-CPT-003",
+      "question": "Un Préstamo Automático sobre póliza se usa para:",
+      "options": [
+        "Comprar beneficios adicionales sin interés",
+        "Aumentar de oficio la suma asegurada",
+        "Pagar deducibles de GM",
+        "Cubrir primas vencidas con cargo a la reserva hasta agotarla"
+      ],
+      "correct": 3,
+      "subtopic": "Valores garantizados – préstamo",
+      "difficulty": "advanced",
+      "explanation": "Evita la caída de la póliza usando la reserva; genera intereses que deben reponerse.",
+      "source": "Cap. 1 – Bases Técnicas",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-CPT-004",
+      "question": "La Tabla de Mortalidad sirve para:",
+      "options": [
+        "Definir coberturas de autos",
+        "Estimar probabilidades de fallecimiento por edad y fijar el costo del riesgo",
+        "Calcular deducibles",
+        "Determinar comisiones del agente"
+      ],
+      "correct": 1,
+      "subtopic": "Tabla de mortalidad",
+      "difficulty": "basic",
+      "explanation": "Es un registro estadístico de mortalidad por edad que sustenta primas de vida.",
+      "source": "Cap. 1 – Bases Técnicas",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-CPT-007",
+      "question": "En Dotal Mixto la aseguradora:",
+      "options": [
+        "Paga solo si sobrevive",
+        "No combina ahorro y protección",
+        "Paga si el asegurado muere en el plazo o paga dote si sobrevive al final",
+        "Paga solo si fallece"
+      ],
+      "correct": 2,
+      "subtopic": "Seguro dotal",
+      "difficulty": "intermediate",
+      "explanation": "Es combinación de temporal + sobrevivencia; el dotal puro solo paga por sobrevivencia.",
+      "source": "Cap. 2 – Planes Básicos y No Tradicionales",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-CPT-008",
+      "question": "'Pago directo' en GM significa que principalmente:",
+      "options": [
+        "Se paga con dividendos",
+        "El agente cubre la cuenta",
+        "El asegurado paga todo y no hay reembolso",
+        "La aseguradora liquida a hospital/proveedor dentro de su red conforme a póliza"
+      ],
+      "correct": 3,
+      "subtopic": "GM – pago directo vs reembolso",
+      "difficulty": "basic",
+      "explanation": "La alternativa es reembolso, donde el asegurado paga y luego recupera según condiciones.",
+      "source": "Cap. 7 – Definiciones (GM)",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-CPT-009",
+      "question": "Un descuento frecuente en vida individual es:",
+      "options": [
+        "Ser agente",
+        "Pago mensual",
+        "No fumador (u otros criterios como sexo femenino o condición física)",
+        "Vivir en capital"
+      ],
+      "correct": 2,
+      "subtopic": "Descuentos",
+      "difficulty": "basic",
+      "explanation": "No fumador, sexo y condición física pueden generar descuento; fraccionamiento puede causar recargo.",
+      "source": "Cap. 1 – Bases Técnicas",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-CPT-011",
+      "question": "Sobre beneficiarios, el asegurado puede:",
+      "options": [
+        "Designarlos y revocarlos libremente salvo beneficiarios irrevocables",
+        "Requerir autorización de CONDUSEF para todo cambio",
+        "No revocar nunca",
+        "Designar solo al cónyuge"
+      ],
+      "correct": 0,
+      "subtopic": "Beneficiarios",
+      "difficulty": "intermediate",
+      "explanation": "La revocación es libre salvo renuncia; reglas especiales cuando no hay designación o mueren simultáneamente.",
+      "source": "Cap. 3 – Condiciones Generales",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-CPT-012",
+      "question": "La Exención de Pago de Primas por invalidez:",
+      "options": [
+        "Solo difiere el pago 30 días",
+        "Mantiene la póliza en vigor sin pago de primas desde el dictamen de invalidez",
+        "Reduce automáticamente la suma asegurada a la mitad",
+        "Devuelve la reserva y cancela la póliza"
+      ],
+      "correct": 1,
+      "subtopic": "Invalidez – exención de primas",
+      "difficulty": "intermediate",
+      "explanation": "La aseguradora cubre las primas futuras para conservar la protección.",
+      "source": "Cap. 5 – Coberturas y Beneficios Adicionales",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-CPT-014",
+      "question": "En Seguros Universales (flexibles), el beneficio por muerte Opción 2 principalmente:",
+      "options": [
+        "Es suma asegurada más saldo de fondos excedentes a la fecha de fallecimiento",
+        "Es solo el saldo del fondo",
+        "Es únicamente la suma asegurada sin cambios",
+        "Depende de dividendos de grupo"
+      ],
+      "correct": 0,
+      "subtopic": "Planes no tradicionales",
+      "difficulty": "advanced",
+      "explanation": "Opción 2 (creciente) suma la SA más el saldo de fondos; la Opción 1 mantiene beneficio nivelado.",
+      "source": "Cap. 2 – Planes Básicos y No Tradicionales",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-CPT-015",
+      "question": "En GM, el 'coaseguro' es principalmente:",
+      "options": [
+        "Porcentaje del gasto cubierto (después del deducible) a cargo del asegurado",
+        "Un recargo por fraccionar",
+        "Un impuesto a la prima",
+        "Una exclusión general"
+      ],
+      "correct": 0,
+      "subtopic": "GM – coaseguro",
+      "difficulty": "basic",
+      "explanation": "La aseguradora cubre el resto según la póliza; pueden existir topes y periodos al descubierto.",
+      "source": "Cap. 7 – Definiciones (GM)",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-CPT-016",
+      "question": "La Prima Nivelada es:",
+      "options": [
+        "Una prima que disminuye conforme pasa el tiempo",
+        "El promedio de primas puras de riesgo pagado en cuotas iguales a lo largo del plazo",
+        "Una prima que no genera reservas",
+        "Una prima única al inicio"
+      ],
+      "correct": 1,
+      "subtopic": "Tipos de prima",
+      "difficulty": "intermediate",
+      "explanation": "Su diseño genera excedentes iniciales que conforman la reserva matemática.",
+      "source": "Cap. 1 – Bases Técnicas",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-CPT-018",
+      "question": "Documentos típicos para reclamación por fallecimiento incluyen:",
+      "options": [
+        "Contrato de arrendamiento del beneficiario",
+        "Acta de matrimonio del agente",
+        "Comprobante de domicilio del agente",
+        "Póliza, acta de defunción y, si aplica accidente, acta de autoridad; identificación y relación con el asegurado"
+      ],
+      "correct": 3,
+      "subtopic": "Reclamaciones – requisitos",
+      "difficulty": "basic",
+      "explanation": "La reclamación requiere identificar póliza y circunstancias; para accidentes, constancias de autoridad.",
+      "source": "Cap. 4 – Reclamaciones y Administración",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-CPT-020",
+      "question": "Los Valores Garantizados permiten al asegurado:",
+      "options": [
+        "Aumentar la suma asegurada sin costo",
+        "Disponer de la reserva mediante rescate, seguro saldado o prorrogado",
+        "Eliminar exclusiones",
+        "Cobrar comisiones de agente"
+      ],
+      "correct": 1,
+      "subtopic": "Valores garantizados",
+      "difficulty": "intermediate",
+      "explanation": "Tras al menos tres anualidades, se habilitan opciones: rescate, saldado y prorrogado.",
+      "source": "Cap. 1 – Bases Técnicas",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-CPT-021",
+      "question": "La Ley de los Grandes Números permite a las aseguradoras principalmente:",
+      "options": [
+        "Cobrar primas sin datos",
+        "Reducir la variabilidad relativa de resultados y estimar primas con mayor precisión",
+        "Aumentar la siniestralidad",
+        "Eliminar por completo el riesgo"
+      ],
+      "correct": 1,
+      "subtopic": "Bases técnicas",
+      "difficulty": "basic",
+      "explanation": "Con más observaciones, la media empírica se aproxima al valor esperado, estabilizando la siniestralidad.",
+      "source": "Cap. 1 – Bases Técnicas",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-CPT-022",
+      "question": "'Periodo de espera' en GM:",
+      "options": [
+        "Tiempo mínimo desde alta de póliza para que se cubra cierto padecimiento",
+        "Periodo de indisputabilidad",
+        "Tiempo para pagar prima",
+        "Plazo para cancelar sin costo"
+      ],
+      "correct": 0,
+      "subtopic": "GM – periodo de espera",
+      "difficulty": "intermediate",
+      "explanation": "Algunas coberturas requieren transcurrir cierto tiempo para activar cobertura.",
+      "source": "Cap. 7 – Definiciones (GM)",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-CPT-023",
+      "question": "La Prima Natural Ascendente se caracteriza por:",
+      "options": [
+        "Incrementarse con la edad conforme aumenta la probabilidad de muerte",
+        "Incluir utilidades e impuestos",
+        "Disminuir cada año por inflación",
+        "Mantenerse constante sin reservas"
+      ],
+      "correct": 0,
+      "subtopic": "Tipos de prima",
+      "difficulty": "intermediate",
+      "explanation": "Se calcula año a año a la edad alcanzada; crece al aumentar la probabilidad de muerte.",
+      "source": "Cap. 1 – Bases Técnicas",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-CPT-027",
+      "question": "En Muerte Accidental la regla de 90 días indica que:",
+      "options": [
+        "La prima vence en 90 días",
+        "La póliza prescribe en 90 días",
+        "La muerte debe ocurrir dentro de los 90 días siguientes al accidente amparado",
+        "El reclamo debe presentarse en 90 minutos"
+      ],
+      "correct": 2,
+      "subtopic": "Muerte accidental",
+      "difficulty": "intermediate",
+      "explanation": "Condición típica: el deceso derivado del accidente debe ocurrir dentro de 90 días.",
+      "source": "Cap. 5 – Coberturas y Beneficios Adicionales",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-CPT-028",
+      "question": "Una causa típica de extraprima en Vida Individual:",
+      "options": [
+        "Ser contribuyente",
+        "Ocupación peligrosa o hábitos que aumentan mortalidad",
+        "Tener tarjeta de crédito",
+        "Vivir cerca de una aseguradora"
+      ],
+      "correct": 1,
+      "subtopic": "Selección de riesgos – extraprimas",
+      "difficulty": "basic",
+      "explanation": "Ocupación, salud, deportes peligrosos, hábitos; elevan el riesgo aceptado.",
+      "source": "Cap. 6 – Selección de Riesgos",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-CPT-029",
+      "question": "La regla de suicidio en Vida Individual indica que principalmente:",
+      "options": [
+        "Se paga siempre la suma asegurada",
+        "Se paga doble suma asegurada",
+        "Nunca se paga nada por suicidio",
+        "Durante los dos primeros años solo se paga la reserva matemática, no la suma asegurada"
+      ],
+      "correct": 3,
+      "subtopic": "Suicidio",
+      "difficulty": "basic",
+      "explanation": "Dentro de los 2 años iniciales (o tras rehabilitación), procede la reserva; después, aplica cobertura.",
+      "source": "Cap. 3 – Condiciones Generales",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-CPT-031",
+      "question": "Según tabla típica de pérdidas orgánicas, la pérdida de una mano indemniza:",
+      "options": [
+        "El 100%",
+        "El 50% de la suma asegurada del beneficio de pérdidas orgánicas",
+        "El 30%",
+        "El 10%"
+      ],
+      "correct": 1,
+      "subtopic": "Pérdidas orgánicas por accidente",
+      "difficulty": "basic",
+      "explanation": "Ejemplo de tabla: mano o pie 50%; vista de un ojo 30%; pulgar 15%; índice 10%.",
+      "source": "Cap. 5 – Coberturas y Beneficios Adicionales",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-CPT-036",
+      "question": "El Seguro Temporal se caracteriza por principalmente:",
+      "options": [
+        "Pagar la suma asegurada solo si la muerte ocurre dentro del plazo pactado",
+        "Requerir prima única obligatoria",
+        "Pagar al cumplir 99 años",
+        "No generar ninguna reserva en ningún caso"
+      ],
+      "correct": 0,
+      "subtopic": "Seguro temporal",
+      "difficulty": "basic",
+      "explanation": "Cubierta por plazo fijo; a mayor plazo, mayor costo; existen modalidades nivelada, renovable, decreciente, creciente.",
+      "source": "Cap. 2 – Planes Básicos y No Tradicionales",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-CPT-038",
+      "question": "Error en la edad del asegurado principalmente:",
+      "options": [
+        "Obliga a pagar doble prima",
+        "Ajusta suma o prima según proporción entre lo pagado y lo debido",
+        "Anula automáticamente la póliza",
+        "No tiene efectos"
+      ],
+      "correct": 1,
+      "subtopic": "Edad del asegurado (ajustes)",
+      "difficulty": "advanced",
+      "explanation": "Si pagó menos prima por mayor edad, se reduce la SA proporcionalmente; si pagó de más, se restituye.",
+      "source": "Cap. 3 – Condiciones Generales",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-CPT-039",
+      "question": "La Reserva Matemática en vida individual:",
+      "options": [
+        "Un pago por única ocasión al emitir la póliza",
+        "Es un impuesto a la prima",
+        "Es la utilidad de la compañía",
+        "Es el fondo constituido por excedentes iniciales y rendimientos para garantizar obligaciones futuras"
+      ],
+      "correct": 3,
+      "subtopic": "Reserva matemática",
+      "difficulty": "intermediate",
+      "explanation": "Parte de la prima nivelada no consumida se capitaliza para cubrir compromisos en edades avanzadas.",
+      "source": "Cap. 1 – Bases Técnicas",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-CPT-044",
+      "question": "La cláusula de indisputabilidad establece que principalmente:",
+      "options": [
+        "Exime de pagar primas",
+        "Nunca podrá disputarse por ninguna causa",
+        "Opera desde el primer día",
+        "Transcurridos 2 años ininterrumpidos, la póliza no será disputable por omisiones en la solicitud"
+      ],
+      "correct": 3,
+      "subtopic": "Indisputabilidad",
+      "difficulty": "basic",
+      "explanation": "Tras dos años, la compañía renuncia a disputar por omisiones/inexactitudes, salvo supuestos legales.",
+      "source": "Cap. 3 – Condiciones Generales",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-CPT-046",
+      "question": "La Invalidez Total y Permanente requiere principalmente:",
+      "options": [
+        "Incapacidad total y permanente para el trabajo habitual o compatible, usualmente con período de espera",
+        "Solo accidente de tránsito",
+        "Cualquier enfermedad temporal",
+        "Hospitalización de 24 horas"
+      ],
+      "correct": 0,
+      "subtopic": "Invalidez – criterios",
+      "difficulty": "advanced",
+      "explanation": "Opera tras periodo (p. ej., 6 meses) salvo pérdidas anatómicas mayores donde no hay espera.",
+      "source": "Cap. 5 – Coberturas y Beneficios Adicionales",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-CPT-049",
+      "question": "En GM, 'deducible' es principalmente:",
+      "options": [
+        "La prima anual",
+        "La cantidad fija a cargo del asegurado antes de aplicar el coaseguro",
+        "Un porcentaje del total siempre",
+        "La suma asegurada"
+      ],
+      "correct": 1,
+      "subtopic": "GM – deducible",
+      "difficulty": "basic",
+      "explanation": "Primero se resta el deducible; luego se aplica coaseguro sobre el remanente.",
+      "source": "Cap. 7 – Definiciones (GM)",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-CPT-051",
+      "question": "La Prima Pura de Riesgo en Vida Individual cubre:",
+      "options": [
+        "Gastos de adquisición y administración",
+        "Utilidad del accionista",
+        "Únicamente el costo de mortalidad del periodo",
+        "Todas las coberturas adicionales"
+      ],
+      "correct": 2,
+      "subtopic": "Tipos de prima",
+      "difficulty": "basic",
+      "explanation": "La prima pura es el valor esperado de la pérdida (mortalidad) del periodo.",
+      "source": "Cap. 1 – Bases Técnicas",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-CPT-067",
+      "question": "En Ordinario de Vida, la compañía paga:",
+      "options": [
+        "Solo si existe dote",
+        "Al fallecer el asegurado en cualquier fecha o por muerte técnica a edad límite de la tabla",
+        "Solo si muere durante los primeros 20 años",
+        "Solo al cumplir 65 años"
+      ],
+      "correct": 1,
+      "subtopic": "Ordinario de vida",
+      "difficulty": "basic",
+      "explanation": "Paga al fallecimiento o a edad técnica (p. ej., 95–99), con reserva creciente y dividendos según políticas.",
+      "source": "Cap. 2 – Planes Básicos y No Tradicionales",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-PLN-001",
+      "question": "Identifica la característica correcta de Temporal Creciente:",
+      "options": [
+        "Prima baja con el tiempo",
+        "Prima y SA crecen periódicamente (planes dinámicos)",
+        "No permite endosos",
+        "Paga dote al final sí o sí"
+      ],
+      "correct": 1,
+      "subtopic": "Seguro temporal",
+      "difficulty": "intermediate",
+      "explanation": "Crecen para acompañar inflación.",
+      "source": "Cap. 2 – Planes Básicos y No Tradicionales",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-PLN-002",
+      "question": "Identifica la característica correcta de Temporal Renovable:",
+      "options": [
+        "Prima única y dote al final",
+        "Prima decreciente y SA decreciente",
+        "Prima nivelada y SA constante toda la vida",
+        "La prima sube con la edad; la suma asegurada se mantiene"
+      ],
+      "correct": 3,
+      "subtopic": "Seguro temporal",
+      "difficulty": "basic",
+      "explanation": "Renovable: prima natural ascendente, SA fija.",
+      "source": "Cap. 2 – Planes Básicos y No Tradicionales",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-PLN-005",
+      "question": "Identifica la característica correcta de Temporal Decreciente:",
+      "options": [
+        "SA aumenta anualmente por inflación",
+        "SA y prima constantes",
+        "Solo paga por sobrevivencia",
+        "SA disminuye con el tiempo para acompañar deudas decrecientes"
+      ],
+      "correct": 3,
+      "subtopic": "Seguro temporal",
+      "difficulty": "intermediate",
+      "explanation": "Plan usado para hipotecas; prima promedio, SA baja en el tiempo.",
+      "source": "Cap. 2 – Planes Básicos y No Tradicionales",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-PLN-010",
+      "question": "Identifica la característica correcta de Dotal Puro:",
+      "options": [
+        "Paga si el asegurado sobrevive al plazo; si fallece, devuelve primas menos gastos",
+        "Paga solo por muerte",
+        "Paga renta vitalicia obligatoria",
+        "No tiene ahorro"
+      ],
+      "correct": 0,
+      "subtopic": "Seguro dotal",
+      "difficulty": "advanced",
+      "explanation": "Cubre sobrevivencia; el mixto cubre muerte o sobrevivencia.",
+      "source": "Cap. 2 – Planes Básicos y No Tradicionales",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-PLN-012",
+      "question": "Identifica la característica correcta de Ordinario de Vida:",
+      "options": [
+        "Solo si hay invalidez",
+        "Cubre fallecimiento en cualquier fecha (o muerte técnica a edad límite)",
+        "Solo cubre hasta 20 años",
+        "Solo con prima única"
+      ],
+      "correct": 1,
+      "subtopic": "Vida entera",
+      "difficulty": "basic",
+      "explanation": "Plan vitalicio por definición; prima nivelada; reserva creciente.",
+      "source": "Cap. 2 – Planes Básicos y No Tradicionales",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-PLN-014",
+      "question": "Identifica la característica correcta de Universal – Opción 1:",
+      "options": [
+        "Beneficio = SA + fondo excedente",
+        "Beneficio por muerte nivelado igual a la SA especificada",
+        "No admite retiros parciales",
+        "Beneficio es solo el fondo"
+      ],
+      "correct": 1,
+      "subtopic": "Planes no tradicionales",
+      "difficulty": "advanced",
+      "explanation": "Opción 1 mantiene beneficio nivelado; Opción 2 suma el fondo.",
+      "source": "Cap. 2 – Planes Básicos y No Tradicionales",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-NUM-001",
+      "question": "Tras 3 anualidades y una reserva estimada de $10,000 (rendimiento 6%), ¿cuál sería un monto razonable de préstamo ordinario y su efecto?",
+      "options": [
+        "No procede hasta cumplir 10 anualidades",
+        "$10,000 sin intereses ni cargos",
+        "$8,000 (aprox.), genera intereses y debe reponerse para restablecer la reserva",
+        "$200,000 (igual a la suma asegurada)"
+      ],
+      "correct": 2,
+      "subtopic": "Valores garantizados – préstamo",
+      "difficulty": "intermediate",
+      "explanation": "El préstamo ordinario no debe exceder típicamente el valor de rescate; usamos 80% de una reserva estimada como aproximación didáctica. Genera intereses y reduce la reserva hasta su reposición.",
+      "source": "Cap. 1 – Bases Técnicas",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-ACC-001",
+      "question": "Según la tabla de pérdidas orgánicas por accidente, la pérdida de un pie indemniza:",
+      "options": [
+        "100%",
+        "30%",
+        "5%",
+        "50%"
+      ],
+      "correct": 3,
+      "subtopic": "Pérdidas orgánicas por accidente",
+      "difficulty": "basic",
+      "explanation": "Ejemplo de tabla típica: vida o pérdidas combinadas 100%; mano o pie 50%; vista de un ojo 30%; pulgar 15%; índice 10%.",
+      "source": "Cap. 5 – Coberturas y Beneficios Adicionales",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-GM-001",
+      "question": "En GM: gasto de $60,000, deducible $20,000 y coaseguro 10% (aplicado después del deducible). ¿Cuánto paga la aseguradora por reembolso?",
+      "options": [
+        "$36,000",
+        "$54,000",
+        "$26,000",
+        "$40,000"
+      ],
+      "correct": 0,
+      "subtopic": "GM – cálculo deducible/coaseguro",
+      "difficulty": "intermediate",
+      "explanation": "Base = gasto − deducible = $40,000. Indemnización = Base × (1 − 10%) = $36,000.",
+      "source": "Cap. 7 – Definiciones (GM)",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-GM-002",
+      "question": "En GM: gasto de $120,000, deducible $15,000 y coaseguro 10% (aplicado después del deducible). ¿Cuánto paga la aseguradora por reembolso?",
+      "options": [
+        "$105,000",
+        "$84,500",
+        "$108,000",
+        "$94,500"
+      ],
+      "correct": 3,
+      "subtopic": "GM – cálculo deducible/coaseguro",
+      "difficulty": "intermediate",
+      "explanation": "Base = gasto − deducible = $105,000. Indemnización = Base × (1 − 10%) = $94,500.",
+      "source": "Cap. 7 – Definiciones (GM)",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-GM-003",
+      "question": "En GM: gasto de $90,000, deducible $10,000 y coaseguro 20% (aplicado después del deducible). ¿Cuánto paga la aseguradora por reembolso?",
+      "options": [
+        "$80,000",
+        "$72,000",
+        "$64,000",
+        "$54,000"
+      ],
+      "correct": 2,
+      "subtopic": "GM – cálculo deducible/coaseguro",
+      "difficulty": "intermediate",
+      "explanation": "Base = gasto − deducible = $80,000. Indemnización = Base × (1 − 20%) = $64,000.",
+      "source": "Cap. 7 – Definiciones (GM)",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-GM-004",
+      "question": "En GM: gasto de $120,000, deducible $20,000 y coaseguro 30% (aplicado después del deducible). ¿Cuánto paga la aseguradora por reembolso?",
+      "options": [
+        "$70,000",
+        "$60,000",
+        "$84,000",
+        "$100,000"
+      ],
+      "correct": 0,
+      "subtopic": "GM – cálculo deducible/coaseguro",
+      "difficulty": "intermediate",
+      "explanation": "Base = gasto − deducible = $100,000. Indemnización = Base × (1 − 30%) = $70,000.",
+      "source": "Cap. 7 – Definiciones (GM)",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-GM-005",
+      "question": "En GM: gasto de $120,000, deducible $5,000 y coaseguro 10% (aplicado después del deducible). ¿Cuánto paga la aseguradora por reembolso?",
+      "options": [
+        "$103,500",
+        "$115,000",
+        "$93,500",
+        "$108,000"
+      ],
+      "correct": 0,
+      "subtopic": "GM – cálculo deducible/coaseguro",
+      "difficulty": "intermediate",
+      "explanation": "Base = gasto − deducible = $115,000. Indemnización = Base × (1 − 10%) = $103,500.",
+      "source": "Cap. 7 – Definiciones (GM)",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-GM-006",
+      "question": "En GM: gasto de $35,000, deducible $10,000 y coaseguro 20% (aplicado después del deducible). ¿Cuánto paga la aseguradora por reembolso?",
+      "options": [
+        "$25,000",
+        "$28,000",
+        "$20,000",
+        "$10,000"
+      ],
+      "correct": 2,
+      "subtopic": "GM – cálculo deducible/coaseguro",
+      "difficulty": "intermediate",
+      "explanation": "Base = gasto − deducible = $25,000. Indemnización = Base × (1 − 20%) = $20,000.",
+      "source": "Cap. 7 – Definiciones (GM)",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-GM-007",
+      "question": "En GM: gasto de $250,000, deducible $10,000 y coaseguro 30% (aplicado después del deducible). ¿Cuánto paga la aseguradora por reembolso?",
+      "options": [
+        "$158,000",
+        "$175,000",
+        "$240,000",
+        "$168,000"
+      ],
+      "correct": 3,
+      "subtopic": "GM – cálculo deducible/coaseguro",
+      "difficulty": "intermediate",
+      "explanation": "Base = gasto − deducible = $240,000. Indemnización = Base × (1 − 30%) = $168,000.",
+      "source": "Cap. 7 – Definiciones (GM)",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-GM-008",
+      "question": "En GM: gasto de $90,000, deducible $15,000 y coaseguro 30% (aplicado después del deducible). ¿Cuánto paga la aseguradora por reembolso?",
+      "options": [
+        "$63,000",
+        "$42,500",
+        "$75,000",
+        "$52,500"
+      ],
+      "correct": 3,
+      "subtopic": "GM – cálculo deducible/coaseguro",
+      "difficulty": "intermediate",
+      "explanation": "Base = gasto − deducible = $75,000. Indemnización = Base × (1 − 30%) = $52,500.",
+      "source": "Cap. 7 – Definiciones (GM)",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-GM-009",
+      "question": "En GM: gasto de $120,000, deducible $10,000 y coaseguro 20% (aplicado después del deducible). ¿Cuánto paga la aseguradora por reembolso?",
+      "options": [
+        "$88,000",
+        "$96,000",
+        "$110,000",
+        "$78,000"
+      ],
+      "correct": 0,
+      "subtopic": "GM – cálculo deducible/coaseguro",
+      "difficulty": "intermediate",
+      "explanation": "Base = gasto − deducible = $110,000. Indemnización = Base × (1 − 20%) = $88,000.",
+      "source": "Cap. 7 – Definiciones (GM)",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-GM-010",
+      "question": "En GM: gasto de $35,000, deducible $20,000 y coaseguro 30% (aplicado después del deducible). ¿Cuánto paga la aseguradora por reembolso?",
+      "options": [
+        "$10,500",
+        "$500",
+        "$24,500",
+        "$15,000"
+      ],
+      "correct": 0,
+      "subtopic": "GM – cálculo deducible/coaseguro",
+      "difficulty": "intermediate",
+      "explanation": "Base = gasto − deducible = $15,000. Indemnización = Base × (1 − 30%) = $10,500.",
+      "source": "Cap. 7 – Definiciones (GM)",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-GM-011",
+      "question": "En GM: gasto de $35,000, deducible $20,000 y coaseguro 20% (aplicado después del deducible). ¿Cuánto paga la aseguradora por reembolso?",
+      "options": [
+        "$28,000",
+        "$15,000",
+        "$2,000",
+        "$12,000"
+      ],
+      "correct": 3,
+      "subtopic": "GM – cálculo deducible/coaseguro",
+      "difficulty": "intermediate",
+      "explanation": "Base = gasto − deducible = $15,000. Indemnización = Base × (1 − 20%) = $12,000.",
+      "source": "Cap. 7 – Definiciones (GM)",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-GM-012",
+      "question": "En GM: gasto de $180,000, deducible $10,000 y coaseguro 10% (aplicado después del deducible). ¿Cuánto paga la aseguradora por reembolso?",
+      "options": [
+        "$153,000",
+        "$143,000",
+        "$162,000",
+        "$170,000"
+      ],
+      "correct": 0,
+      "subtopic": "GM – cálculo deducible/coaseguro",
+      "difficulty": "intermediate",
+      "explanation": "Base = gasto − deducible = $170,000. Indemnización = Base × (1 − 10%) = $153,000.",
+      "source": "Cap. 7 – Definiciones (GM)",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-GM-014",
+      "question": "En GM: gasto de $180,000, deducible $5,000 y coaseguro 30% (aplicado después del deducible). ¿Cuánto paga la aseguradora por reembolso?",
+      "options": [
+        "$122,500",
+        "$175,000",
+        "$112,500",
+        "$126,000"
+      ],
+      "correct": 0,
+      "subtopic": "GM – cálculo deducible/coaseguro",
+      "difficulty": "intermediate",
+      "explanation": "Base = gasto − deducible = $175,000. Indemnización = Base × (1 − 30%) = $122,500.",
+      "source": "Cap. 7 – Definiciones (GM)",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-GM-015",
+      "question": "En GM: gasto de $120,000, deducible $20,000 y coaseguro 10% (aplicado después del deducible). ¿Cuánto paga la aseguradora por reembolso?",
+      "options": [
+        "$108,000",
+        "$90,000",
+        "$80,000",
+        "$100,000"
+      ],
+      "correct": 1,
+      "subtopic": "GM – cálculo deducible/coaseguro",
+      "difficulty": "intermediate",
+      "explanation": "Base = gasto − deducible = $100,000. Indemnización = Base × (1 − 10%) = $90,000.",
+      "source": "Cap. 7 – Definiciones (GM)",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-GM-016",
+      "question": "En GM: gasto de $250,000, deducible $15,000 y coaseguro 30% (aplicado después del deducible). ¿Cuánto paga la aseguradora por reembolso?",
+      "options": [
+        "$154,500",
+        "$175,000",
+        "$235,000",
+        "$164,500"
+      ],
+      "correct": 3,
+      "subtopic": "GM – cálculo deducible/coaseguro",
+      "difficulty": "intermediate",
+      "explanation": "Base = gasto − deducible = $235,000. Indemnización = Base × (1 − 30%) = $164,500.",
+      "source": "Cap. 7 – Definiciones (GM)",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-GM-018",
+      "question": "En GM: gasto de $120,000, deducible $15,000 y coaseguro 30% (aplicado después del deducible). ¿Cuánto paga la aseguradora por reembolso?",
+      "options": [
+        "$105,000",
+        "$63,500",
+        "$73,500",
+        "$84,000"
+      ],
+      "correct": 2,
+      "subtopic": "GM – cálculo deducible/coaseguro",
+      "difficulty": "intermediate",
+      "explanation": "Base = gasto − deducible = $105,000. Indemnización = Base × (1 − 30%) = $73,500.",
+      "source": "Cap. 7 – Definiciones (GM)",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-GM-019",
+      "question": "En GM: gasto de $90,000, deducible $20,000 y coaseguro 30% (aplicado después del deducible). ¿Cuánto paga la aseguradora por reembolso?",
+      "options": [
+        "$49,000",
+        "$63,000",
+        "$39,000",
+        "$70,000"
+      ],
+      "correct": 0,
+      "subtopic": "GM – cálculo deducible/coaseguro",
+      "difficulty": "intermediate",
+      "explanation": "Base = gasto − deducible = $70,000. Indemnización = Base × (1 − 30%) = $49,000.",
+      "source": "Cap. 7 – Definiciones (GM)",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-GM-020",
+      "question": "En GM: gasto de $60,000, deducible $10,000 y coaseguro 10% (aplicado después del deducible). ¿Cuánto paga la aseguradora por reembolso?",
+      "options": [
+        "$50,000",
+        "$35,000",
+        "$54,000",
+        "$45,000"
+      ],
+      "correct": 3,
+      "subtopic": "GM – cálculo deducible/coaseguro",
+      "difficulty": "intermediate",
+      "explanation": "Base = gasto − deducible = $50,000. Indemnización = Base × (1 − 10%) = $45,000.",
+      "source": "Cap. 7 – Definiciones (GM)",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-GM-021",
+      "question": "En GM: gasto de $120,000, deducible $10,000 y coaseguro 10% (aplicado después del deducible). ¿Cuánto paga la aseguradora por reembolso?",
+      "options": [
+        "$99,000",
+        "$110,000",
+        "$89,000",
+        "$108,000"
+      ],
+      "correct": 0,
+      "subtopic": "GM – cálculo deducible/coaseguro",
+      "difficulty": "intermediate",
+      "explanation": "Base = gasto − deducible = $110,000. Indemnización = Base × (1 − 10%) = $99,000.",
+      "source": "Cap. 7 – Definiciones (GM)",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-GM-023",
+      "question": "En GM: gasto de $60,000, deducible $15,000 y coaseguro 30% (aplicado después del deducible). ¿Cuánto paga la aseguradora por reembolso?",
+      "options": [
+        "$31,500",
+        "$45,000",
+        "$42,000",
+        "$21,500"
+      ],
+      "correct": 0,
+      "subtopic": "GM – cálculo deducible/coaseguro",
+      "difficulty": "intermediate",
+      "explanation": "Base = gasto − deducible = $45,000. Indemnización = Base × (1 − 30%) = $31,500.",
+      "source": "Cap. 7 – Definiciones (GM)",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-GM-025",
+      "question": "En GM: gasto de $90,000, deducible $10,000 y coaseguro 30% (aplicado después del deducible). ¿Cuánto paga la aseguradora por reembolso?",
+      "options": [
+        "$56,000",
+        "$46,000",
+        "$80,000",
+        "$63,000"
+      ],
+      "correct": 0,
+      "subtopic": "GM – cálculo deducible/coaseguro",
+      "difficulty": "intermediate",
+      "explanation": "Base = gasto − deducible = $80,000. Indemnización = Base × (1 − 30%) = $56,000.",
+      "source": "Cap. 7 – Definiciones (GM)",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-GM-027",
+      "question": "En GM: gasto de $60,000, deducible $15,000 y coaseguro 20% (aplicado después del deducible). ¿Cuánto paga la aseguradora por reembolso?",
+      "options": [
+        "$48,000",
+        "$45,000",
+        "$26,000",
+        "$36,000"
+      ],
+      "correct": 3,
+      "subtopic": "GM – cálculo deducible/coaseguro",
+      "difficulty": "intermediate",
+      "explanation": "Base = gasto − deducible = $45,000. Indemnización = Base × (1 − 20%) = $36,000.",
+      "source": "Cap. 7 – Definiciones (GM)",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-GM-029",
+      "question": "En GM: gasto de $60,000, deducible $5,000 y coaseguro 30% (aplicado después del deducible). ¿Cuánto paga la aseguradora por reembolso?",
+      "options": [
+        "$28,500",
+        "$38,500",
+        "$55,000",
+        "$42,000"
+      ],
+      "correct": 1,
+      "subtopic": "GM – cálculo deducible/coaseguro",
+      "difficulty": "intermediate",
+      "explanation": "Base = gasto − deducible = $55,000. Indemnización = Base × (1 − 30%) = $38,500.",
+      "source": "Cap. 7 – Definiciones (GM)",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-GM-031",
+      "question": "En GM: gasto de $60,000, deducible $10,000 y coaseguro 20% (aplicado después del deducible). ¿Cuánto paga la aseguradora por reembolso?",
+      "options": [
+        "$30,000",
+        "$40,000",
+        "$48,000",
+        "$50,000"
+      ],
+      "correct": 1,
+      "subtopic": "GM – cálculo deducible/coaseguro",
+      "difficulty": "intermediate",
+      "explanation": "Base = gasto − deducible = $50,000. Indemnización = Base × (1 − 20%) = $40,000.",
+      "source": "Cap. 7 – Definiciones (GM)",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-GM-032",
+      "question": "En GM: gasto de $250,000, deducible $15,000 y coaseguro 10% (aplicado después del deducible). ¿Cuánto paga la aseguradora por reembolso?",
+      "options": [
+        "$235,000",
+        "$211,500",
+        "$225,000",
+        "$201,500"
+      ],
+      "correct": 1,
+      "subtopic": "GM – cálculo deducible/coaseguro",
+      "difficulty": "intermediate",
+      "explanation": "Base = gasto − deducible = $235,000. Indemnización = Base × (1 − 10%) = $211,500.",
+      "source": "Cap. 7 – Definiciones (GM)",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-GM-034",
+      "question": "En GM: gasto de $180,000, deducible $5,000 y coaseguro 20% (aplicado después del deducible). ¿Cuánto paga la aseguradora por reembolso?",
+      "options": [
+        "$175,000",
+        "$144,000",
+        "$140,000",
+        "$130,000"
+      ],
+      "correct": 2,
+      "subtopic": "GM – cálculo deducible/coaseguro",
+      "difficulty": "intermediate",
+      "explanation": "Base = gasto − deducible = $175,000. Indemnización = Base × (1 − 20%) = $140,000.",
+      "source": "Cap. 7 – Definiciones (GM)",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-GM-038",
+      "question": "En GM: gasto de $120,000, deducible $15,000 y coaseguro 20% (aplicado después del deducible). ¿Cuánto paga la aseguradora por reembolso?",
+      "options": [
+        "$105,000",
+        "$84,000",
+        "$96,000",
+        "$74,000"
+      ],
+      "correct": 1,
+      "subtopic": "GM – cálculo deducible/coaseguro",
+      "difficulty": "intermediate",
+      "explanation": "Base = gasto − deducible = $105,000. Indemnización = Base × (1 − 20%) = $84,000.",
+      "source": "Cap. 7 – Definiciones (GM)",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-SEL-001",
+      "question": "La ocupación del solicitante influye porque:",
+      "options": [
+        "Siempre implica rechazo",
+        "Solo afecta comisiones",
+        "Modifica el perfil de mortalidad y puede generar extraprima o exclusión",
+        "No se considera en vida individual"
+      ],
+      "correct": 2,
+      "subtopic": "Selección de riesgos – ocupación",
+      "difficulty": "intermediate",
+      "explanation": "Ocupaciones peligrosas elevan mortalidad esperada.",
+      "source": "Cap. 6 – Selección de Riesgos",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-SEL-002",
+      "question": "Edad y estatura/peso son relevantes porque:",
+      "options": [
+        "Se relacionan con mortalidad y morbilidad, afectando prima o aceptación",
+        "Solo cuentan para GM",
+        "Carecen de evidencia actuarial",
+        "Definen el tipo de endoso"
+      ],
+      "correct": 0,
+      "subtopic": "Selección de riesgos – edad/IMC",
+      "difficulty": "basic",
+      "explanation": "Variables biométricas impactan la expectativa de vida.",
+      "source": "Cap. 6 – Selección de Riesgos",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-SEL-004",
+      "question": "Un deporte de alto riesgo (p. ej., alpinismo) suele:",
+      "options": [
+        "Generar extraprima o exclusión específica",
+        "No tener efecto",
+        "Convertir el plan a dotal automáticamente",
+        "Reducir la prima"
+      ],
+      "correct": 0,
+      "subtopic": "Selección de riesgos – deportes",
+      "difficulty": "basic",
+      "explanation": "Deportes peligrosos alteran severidad y probabilidad de siniestro.",
+      "source": "Cap. 6 – Selección de Riesgos",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    },
+    {
+      "id": "RI-SEL-008",
+      "question": "El monto de seguro en relación con ingresos:",
+      "options": [
+        "Siempre es 30 veces el ingreso",
+        "Se ignora si hay beneficiarios",
+        "Puede ser cualquiera",
+        "Debe guardar congruencia técnica para evitar sobreaseguro o selección adversa"
+      ],
+      "correct": 3,
+      "subtopic": "Selección de riesgos – monto",
+      "difficulty": "advanced",
+      "explanation": "Congruencia evita incentivos y riesgos de fraude o selección adversa.",
+      "source": "Cap. 6 – Selección de Riesgos",
+      "module": "Riesgos Individuales de Seguro de Personas"
+    }
+  ],
+  "metadata": {
+    "version": "2025-09-29",
+    "module_count": 4,
+    "total": 240
+  }
+}

@@ -1,0 +1,864 @@
+{
+  "by_module": [
+    {
+      "module": "Aspectos Generales",
+      "count": 67
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Daños",
+      "count": 40
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Personas",
+      "count": 68
+    },
+    {
+      "module": "Sistema y Mercados Financieros",
+      "count": 65
+    }
+  ],
+  "by_module_subtopic": [
+    {
+      "module": "Aspectos Generales",
+      "subtopic": "Autoridades",
+      "count": 2
+    },
+    {
+      "module": "Aspectos Generales",
+      "subtopic": "CNSF – funciones",
+      "count": 2
+    },
+    {
+      "module": "Aspectos Generales",
+      "subtopic": "CONDUSEF – atribuciones",
+      "count": 1
+    },
+    {
+      "module": "Aspectos Generales",
+      "subtopic": "CONDUSEF – funciones",
+      "count": 1
+    },
+    {
+      "module": "Aspectos Generales",
+      "subtopic": "Cancelación de autorización",
+      "count": 1
+    },
+    {
+      "module": "Aspectos Generales",
+      "subtopic": "Características del contrato",
+      "count": 1
+    },
+    {
+      "module": "Aspectos Generales",
+      "subtopic": "Características del riesgo asegurable",
+      "count": 3
+    },
+    {
+      "module": "Aspectos Generales",
+      "subtopic": "Clasificación del riesgo",
+      "count": 1
+    },
+    {
+      "module": "Aspectos Generales",
+      "subtopic": "Conciliación y arbitraje",
+      "count": 2
+    },
+    {
+      "module": "Aspectos Generales",
+      "subtopic": "Deber de información",
+      "count": 1
+    },
+    {
+      "module": "Aspectos Generales",
+      "subtopic": "Deber de información del agente",
+      "count": 1
+    },
+    {
+      "module": "Aspectos Generales",
+      "subtopic": "Debida diligencia",
+      "count": 1
+    },
+    {
+      "module": "Aspectos Generales",
+      "subtopic": "Declaración del riesgo",
+      "count": 1
+    },
+    {
+      "module": "Aspectos Generales",
+      "subtopic": "Deducible",
+      "count": 2
+    },
+    {
+      "module": "Aspectos Generales",
+      "subtopic": "Distribución del riesgo",
+      "count": 2
+    },
+    {
+      "module": "Aspectos Generales",
+      "subtopic": "Enfoque basado en riesgo",
+      "count": 1
+    },
+    {
+      "module": "Aspectos Generales",
+      "subtopic": "Facultades de CONDUSEF",
+      "count": 1
+    },
+    {
+      "module": "Aspectos Generales",
+      "subtopic": "Homogeneidad",
+      "count": 1
+    },
+    {
+      "module": "Aspectos Generales",
+      "subtopic": "Indisputabilidad",
+      "count": 1
+    },
+    {
+      "module": "Aspectos Generales",
+      "subtopic": "Interés asegurable",
+      "count": 3
+    },
+    {
+      "module": "Aspectos Generales",
+      "subtopic": "KYC Persona Moral",
+      "count": 1
+    },
+    {
+      "module": "Aspectos Generales",
+      "subtopic": "Ley de los grandes números",
+      "count": 2
+    },
+    {
+      "module": "Aspectos Generales",
+      "subtopic": "Naturaleza del contrato",
+      "count": 1
+    },
+    {
+      "module": "Aspectos Generales",
+      "subtopic": "Operaciones inusuales",
+      "count": 1
+    },
+    {
+      "module": "Aspectos Generales",
+      "subtopic": "Operaciones y ramos",
+      "count": 1
+    },
+    {
+      "module": "Aspectos Generales",
+      "subtopic": "PLD – beneficiario controlador",
+      "count": 1
+    },
+    {
+      "module": "Aspectos Generales",
+      "subtopic": "PLD – operaciones inusuales",
+      "count": 2
+    },
+    {
+      "module": "Aspectos Generales",
+      "subtopic": "Perfeccionamiento",
+      "count": 1
+    },
+    {
+      "module": "Aspectos Generales",
+      "subtopic": "Principios del contrato",
+      "count": 1
+    },
+    {
+      "module": "Aspectos Generales",
+      "subtopic": "Principios del seguro",
+      "count": 1
+    },
+    {
+      "module": "Aspectos Generales",
+      "subtopic": "Propietario real",
+      "count": 1
+    },
+    {
+      "module": "Aspectos Generales",
+      "subtopic": "Póliza: elementos",
+      "count": 1
+    },
+    {
+      "module": "Aspectos Generales",
+      "subtopic": "Regla proporcional",
+      "count": 6
+    },
+    {
+      "module": "Aspectos Generales",
+      "subtopic": "Reservas técnicas",
+      "count": 1
+    },
+    {
+      "module": "Aspectos Generales",
+      "subtopic": "Responsabilidad civil E&O",
+      "count": 1
+    },
+    {
+      "module": "Aspectos Generales",
+      "subtopic": "Riesgo moral",
+      "count": 1
+    },
+    {
+      "module": "Aspectos Generales",
+      "subtopic": "SHCP – rol",
+      "count": 1
+    },
+    {
+      "module": "Aspectos Generales",
+      "subtopic": "Sanciones",
+      "count": 3
+    },
+    {
+      "module": "Aspectos Generales",
+      "subtopic": "Sanciones – amonestación",
+      "count": 1
+    },
+    {
+      "module": "Aspectos Generales",
+      "subtopic": "Sanciones – revocación",
+      "count": 2
+    },
+    {
+      "module": "Aspectos Generales",
+      "subtopic": "Selección adversa",
+      "count": 2
+    },
+    {
+      "module": "Aspectos Generales",
+      "subtopic": "Señales de alerta",
+      "count": 1
+    },
+    {
+      "module": "Aspectos Generales",
+      "subtopic": "Subrogación",
+      "count": 3
+    },
+    {
+      "module": "Aspectos Generales",
+      "subtopic": "Sujetos del contrato",
+      "count": 1
+    },
+    {
+      "module": "Aspectos Generales",
+      "subtopic": "Tipos de prima",
+      "count": 1
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Daños",
+      "subtopic": "Autos – Cláusulas al siniestro",
+      "count": 1
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Daños",
+      "subtopic": "Autos – Coberturas básicas",
+      "count": 1
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Daños",
+      "subtopic": "Autos – Daños materiales (exclusiones)",
+      "count": 1
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Daños",
+      "subtopic": "Autos – Deducible y coaseguro",
+      "count": 6
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Daños",
+      "subtopic": "Autos – Devolución de primas",
+      "count": 1
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Daños",
+      "subtopic": "Autos – Equipo especial",
+      "count": 2
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Daños",
+      "subtopic": "Autos – Extensión RC",
+      "count": 1
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Daños",
+      "subtopic": "Autos – Obligaciones de la compañía",
+      "count": 1
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Daños",
+      "subtopic": "Autos – Obligaciones del asegurado",
+      "count": 1
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Daños",
+      "subtopic": "Autos – RC",
+      "count": 1
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Daños",
+      "subtopic": "Autos – Regla proporcional (infraseguro)",
+      "count": 6
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Daños",
+      "subtopic": "Autos – Robo total (limitada)",
+      "count": 1
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Daños",
+      "subtopic": "Autos – Territorialidad",
+      "count": 1
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Daños",
+      "subtopic": "Hogar – Estructura",
+      "count": 1
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Daños",
+      "subtopic": "Hogar – FH",
+      "count": 2
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Daños",
+      "subtopic": "Hogar – Incendio T.R.",
+      "count": 1
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Daños",
+      "subtopic": "Hogar – Pérdidas consecuenciales",
+      "count": 3
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Daños",
+      "subtopic": "Hogar – RC Familiar",
+      "count": 1
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Daños",
+      "subtopic": "Hogar – Sección I",
+      "count": 1
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Daños",
+      "subtopic": "Hogar – Sección II",
+      "count": 1
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Daños",
+      "subtopic": "Hogar – Terremoto",
+      "count": 1
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Daños",
+      "subtopic": "Hogar – Valores",
+      "count": 3
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Daños",
+      "subtopic": "Hogar – Valores convenidos",
+      "count": 1
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Daños",
+      "subtopic": "Siniestros – Obligaciones del asegurado",
+      "count": 1
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Personas",
+      "subtopic": "Bases técnicas",
+      "count": 1
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Personas",
+      "subtopic": "Beneficiarios",
+      "count": 1
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Personas",
+      "subtopic": "Descuentos",
+      "count": 1
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Personas",
+      "subtopic": "Edad del asegurado (ajustes)",
+      "count": 1
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Personas",
+      "subtopic": "Formas de liquidación/administración",
+      "count": 1
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Personas",
+      "subtopic": "GM – coaseguro",
+      "count": 1
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Personas",
+      "subtopic": "GM – cálculo deducible/coaseguro",
+      "count": 27
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Personas",
+      "subtopic": "GM – deducible",
+      "count": 1
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Personas",
+      "subtopic": "GM – pago directo vs reembolso",
+      "count": 1
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Personas",
+      "subtopic": "GM – periodo de espera",
+      "count": 1
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Personas",
+      "subtopic": "Indisputabilidad",
+      "count": 1
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Personas",
+      "subtopic": "Invalidez – criterios",
+      "count": 1
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Personas",
+      "subtopic": "Invalidez – exención de primas",
+      "count": 1
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Personas",
+      "subtopic": "Muerte accidental",
+      "count": 1
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Personas",
+      "subtopic": "Ordinario de vida",
+      "count": 1
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Personas",
+      "subtopic": "Planes no tradicionales",
+      "count": 2
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Personas",
+      "subtopic": "Pérdidas orgánicas por accidente",
+      "count": 2
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Personas",
+      "subtopic": "Reclamaciones – requisitos",
+      "count": 1
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Personas",
+      "subtopic": "Reserva matemática",
+      "count": 1
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Personas",
+      "subtopic": "Seguro dotal",
+      "count": 2
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Personas",
+      "subtopic": "Seguro temporal",
+      "count": 4
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Personas",
+      "subtopic": "Selección de riesgos – deportes",
+      "count": 1
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Personas",
+      "subtopic": "Selección de riesgos – edad/IMC",
+      "count": 1
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Personas",
+      "subtopic": "Selección de riesgos – extraprimas",
+      "count": 1
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Personas",
+      "subtopic": "Selección de riesgos – monto",
+      "count": 1
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Personas",
+      "subtopic": "Selección de riesgos – ocupación",
+      "count": 1
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Personas",
+      "subtopic": "Suicidio",
+      "count": 1
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Personas",
+      "subtopic": "Tabla de mortalidad",
+      "count": 1
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Personas",
+      "subtopic": "Tipos de prima",
+      "count": 3
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Personas",
+      "subtopic": "Valores garantizados",
+      "count": 1
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Personas",
+      "subtopic": "Valores garantizados – préstamo",
+      "count": 2
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Personas",
+      "subtopic": "Vida entera",
+      "count": 1
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Personas",
+      "subtopic": "Vida pagos limitados",
+      "count": 1
+    },
+    {
+      "module": "Sistema y Mercados Financieros",
+      "subtopic": "Autoridades vs. intermediarios",
+      "count": 1
+    },
+    {
+      "module": "Sistema y Mercados Financieros",
+      "subtopic": "Autoridades – Banxico",
+      "count": 2
+    },
+    {
+      "module": "Sistema y Mercados Financieros",
+      "subtopic": "Autoridades – Banxico (funciones)",
+      "count": 1
+    },
+    {
+      "module": "Sistema y Mercados Financieros",
+      "subtopic": "Autoridades – SHCP",
+      "count": 1
+    },
+    {
+      "module": "Sistema y Mercados Financieros",
+      "subtopic": "Auxiliares – SOFOM",
+      "count": 1
+    },
+    {
+      "module": "Sistema y Mercados Financieros",
+      "subtopic": "Clasificación – accionario",
+      "count": 1
+    },
+    {
+      "module": "Sistema y Mercados Financieros",
+      "subtopic": "Clasificación – deuda",
+      "count": 1
+    },
+    {
+      "module": "Sistema y Mercados Financieros",
+      "subtopic": "Clasificación – por plazo",
+      "count": 1
+    },
+    {
+      "module": "Sistema y Mercados Financieros",
+      "subtopic": "Clasificación – primario",
+      "count": 1
+    },
+    {
+      "module": "Sistema y Mercados Financieros",
+      "subtopic": "Clasificación – secundario",
+      "count": 1
+    },
+    {
+      "module": "Sistema y Mercados Financieros",
+      "subtopic": "Comisiones – CNBV",
+      "count": 2
+    },
+    {
+      "module": "Sistema y Mercados Financieros",
+      "subtopic": "Comisiones – CNSF",
+      "count": 1
+    },
+    {
+      "module": "Sistema y Mercados Financieros",
+      "subtopic": "Comisiones – CONSAR",
+      "count": 1
+    },
+    {
+      "module": "Sistema y Mercados Financieros",
+      "subtopic": "Costo de oportunidad – concepto",
+      "count": 1
+    },
+    {
+      "module": "Sistema y Mercados Financieros",
+      "subtopic": "Diversificación – concepto",
+      "count": 1
+    },
+    {
+      "module": "Sistema y Mercados Financieros",
+      "subtopic": "Diversificación – objetivo",
+      "count": 1
+    },
+    {
+      "module": "Sistema y Mercados Financieros",
+      "subtopic": "Inflación – concepto",
+      "count": 1
+    },
+    {
+      "module": "Sistema y Mercados Financieros",
+      "subtopic": "Instrumentos bancarios – ABS",
+      "count": 1
+    },
+    {
+      "module": "Sistema y Mercados Financieros",
+      "subtopic": "Instrumentos bancarios – CEDES",
+      "count": 1
+    },
+    {
+      "module": "Sistema y Mercados Financieros",
+      "subtopic": "Instrumentos bancarios – PRLV",
+      "count": 1
+    },
+    {
+      "module": "Sistema y Mercados Financieros",
+      "subtopic": "Instrumentos empresariales – obligaciones",
+      "count": 1
+    },
+    {
+      "module": "Sistema y Mercados Financieros",
+      "subtopic": "Instrumentos empresariales – papel comercial",
+      "count": 1
+    },
+    {
+      "module": "Sistema y Mercados Financieros",
+      "subtopic": "Instrumentos – BONDES",
+      "count": 1
+    },
+    {
+      "module": "Sistema y Mercados Financieros",
+      "subtopic": "Instrumentos – CETES",
+      "count": 1
+    },
+    {
+      "module": "Sistema y Mercados Financieros",
+      "subtopic": "Instrumentos – UDIBONOS",
+      "count": 1
+    },
+    {
+      "module": "Sistema y Mercados Financieros",
+      "subtopic": "Instrumentos – UMS",
+      "count": 1
+    },
+    {
+      "module": "Sistema y Mercados Financieros",
+      "subtopic": "Instrumentos – certificados de participación",
+      "count": 1
+    },
+    {
+      "module": "Sistema y Mercados Financieros",
+      "subtopic": "Intermediación – función",
+      "count": 1
+    },
+    {
+      "module": "Sistema y Mercados Financieros",
+      "subtopic": "Intermediarios – definición",
+      "count": 1
+    },
+    {
+      "module": "Sistema y Mercados Financieros",
+      "subtopic": "Interés – compuesto",
+      "count": 1
+    },
+    {
+      "module": "Sistema y Mercados Financieros",
+      "subtopic": "Interés – simple",
+      "count": 1
+    },
+    {
+      "module": "Sistema y Mercados Financieros",
+      "subtopic": "Liquidez – definición",
+      "count": 1
+    },
+    {
+      "module": "Sistema y Mercados Financieros",
+      "subtopic": "Mercado de Valores – definición",
+      "count": 1
+    },
+    {
+      "module": "Sistema y Mercados Financieros",
+      "subtopic": "Mercado – primario",
+      "count": 1
+    },
+    {
+      "module": "Sistema y Mercados Financieros",
+      "subtopic": "Riesgo – definición",
+      "count": 1
+    },
+    {
+      "module": "Sistema y Mercados Financieros",
+      "subtopic": "Riesgo–rentabilidad",
+      "count": 1
+    },
+    {
+      "module": "Sistema y Mercados Financieros",
+      "subtopic": "SAR – AFORES",
+      "count": 1
+    },
+    {
+      "module": "Sistema y Mercados Financieros",
+      "subtopic": "SAR – SIEFORES",
+      "count": 1
+    },
+    {
+      "module": "Sistema y Mercados Financieros",
+      "subtopic": "Sector Bursátil – casas de bolsa",
+      "count": 1
+    },
+    {
+      "module": "Sistema y Mercados Financieros",
+      "subtopic": "Sector Fianzas – función",
+      "count": 1
+    },
+    {
+      "module": "Sistema y Mercados Financieros",
+      "subtopic": "Sector Seguros – definición",
+      "count": 1
+    },
+    {
+      "module": "Sistema y Mercados Financieros",
+      "subtopic": "Sector Seguros – mutualistas",
+      "count": 1
+    },
+    {
+      "module": "Sistema y Mercados Financieros",
+      "subtopic": "Sistema financiero – concepto",
+      "count": 1
+    },
+    {
+      "module": "Sistema y Mercados Financieros",
+      "subtopic": "Sociedades de inversión – abiertas",
+      "count": 1
+    },
+    {
+      "module": "Sistema y Mercados Financieros",
+      "subtopic": "Sociedades de inversión – abiertas vs. cerradas",
+      "count": 1
+    },
+    {
+      "module": "Sistema y Mercados Financieros",
+      "subtopic": "Sociedades de inversión – concepto",
+      "count": 1
+    },
+    {
+      "module": "Sistema y Mercados Financieros",
+      "subtopic": "Tasas – activa/pasiva",
+      "count": 1
+    },
+    {
+      "module": "Sistema y Mercados Financieros",
+      "subtopic": "Tasas – efectiva",
+      "count": 2
+    },
+    {
+      "module": "Sistema y Mercados Financieros",
+      "subtopic": "Tasas – nominal",
+      "count": 1
+    },
+    {
+      "module": "Sistema y Mercados Financieros",
+      "subtopic": "Tasas – real",
+      "count": 2
+    },
+    {
+      "module": "Sistema y Mercados Financieros",
+      "subtopic": "Tasas – real (aproximación)",
+      "count": 7
+    },
+    {
+      "module": "Sistema y Mercados Financieros",
+      "subtopic": "Tipo de cambio – devaluación",
+      "count": 1
+    },
+    {
+      "module": "Sistema y Mercados Financieros",
+      "subtopic": "Tipo de cambio – fijo vs. flexible",
+      "count": 1
+    },
+    {
+      "module": "Sistema y Mercados Financieros",
+      "subtopic": "Usuarios – CONDUSEF",
+      "count": 1
+    },
+    {
+      "module": "Sistema y Mercados Financieros",
+      "subtopic": "Valores – definición",
+      "count": 1
+    }
+  ],
+  "by_module_difficulty": [
+    {
+      "module": "Aspectos Generales",
+      "difficulty": "advanced",
+      "count": 18
+    },
+    {
+      "module": "Aspectos Generales",
+      "difficulty": "basic",
+      "count": 32
+    },
+    {
+      "module": "Aspectos Generales",
+      "difficulty": "intermediate",
+      "count": 17
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Daños",
+      "difficulty": "advanced",
+      "count": 9
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Daños",
+      "difficulty": "basic",
+      "count": 13
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Daños",
+      "difficulty": "intermediate",
+      "count": 18
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Personas",
+      "difficulty": "advanced",
+      "count": 7
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Personas",
+      "difficulty": "basic",
+      "count": 19
+    },
+    {
+      "module": "Riesgos Individuales de Seguro de Personas",
+      "difficulty": "intermediate",
+      "count": 42
+    },
+    {
+      "module": "Sistema y Mercados Financieros",
+      "difficulty": "basic",
+      "count": 44
+    },
+    {
+      "module": "Sistema y Mercados Financieros",
+      "difficulty": "intermediate",
+      "count": 21
+    }
+  ]
+}
