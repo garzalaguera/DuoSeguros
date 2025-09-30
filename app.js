@@ -1,9 +1,9 @@
-
-// app.final.js — Quiz Seguros (Duolingo-like)
-// Reemplaza tu app.js con este archivo
+// app.js — Quiz Seguros (Duolingo-like) — versión integrada con questions_all.json + questions_index.json
 
 // === Global State ===
-let ALL_QUESTIONS = [];
+let QUESTIONS_ALL = {};           // { "Módulo": [ {id, module, subtopic, difficulty, question, options[], correct, explanation}, ... ] }
+let QUESTIONS_INDEX = {};         // { modules: [{key,title,count,subtopic_counts,difficulty_counts,difficulty_pct}], difficulty_colors, updated_at }
+
 let currentModule = null;
 let sessionQuestions = [];
 let qIndex = 0;
@@ -24,6 +24,7 @@ const startBtn      = document.getElementById('startBtn');
 const numSel        = document.getElementById('numQuestions');
 const soundChk      = document.getElementById('soundEnabled');
 
+// Cabecera de pregunta
 const difficultyBadge = document.getElementById('difficultyBadge');
 const subtopicText  = document.getElementById('subtopicText');
 const questionText  = document.getElementById('questionText');
@@ -33,6 +34,7 @@ const nextBtn       = document.getElementById('nextBtn');
 const progressFill  = document.getElementById('progressFill');
 const counterText   = document.getElementById('questionCounter');
 
+// Score
 const correctCount  = document.getElementById('correctCount');
 const incorrectCount= document.getElementById('incorrectCount');
 const finalScore    = document.getElementById('finalScore');
@@ -60,41 +62,43 @@ function shuffleOptions(q) {
 // === Data Loading ===
 async function loadAll() {
   try {
-    const resQ = await fetch('questions_all.json');
-    if (!resQ.ok) throw new Error('No se pudo cargar questions_all.json');
-    const data = await resQ.json();
-    ALL_QUESTIONS = data.questions;
+    const [idxRes, allRes] = await Promise.all([
+      fetch('questions_index.json'),
+      fetch('questions_all.json')
+    ]);
+    if (!idxRes.ok) throw new Error('No se pudo cargar questions_index.json');
+    if (!allRes.ok) throw new Error('No se pudo cargar questions_all.json');
 
-    const resI = await fetch('questions_index.json');
-    const idx = await resI.json();
+    QUESTIONS_INDEX = await idxRes.json();
+    QUESTIONS_ALL   = await allRes.json();
 
-    // Render módulos disponibles
-    renderModules(idx.by_module);
+    // Render módulos disponibles desde QUESTIONS_INDEX.modules
+    renderModules(QUESTIONS_INDEX.modules);
 
     loadingScreen.style.display = 'none';
     startScreen.style.display = 'block';
   } catch (e) {
     console.error(e);
-    alert('Error cargando preguntas.');
+    alert('Error cargando preguntas. Revisa que questions_all.json y questions_index.json estén en la misma carpeta que index.html');
   }
 }
 
 // === Module UI ===
-function renderModules(rows) {
+function renderModules(modules) {
   moduleList.innerHTML = '';
-  rows.forEach(row => {
+  modules.forEach(row => {
     const card = document.createElement('div');
     card.className = 'module-option';
-    card.dataset.module = row.module;
-    const desc = moduleDescription(row.module);
+    card.dataset.module = row.key;
+    const desc = moduleDescription(row.key);
     card.innerHTML = `
-      <div class="module-title">${row.module}</div>
+      <div class="module-title">${row.title}</div>
       <div class="module-description">${row.count} preguntas · ${desc}</div>
     `;
     card.addEventListener('click', () => {
       [...moduleList.children].forEach(c => c.classList.remove('selected'));
       card.classList.add('selected');
-      currentModule = row.module;
+      currentModule = row.key; // usamos la key (nombre del módulo) que también existe como clave en QUESTIONS_ALL
       startBtn.disabled = false;
     });
     moduleList.appendChild(card);
@@ -103,7 +107,7 @@ function renderModules(rows) {
   startBtn.addEventListener('click', startQuiz);
   restartBtn.addEventListener('click', restart);
   nextBtn.addEventListener('click', nextQuestion);
-  numSel.addEventListener('change', e => batchSize = e.target.value==='all' ? 'all' : parseInt(e.target.value));
+  numSel.addEventListener('change', e => batchSize = e.target.value==='all' ? 'all' : parseInt(e.target.value,10));
   soundChk.addEventListener('change', e=> soundEnabled = e.target.checked);
 }
 
@@ -147,14 +151,16 @@ function subtopicStats(module) {
   return stats;
 }
 
+// === Selección del lote por módulo ===
 function nextBatchFromModule(module, size) {
-  const pool = ALL_QUESTIONS.filter(q => q.module === module);
+  // Nuestro questions_all.json es { "Módulo": [preguntas...] }
+  const pool = (QUESTIONS_ALL[module] || []).slice();
 
   // No repetir hasta agotar: exclude "seen"
   const seen = new Set(JSON.parse(localStorage.getItem(seenKey(module)) || '[]'));
   let candidates = pool.filter(q => !seen.has(q.id));
 
-  // Si agotado, reset "seen"
+  // Si se agotó, reset "seen"
   if (candidates.length === 0) {
     localStorage.setItem(seenKey(module), JSON.stringify([]));
     candidates = pool.slice();
@@ -180,19 +186,21 @@ function nextBatchFromModule(module, size) {
     if ((perSubCount[pick.subtopic] || 0) >= limit) continue;
     take.push(pick);
     perSubCount[pick.subtopic] = (perSubCount[pick.subtopic] || 0) + 1;
-    // quita pick de candidates
+    // quitar pick de candidates
     candidates = candidates.filter(x => x.id !== pick.id);
   }
-  // Si faltan, completa aleatorio
+
+  // Si faltan, completar aleatorio
   while (take.length < N && candidates.length) {
     take.push(candidates.pop());
   }
 
-  // marca como vistos
+  // marcar como vistos
   const newSeen = new Set(JSON.parse(localStorage.getItem(seenKey(module)) || '[]'));
   take.forEach(q => newSeen.add(q.id));
   localStorage.setItem(seenKey(module), JSON.stringify(Array.from(newSeen)));
 
+  // Barajar el orden de las preguntas y también las opciones dentro de cada una
   return shuffle(take).map(q => shuffleOptions(q));
 }
 
@@ -215,7 +223,7 @@ function startQuiz() {
   score = {correct:0, incorrect:0};
   qIndex = 0;
   answered = false;
-  batchSize = (numSel.value==='all') ? 'all' : parseInt(numSel.value || '20');
+  batchSize = (numSel.value==='all') ? 'all' : parseInt(numSel.value || '20',10);
 
   sessionQuestions = nextBatchFromModule(currentModule, batchSize);
 
@@ -231,12 +239,17 @@ function renderQuestion() {
   subtopicText.textContent = q.subtopic || '';
   subtopicText.style.display = q.subtopic ? 'block' : 'none';
 
-  // Difficulty badge
+  // Difficulty badge (colores desde questions_index.json)
+  const colors = (QUESTIONS_INDEX && QUESTIONS_INDEX.difficulty_colors) || {
+    basic: '#16a34a', intermediate: '#f59e0b', advanced: '#ef4444'
+  };
   difficultyBadge.textContent = difficultyLabel(q.difficulty);
   difficultyBadge.className = 'difficulty-badge ' + difficultyClass(q.difficulty);
+  difficultyBadge.style.color = colors[q.difficulty] || '#16a34a';
 
   // Progress
-  progressFill.style.width = `${(qIndex/sessionQuestions.length)*100}%`;
+  const pct = (qIndex / sessionQuestions.length) * 100;
+  progressFill.style.width = `${pct}%`;
 
   // Options
   optionsWrap.innerHTML = '';
@@ -307,7 +320,7 @@ function submitAnswer() {
     if (isCorrect) playCorrectSound(); else playIncorrectSound();
   }
 
-  // Push history for weighting
+  // Push history para ponderar subtemas en siguientes sesiones
   pushHistory(currentModule, {
     id: q.id,
     subtopic: q.subtopic || 'General',
