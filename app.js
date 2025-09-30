@@ -1,8 +1,8 @@
-// app.js — Quiz Seguros (Duolingo-like) — versión integrada con questions_all.json + questions_index.json
+// app.js – Quiz Seguros (versión con estadísticas mejoradas)
 
 // === Global State ===
-let QUESTIONS_ALL = {};           // { "Módulo": [ {id, module, subtopic, difficulty, question, options[], correct, explanation}, ... ] }
-let QUESTIONS_INDEX = {};         // { modules: [{key,title,count,subtopic_counts,difficulty_counts,difficulty_pct}], difficulty_colors, updated_at }
+let QUESTIONS_ALL = {};
+let QUESTIONS_INDEX = {};
 
 let currentModule = null;
 let sessionQuestions = [];
@@ -15,32 +15,35 @@ let batchSize = 20;
 
 // === DOM ===
 const loadingScreen = document.getElementById('loadingScreen');
-const startScreen   = document.getElementById('startScreen');
-const questionScreen= document.getElementById('questionScreen');
-const endScreen     = document.getElementById('endScreen');
+const startScreen = document.getElementById('startScreen');
+const questionScreen = document.getElementById('questionScreen');
+const endScreen = document.getElementById('endScreen');
+const statsDetailScreen = document.getElementById('statsDetailScreen');
 
-const moduleList    = document.getElementById('moduleList');
-const startBtn      = document.getElementById('startBtn');
-const numSel        = document.getElementById('numQuestions');
-const soundChk      = document.getElementById('soundEnabled');
+const moduleList = document.getElementById('moduleList');
+const startBtn = document.getElementById('startBtn');
+const numSel = document.getElementById('numQuestions');
+const soundChk = document.getElementById('soundEnabled');
 
-// Cabecera de pregunta
 const difficultyBadge = document.getElementById('difficultyBadge');
-const subtopicText  = document.getElementById('subtopicText');
-const questionText  = document.getElementById('questionText');
-const optionsWrap   = document.getElementById('optionsContainer');
-const feedbackBox   = document.getElementById('feedback');
-const nextBtn       = document.getElementById('nextBtn');
-const progressFill  = document.getElementById('progressFill');
-const counterText   = document.getElementById('questionCounter');
+const subtopicText = document.getElementById('subtopicText');
+const questionText = document.getElementById('questionText');
+const optionsWrap = document.getElementById('optionsContainer');
+const feedbackBox = document.getElementById('feedback');
+const nextBtn = document.getElementById('nextBtn');
+const progressFill = document.getElementById('progressFill');
+const counterText = document.getElementById('questionCounter');
 
-// Score
-const correctCount  = document.getElementById('correctCount');
-const incorrectCount= document.getElementById('incorrectCount');
-const finalScore    = document.getElementById('finalScore');
+const correctCount = document.getElementById('correctCount');
+const incorrectCount = document.getElementById('incorrectCount');
+const finalScore = document.getElementById('finalScore');
 const performanceMessage = document.getElementById('performanceMessage');
-const detailedResults= document.getElementById('detailedResults');
-const restartBtn    = document.getElementById('restartBtn');
+const detailedResults = document.getElementById('detailedResults');
+const restartBtn = document.getElementById('restartBtn');
+
+const statsModuleName = document.getElementById('statsModuleName');
+const statsTableContainer = document.getElementById('statsTableContainer');
+const backToStartBtn = document.getElementById('backToStartBtn');
 
 // === Utils ===
 function shuffle(arr, rng=Math) {
@@ -70,9 +73,8 @@ async function loadAll() {
     if (!allRes.ok) throw new Error('No se pudo cargar questions_all.json');
 
     QUESTIONS_INDEX = await idxRes.json();
-    QUESTIONS_ALL   = await allRes.json();
+    QUESTIONS_ALL = await allRes.json();
 
-    // Render módulos disponibles desde QUESTIONS_INDEX.modules
     renderModules(QUESTIONS_INDEX.modules);
 
     loadingScreen.style.display = 'none';
@@ -83,30 +85,69 @@ async function loadAll() {
   }
 }
 
-// === Module UI ===
+// === Module UI con Estadísticas ===
 function renderModules(modules) {
   moduleList.innerHTML = '';
   modules.forEach(row => {
     const card = document.createElement('div');
     card.className = 'module-option';
     card.dataset.module = row.key;
+    
     const desc = moduleDescription(row.key);
+    
+    // Obtener estadísticas
+    const lastSessionStats = getLastSessionStats(row.key);
+    const last100Stats = getLast100Stats(row.key);
+    
     card.innerHTML = `
-      <div class="module-title">${row.title}</div>
-      <div class="module-description">${row.count} preguntas · ${desc}</div>
+      <div class="module-info">
+        <div class="module-title">${row.title}</div>
+        <div class="module-description">${row.count} preguntas · ${desc}</div>
+      </div>
+      <div class="module-stats">
+        <div class="stat-box" data-module="${row.key}" data-type="last">
+          <div class="stat-label">Última</div>
+          <div class="stat-value">${lastSessionStats.display}</div>
+        </div>
+        <div class="stat-box" data-module="${row.key}" data-type="avg100">
+          <div class="stat-label">Promedio</div>
+          <div class="stat-value">${last100Stats.display}</div>
+          <div class="stat-detail">${last100Stats.detail}</div>
+        </div>
+      </div>
     `;
-    card.addEventListener('click', () => {
+    
+    // Click en el card para seleccionar módulo
+    card.addEventListener('click', (e) => {
+      // No activar si se clickeó una stat-box
+      if (e.target.closest('.stat-box')) return;
+      
       [...moduleList.children].forEach(c => c.classList.remove('selected'));
       card.classList.add('selected');
-      currentModule = row.key; // usamos la key (nombre del módulo) que también existe como clave en QUESTIONS_ALL
+      currentModule = row.key;
       startBtn.disabled = false;
     });
+    
     moduleList.appendChild(card);
+  });
+  
+  // Event listeners para las stat-boxes
+  document.querySelectorAll('.stat-box').forEach(box => {
+    box.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const module = box.dataset.module;
+      const type = box.dataset.type;
+      showStatsDetail(module, type);
+    });
   });
 
   startBtn.addEventListener('click', startQuiz);
   restartBtn.addEventListener('click', restart);
   nextBtn.addEventListener('click', nextQuestion);
+  backToStartBtn.addEventListener('click', () => {
+    statsDetailScreen.style.display = 'none';
+    startScreen.style.display = 'block';
+  });
   numSel.addEventListener('change', e => batchSize = e.target.value==='all' ? 'all' : parseInt(e.target.value,10));
   soundChk.addEventListener('change', e=> soundEnabled = e.target.checked);
 }
@@ -119,17 +160,129 @@ function moduleDescription(name) {
   return '';
 }
 
-// === Local Storage Tracking ===
-// Guardamos últimas 100 respuestas por módulo para ponderar subtemas
+// === Estadísticas ===
 function historyKey(module){ return `qp_hist_${module}`; }
-function seenKey(module){ return `qp_seen_${module}`; } // para evitar repetir hasta agotar
+function seenKey(module){ return `qp_seen_${module}`; }
+function lastSessionKey(module){ return `qp_last_session_${module}`; }
 
 function pushHistory(module, entry) {
   const key = historyKey(module);
   const arr = JSON.parse(localStorage.getItem(key) || '[]');
-  arr.unshift(entry); // más reciente al inicio
+  arr.unshift(entry);
   const trimmed = arr.slice(0,100);
   localStorage.setItem(key, JSON.stringify(trimmed));
+}
+
+function getLastSessionStats(module) {
+  const data = JSON.parse(localStorage.getItem(lastSessionKey(module)) || 'null');
+  if (!data) return { display: '—', pct: null };
+  const pct = Math.round((data.correct / data.total) * 100);
+  return { display: `${pct}%`, pct, data };
+}
+
+function getLast100Stats(module) {
+  const hist = JSON.parse(localStorage.getItem(historyKey(module)) || '[]');
+  if (hist.length === 0) return { display: '—', detail: '', pct: null };
+  
+  const count = Math.min(hist.length, 100);
+  const relevant = hist.slice(0, count);
+  const correct = relevant.filter(h => h.correct).length;
+  const pct = Math.round((correct / count) * 100);
+  
+  const detail = count < 100 ? `últimas ${count}` : 'últimas 100';
+  
+  return { 
+    display: `${pct}%`, 
+    detail, 
+    pct,
+    count,
+    correct
+  };
+}
+
+function getStatsBySubtopic(module, type) {
+  let entries = [];
+  
+  if (type === 'last') {
+    // Última sesión
+    const data = JSON.parse(localStorage.getItem(lastSessionKey(module)) || 'null');
+    if (!data || !data.details) return {};
+    entries = data.details;
+  } else {
+    // Últimas 100
+    const hist = JSON.parse(localStorage.getItem(historyKey(module)) || '[]');
+    entries = hist.slice(0, 100);
+  }
+  
+  const by = {};
+  entries.forEach(e => {
+    const sub = e.subtopic || 'General';
+    if (!by[sub]) by[sub] = { correct: 0, total: 0 };
+    by[sub].total += 1;
+    by[sub].correct += e.correct ? 1 : 0;
+  });
+  
+  return by;
+}
+
+function showStatsDetail(module, type) {
+  const moduleInfo = QUESTIONS_INDEX.modules.find(m => m.key === module);
+  const typeLabel = type === 'last' ? 'Última sesión' : 'Últimas 100 preguntas';
+  
+  statsModuleName.textContent = `${moduleInfo.title} - ${typeLabel}`;
+  
+  const lastStats = getStatsBySubtopic(module, 'last');
+  const avg100Stats = getStatsBySubtopic(module, 'avg100');
+  
+  // Obtener todos los subtemas que aparecen en cualquiera de las dos
+  const allSubtopics = new Set([
+    ...Object.keys(lastStats),
+    ...Object.keys(avg100Stats)
+  ]);
+  
+  let tableHTML = `
+    <table class="stats-table">
+      <thead>
+        <tr>
+          <th>Subtema</th>
+          <th>Última sesión</th>
+          <th>Últimas 100</th>
+        </tr>
+      </thead>
+      <tbody>
+  `;
+  
+  [...allSubtopics].sort().forEach(sub => {
+    const last = lastStats[sub] || { correct: 0, total: 0 };
+    const avg = avg100Stats[sub] || { correct: 0, total: 0 };
+    
+    const lastPct = last.total > 0 ? Math.round((last.correct / last.total) * 100) : 0;
+    const avgPct = avg.total > 0 ? Math.round((avg.correct / avg.total) * 100) : 0;
+    
+    const lastDisplay = last.total > 0 ? `${last.correct}/${last.total} (${lastPct}%)` : '—';
+    const avgDisplay = avg.total > 0 ? `${avg.correct}/${avg.total} (${avgPct}%)` : '—';
+    
+    const lastClass = lastPct >= 80 ? 'perf-good' : lastPct >= 60 ? 'perf-ok' : lastPct > 0 ? 'perf-bad' : '';
+    const avgClass = avgPct >= 80 ? 'perf-good' : avgPct >= 60 ? 'perf-ok' : avgPct > 0 ? 'perf-bad' : '';
+    
+    tableHTML += `
+      <tr>
+        <td>${sub}</td>
+        <td class="${lastClass}">${lastDisplay}</td>
+        <td class="${avgClass}">${avgDisplay}</td>
+      </tr>
+    `;
+  });
+  
+  tableHTML += `
+      </tbody>
+    </table>
+  `;
+  
+  statsTableContainer.innerHTML = tableHTML;
+  
+  startScreen.style.display = 'none';
+  statsDetailScreen.style.display = 'block';
 }
 
 function subtopicStats(module) {
@@ -141,37 +294,29 @@ function subtopicStats(module) {
     by[k].total += 1;
     by[k].correct += e.correct ? 1 : 0;
   });
-  // calcular accuracy y peso inverso
   const stats = Object.entries(by).map(([sub, v]) => {
     const acc = v.total ? (v.correct/v.total) : 0.0;
-    // peso: entre 0.3 (si acc=1) y 1.0 (si acc=0)
     const w = 0.3 + (1.0 - acc) * 0.7;
     return { subtopic: sub, total: v.total, accuracy: acc, weight: w };
   });
   return stats;
 }
 
-// === Selección del lote por módulo ===
+// === Selección del lote ===
 function nextBatchFromModule(module, size) {
-  // Nuestro questions_all.json es { "Módulo": [preguntas...] }
   const pool = (QUESTIONS_ALL[module] || []).slice();
-
-  // No repetir hasta agotar: exclude "seen"
   const seen = new Set(JSON.parse(localStorage.getItem(seenKey(module)) || '[]'));
   let candidates = pool.filter(q => !seen.has(q.id));
 
-  // Si se agotó, reset "seen"
   if (candidates.length === 0) {
     localStorage.setItem(seenKey(module), JSON.stringify([]));
     candidates = pool.slice();
   }
 
-  // Calcular ponderación por subtema (a partir del historial)
   const stats = subtopicStats(module);
   const wBySub = Object.fromEntries(stats.map(s => [s.subtopic, s.weight]));
-  const defaultW = 0.6; // si no hay historial de ese subtema
+  const defaultW = 0.6;
 
-  // Construir lote ponderado manteniendo diversidad
   shuffle(candidates);
   const N = size === 'all' ? candidates.length : Math.min(size, candidates.length);
   const take = [];
@@ -181,26 +326,21 @@ function nextBatchFromModule(module, size) {
     guard++;
     const pick = weightedPick(candidates, q => (wBySub[q.subtopic] ?? defaultW));
     if (!pick) break;
-    // evitar saturar un subtema: límite blando de N/2
     const limit = Math.ceil(N/2);
     if ((perSubCount[pick.subtopic] || 0) >= limit) continue;
     take.push(pick);
     perSubCount[pick.subtopic] = (perSubCount[pick.subtopic] || 0) + 1;
-    // quitar pick de candidates
     candidates = candidates.filter(x => x.id !== pick.id);
   }
 
-  // Si faltan, completar aleatorio
   while (take.length < N && candidates.length) {
     take.push(candidates.pop());
   }
 
-  // marcar como vistos
   const newSeen = new Set(JSON.parse(localStorage.getItem(seenKey(module)) || '[]'));
   take.forEach(q => newSeen.add(q.id));
   localStorage.setItem(seenKey(module), JSON.stringify(Array.from(newSeen)));
 
-  // Barajar el orden de las preguntas y también las opciones dentro de cada una
   return shuffle(take).map(q => shuffleOptions(q));
 }
 
@@ -237,21 +377,14 @@ function renderQuestion() {
   counterText.textContent = `Pregunta ${qIndex+1} de ${sessionQuestions.length}`;
   questionText.textContent = q.question;
   subtopicText.textContent = q.subtopic || '';
-  subtopicText.style.display = q.subtopic ? 'block' : 'none';
+  subtopicText.style.display = q.subtopic ? 'inline-block' : 'none';
 
-  // Difficulty badge (colores desde questions_index.json)
-  const colors = (QUESTIONS_INDEX && QUESTIONS_INDEX.difficulty_colors) || {
-    basic: '#16a34a', intermediate: '#f59e0b', advanced: '#ef4444'
-  };
   difficultyBadge.textContent = difficultyLabel(q.difficulty);
   difficultyBadge.className = 'difficulty-badge ' + difficultyClass(q.difficulty);
-  difficultyBadge.style.color = colors[q.difficulty] || '#16a34a';
 
-  // Progress
   const pct = (qIndex / sessionQuestions.length) * 100;
   progressFill.style.width = `${pct}%`;
 
-  // Options
   optionsWrap.innerHTML = '';
   q.options.forEach((opt, idx) => {
     const btn = document.createElement('div');
@@ -267,7 +400,6 @@ function renderQuestion() {
   selectedIdx = null;
   answered = false;
 
-  // Score on header
   correctCount.textContent = score.correct;
   incorrectCount.textContent = score.incorrect;
 }
@@ -291,7 +423,6 @@ function onSelect(idx) {
   [...optionsWrap.children].forEach((el,i) => {
     el.classList.toggle('selected', i===idx);
   });
-  // Auto-submit on select
   submitAnswer();
 }
 
@@ -303,7 +434,6 @@ function submitAnswer() {
   const isCorrect = (selectedIdx === q.correct);
   score[isCorrect ? 'correct' : 'incorrect']++;
 
-  // Visual feedback
   [...optionsWrap.children].forEach((el,i)=>{
     el.classList.remove('selected');
     if (i===q.correct) el.classList.add('correct');
@@ -311,16 +441,13 @@ function submitAnswer() {
     el.classList.add('disabled');
   });
 
-  // Explanation
   feedbackBox.textContent = (isCorrect ? '¡Correcto! ' : 'Respuesta incorrecta. ') + (q.explanation || '');
   feedbackBox.className = 'feedback ' + (isCorrect ? 'correct' : 'incorrect');
 
-  // Sounds
   if (soundEnabled) {
     if (isCorrect) playCorrectSound(); else playIncorrectSound();
   }
 
-  // Push history para ponderar subtemas en siguientes sesiones
   pushHistory(currentModule, {
     id: q.id,
     subtopic: q.subtopic || 'General',
@@ -331,7 +458,6 @@ function submitAnswer() {
 
   nextBtn.disabled = false;
 
-  // Update score header
   correctCount.textContent = score.correct;
   incorrectCount.textContent = score.incorrect;
 }
@@ -353,11 +479,23 @@ function finishQuiz() {
   finalScore.textContent = `${pct}%`;
   performanceMessage.textContent = performanceText(pct);
 
+  // Guardar última sesión
+  const sessionDetails = [];
+  const lastIds = new Set(sessionQuestions.map(q=>q.id));
+  const hist = JSON.parse(localStorage.getItem(historyKey(currentModule)) || '[]');
+  hist.filter(h=>lastIds.has(h.id)).forEach(h => sessionDetails.push(h));
+  
+  localStorage.setItem(lastSessionKey(currentModule), JSON.stringify({
+    correct: score.correct,
+    total: total,
+    pct: pct,
+    ts: Date.now(),
+    details: sessionDetails
+  }));
+
   // Detailed results by subtopic from this session
   const agg = {};
-  const lastIds = new Set(sessionQuestions.map(q=>q.id));
-  const hist = JSON.parse(localStorage.getItem(historyKey(currentModule)) || '[]').filter(h=>lastIds.has(h.id));
-  hist.forEach(h => {
+  sessionDetails.forEach(h => {
     const s = h.subtopic || 'General';
     if(!agg[s]) agg[s]={correct:0,total:0};
     agg[s].total += 1;
@@ -376,6 +514,8 @@ function finishQuiz() {
 function restart() {
   endScreen.style.display = 'none';
   startScreen.style.display = 'block';
+  // Re-render modules para actualizar las estadísticas
+  renderModules(QUESTIONS_INDEX.modules);
 }
 
 // === Beeps ===
@@ -407,7 +547,6 @@ function playIncorrectSound() {
 // === Boot ===
 document.addEventListener('DOMContentLoaded', loadAll);
 
-// Aux: simple performance message
 function performanceText(p){ 
   if(p>=90) return "¡Excelente!"; 
   if(p>=75) return "¡Muy bien!"; 
