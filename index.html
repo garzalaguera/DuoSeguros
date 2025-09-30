@@ -1,427 +1,152 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Seguros - Estilo Duolingo</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz Seguros</title>
+  <style>
+    :root {
+      --primary: #4facfe;
+      --primary-2: #00f2fe;
+      --bg: #f5f7fb;
+      --text: #333;
+      --muted: #666;
+      --green: #2e7d32;
+      --red: #c62828;
+      --yellow: #f9a825;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; display: grid; place-items: center;}
+    .app { width: 92vw; max-width: 900px; background: #fff; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.12); overflow: hidden; }
+    header { padding: 18px 20px; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-2) 100%); color: #fff; }
+    header h1 { font-size: 20px; font-weight: 700; }
+    .progress { height: 8px; background: rgba(255,255,255,0.35); border-radius: 999px; margin-top: 12px; overflow: hidden;}
+    #progressFill { height:100%; width:0%; background: #fff; transition: width .25s ease; }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+    main { padding: 24px; }
 
-        .app-container {
-            max-width: 800px;
-            width: 90%;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            overflow: hidden;
-        }
+    /* Difficulty badge top-left */
+    .topbar { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+    .difficulty-badge { padding: 6px 10px; border-radius: 10px; font-size: 12px; font-weight: 700; color: #fff; }
+    .diff-basic { background: #4CAF50; }       /* verde */
+    .diff-intermediate { background: #FBC02D; }/* amarillo */
+    .diff-advanced { background: #F44336; }    /* rojo */
 
-        .header {
-            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-            padding: 20px;
-            text-align: center;
-            color: white;
-        }
+    #subtopicText { font-size: 13px; font-weight: 600; color: #667eea; padding: 6px 10px; background: #eef2ff; border-radius: 8px; display: inline-block; }
 
-        .progress-bar {
-            width: 100%;
-            height: 8px;
-            background: rgba(255,255,255,0.3);
-            border-radius: 4px;
-            margin-top: 15px;
-            overflow: hidden;
-        }
+    .question { font-size: 18px; font-weight: 700; color: var(--text); margin: 14px 0 18px; line-height: 1.45; }
 
-        .progress-fill {
-            height: 100%;
-            background: #fff;
-            border-radius: 4px;
-            transition: width 0.3s ease;
-        }
+    .options { display: grid; gap: 12px; }
+    .option { background: #f8f9fa; border: 2px solid #e9ecef; border-radius: 12px; padding: 14px 16px; cursor: pointer; transition: .15s; }
+    .option:hover { border-color: var(--primary); background: #f0f8ff; }
+    .option.selected { border-color: var(--primary); background: #e3f2fd; }
+    .option.correct { border-color: #4CAF50; background: #e8f5e8; color: var(--green); }
+    .option.incorrect { border-color: #F44336; background: #ffebee; color: var(--red); }
+    .option.disabled { opacity: .7; cursor: not-allowed; }
 
-        .content {
-            padding: 30px;
-            position: relative;
-        }
+    .row { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-top: 16px; }
+    .btn { background: var(--primary); color:#fff; border:0; padding:12px 18px; border-radius: 10px; font-weight:700; cursor:pointer; transition:.2s;}
+    .btn:disabled { background:#c7c7c7; cursor:not-allowed; }
+    .score { display:flex; gap:12px; font-weight:700; }
+    .score-correct{ color: #4CAF50; } .score-incorrect{color:#F44336;}
 
-        .question-counter {
-            text-align: center;
-            color: #666;
-            margin-bottom: 20px;
-            font-size: 14px;
-        }
+    .feedback { margin-top: 14px; padding: 12px; border-radius: 10px; border: 1px solid transparent; font-weight: 600;}
+    .feedback.correct { background:#e8f5e8; border-color:#4CAF50; color:#2e7d32;}
+    .feedback.incorrect { background:#ffebee; border-color:#F44336; color:#c62828;}
 
-        .subtopic {
-            text-align: center;
-            color: #667eea;
-            font-size: 14px;
-            font-weight: 600;
-            margin-bottom: 15px;
-            padding: 8px 16px;
-            background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%);
-            border-radius: 10px;
-            display: none;
-            box-shadow: 0 2px 8px rgba(102, 126, 234, 0.1);
-        }
-        
-        .question {
-            font-size: 18px;
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 25px;
-            line-height: 1.5;
-        }
+    /* Screens */
+    .screen { display:none; }
+    #loadingScreen, #errorScreen { display:grid; place-items: center; color:#fff; height: 200px; }
 
-        .options {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            margin-bottom: 30px;
-        }
+    /* Start */
+    #startScreen .controls { display:flex; gap:12px; align-items:center; justify-content:center; margin: 14px 0;}
+    .module-option { background:#f8f9fa; border:2px solid #e9ecef; border-radius:12px; padding:14px; margin:10px 0; cursor:pointer; }
+    .module-option.selected { background:#e3f2fd; border-color: var(--primary); }
 
-        .option {
-            background: #f8f9fa;
-            border: 2px solid #e9ecef;
-            border-radius: 12px;
-            padding: 15px 20px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            font-size: 16px;
-            position: relative;
-        }
-
-        .option:hover {
-            border-color: #4facfe;
-            background: #f0f8ff;
-        }
-
-        .option.selected {
-            border-color: #4facfe;
-            background: #e3f2fd;
-        }
-
-        .option.correct {
-            border-color: #4caf50;
-            background: #e8f5e8;
-            color: #2e7d32;
-        }
-
-        .option.incorrect {
-            border-color: #f44336;
-            background: #ffebee;
-            color: #c62828;
-        }
-
-        .option.disabled {
-            cursor: not-allowed;
-            opacity: 0.7;
-        }
-
-        .controls {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .btn {
-            padding: 12px 24px;
-            border: none;
-            border-radius: 8px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-
-        .btn-primary {
-            background: #4facfe;
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background: #2196f3;
-        }
-
-        .btn-primary:disabled {
-            background: #ccc;
-            cursor: not-allowed;
-        }
-
-        .score {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            font-weight: 600;
-        }
-
-        .score-correct {
-            color: #4caf50;
-        }
-
-        .score-incorrect {
-            color: #f44336;
-        }
-
-        .feedback {
-            margin: 15px 0;
-            padding: 15px;
-            border-radius: 8px;
-            font-weight: 500;
-        }
-
-        .feedback.correct {
-            background: #e8f5e8;
-            color: #2e7d32;
-            border: 1px solid #4caf50;
-        }
-
-        .feedback.incorrect {
-            background: #ffebee;
-            color: #c62828;
-            border: 1px solid #f44336;
-        }
-
-        .start-screen, .end-screen {
-            text-align: center;
-            padding: 40px 20px;
-        }
-
-        .start-screen h2, .end-screen h2 {
-            color: #333;
-            margin-bottom: 20px;
-            font-size: 24px;
-        }
-
-        .start-screen p, .end-screen p {
-            color: #666;
-            margin-bottom: 30px;
-            font-size: 16px;
-            line-height: 1.5;
-        }
-
-        .module-selector {
-            margin: 30px 0;
-        }
-
-        .module-option {
-            background: #f8f9fa;
-            border: 2px solid #e9ecef;
-            border-radius: 12px;
-            padding: 20px;
-            margin: 10px 0;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-
-        .module-option:hover {
-            border-color: #4facfe;
-            background: #f0f8ff;
-        }
-
-        .module-option.selected {
-            border-color: #4facfe;
-            background: #e3f2fd;
-        }
-
-        .module-title {
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 5px;
-        }
-
-        .module-description {
-            color: #666;
-            font-size: 14px;
-        }
-
-        .final-score {
-            font-size: 48px;
-            font-weight: bold;
-            color: #4facfe;
-            margin: 20px 0;
-        }
-
-        .performance-message {
-            font-size: 18px;
-            margin: 20px 0;
-        }
-
-        .performance-excellent { color: #4caf50; }
-        .performance-good { color: #ff9800; }
-        .performance-needs-improvement { color: #f44336; }
-
-        .animation-overlay {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 80px;
-            z-index: 1000;
-            pointer-events: none;
-            opacity: 0;
-            animation: popAnimation 0.8s ease-out;
-        }
-
-        .check-mark {
-            color: #4caf50;
-        }
-
-        .x-mark {
-            color: #f44336;
-        }
-
-        @keyframes popAnimation {
-            0% {
-                opacity: 0;
-                transform: translate(-50%, -50%) scale(0.5);
-            }
-            50% {
-                opacity: 1;
-                transform: translate(-50%, -50%) scale(1.2);
-            }
-            100% {
-                opacity: 0;
-                transform: translate(-50%, -50%) scale(1);
-            }
-        }
-
-        .quiz-settings {
-            margin: 20px 0;
-            padding: 20px;
-            background: #f8f9fa;
-            border-radius: 12px;
-        }
-
-        .setting-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin: 10px 0;
-        }
-
-        .setting-label {
-            font-weight: 500;
-            color: #333;
-        }
-
-        .setting-input {
-            padding: 8px 12px;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            font-size: 14px;
-        }
-
-        .loading {
-            text-align: center;
-            padding: 40px 20px;
-            color: #666;
-        }
-
-        .error {
-            text-align: center;
-            padding: 40px 20px;
-            color: #f44336;
-        }
-    </style>
+    /* End */
+    #endScreen .final-score { font-size: 42px; font-weight: 900; color: var(--primary); margin: 10px 0;}
+  </style>
 </head>
 <body>
-    <div class="app-container">
-        <div class="header">
-            <h1>📚 Quiz de Seguros</h1>
-            <div class="progress-bar">
-                <div class="progress-fill" id="progressFill"></div>
-            </div>
+  <div class="app">
+    <header>
+      <h1>Quiz Seguros</h1>
+      <div class="progress"><div id="progressFill"></div></div>
+    </header>
+
+    <main>
+      <!-- Loading -->
+      <div id="loadingScreen" class="screen" style="display:grid; place-items:center;">Cargando…</div>
+      <div id="errorScreen" class="screen">Error cargando preguntas.</div>
+
+      <!-- Start Screen -->
+      <section id="startScreen" class="screen">
+        <h2>Selecciona un módulo</h2>
+        <p>Las preguntas se barajan sin repetir hasta agotar el banco. La dificultad y el subtema se muestran en cada reactivo.</p>
+
+        <div id="moduleList" class="module-selector"></div>
+
+        <div class="controls">
+          <label>
+            # de preguntas:
+            <select id="numQuestions">
+              <option value="10">10</option>
+              <option value="15">15</option>
+              <option value="20" selected>20</option>
+              <option value="30">30</option>
+              <option value="all">Todas</option>
+            </select>
+          </label>
+          <label>
+            Sonido
+            <input type="checkbox" id="soundEnabled" checked />
+          </label>
+          <button id="startBtn" class="btn" disabled>Comenzar</button>
         </div>
+      </section>
 
-        <div class="content">
-            <div id="loadingScreen" class="loading">
-                <h2>Cargando preguntas...</h2>
-                <p>Por favor espera mientras cargamos la base de datos.</p>
-            </div>
-
-            <div id="errorScreen" class="error" style="display: none;">
-                <h2>Error al cargar preguntas</h2>
-                <p>No se pudo cargar la base de datos de preguntas.</p>
-                <button class="btn btn-primary" onclick="location.reload()">Reintentar</button>
-            </div>
-
-            <div id="startScreen" class="start-screen" style="display: none;">
-                <h2>¡Bienvenido al Quiz de Seguros!</h2>
-                <p>Elige un módulo para comenzar tu práctica.</p>
-                
-                <div class="module-selector">
-                    <div class="module-option" data-module="teoria-riesgo">
-                        <div class="module-title">Módulo I: Aspectos Generales - Teoría del Riesgo</div>
-                        <div class="module-description" id="module1-count">Cargando...</div>
-                    </div>
-                    <div class="module-option" data-module="riesgos-individuales">
-                        <div class="module-title">Módulo II: Riesgos Individuales del Seguro de Personas</div>
-                        <div class="module-description" id="module2-count">Cargando...</div>
-                    </div>
-                    <div class="module-option" data-module="sistema-financiero">
-                        <div class="module-title">Módulo III: Sistema y Mercados Financieros</div>
-                        <div class="module-description" id="module3-count">Cargando...</div>
-                    </div>
-                </div>
-
-                <div class="quiz-settings">
-                    <div class="setting-row">
-                        <span class="setting-label">Número de preguntas:</span>
-                        <select id="numQuestions" class="setting-input">
-                            <option value="10">10 preguntas</option>
-                            <option value="20" selected>20 preguntas</option>
-                            <option value="30">30 preguntas</option>
-                            <option value="50">50 preguntas</option>
-                            <option value="all">Todas las preguntas</option>
-                        </select>
-                    </div>
-                    <div class="setting-row">
-                        <span class="setting-label">Sonidos:</span>
-                        <input type="checkbox" id="soundEnabled" checked>
-                    </div>
-                </div>
-
-                <button class="btn btn-primary" id="startBtn" disabled>Comenzar Quiz</button>
-            </div>
-
-            <div id="questionScreen" style="display: none;">
-                <div class="question-counter" id="questionCounter"></div>
-                <div class="subtopic" id="subtopicText"></div>
-                <div class="question" id="questionText"></div>
-                <div class="options" id="optionsContainer"></div>
-                <div id="feedback" class="feedback" style="display: none;"></div>
-                <div class="controls">
-                    <div class="score">
-                        <span class="score-correct">✓ <span id="correctCount">0</span></span>
-                        <span class="score-incorrect">✗ <span id="incorrectCount">0</span></span>
-                    </div>
-                    <button class="btn btn-primary" id="nextBtn" disabled>Siguiente</button>
-                </div>
-            </div>
-
-            <div id="endScreen" class="end-screen" style="display: none;">
-                <h2>🎉 ¡Quiz Completado!</h2>
-                <div class="final-score" id="finalScore"></div>
-                <div class="performance-message" id="performanceMessage"></div>
-                <p id="detailedResults"></p>
-                <button class="btn btn-primary" id="restartBtn">Nuevo Quiz</button>
-            </div>
+      <!-- Question Screen -->
+      <section id="questionScreen" class="screen">
+        <div class="topbar">
+          <span id="difficultyBadge" class="difficulty-badge diff-basic">Básica</span>
+          <span id="subtopicText">Subtema</span>
         </div>
-    </div>
+        <div id="questionCounter" class="question-counter">Pregunta 1 de 10</div>
+        <div id="questionText" class="question">…</div>
+        <div id="optionsContainer" class="options"></div>
 
-    <script src="app.js"></script>
+        <div id="feedback" class="feedback"></div>
+
+        <div class="row">
+          <div class="score">
+            <span class="score-correct">✔ <span id="correctCount">0</span></span>
+            <span class="score-incorrect">✘ <span id="incorrectCount">0</span></span>
+          </div>
+          <button id="nextBtn" class="btn" disabled>Siguiente</button>
+        </div>
+      </section>
+
+      <!-- End Screen -->
+      <section id="endScreen" class="screen">
+        <h2>Resultado</h2>
+        <div id="finalScore" class="final-score">0%</div>
+        <div id="performanceMessage">—</div>
+        <div id="detailedResults"></div>
+        <div style="margin-top:14px; text-align:center;">
+          <button id="restartBtn" class="btn">Reiniciar</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    function performanceText(p){ 
+      if(p>=90) return "¡Excelente!"; 
+      if(p>=75) return "¡Muy bien!"; 
+      if(p>=60) return "Vas por buen camino"; 
+      return "A repasar los subtemas débiles";
+    }
+  </script>
+  <script src="app.final.js"></script>
 </body>
 </html>
