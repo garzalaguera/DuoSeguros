@@ -4,68 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Quiz Seguros</title>
-  <style>
-    :root {
-      --primary: #4facfe;
-      --primary-2: #00f2fe;
-      --bg: #f5f7fb;
-      --text: #333;
-      --muted: #666;
-      --green: #2e7d32;
-      --red: #c62828;
-      --yellow: #f9a825;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; display: grid; place-items: center;}
-    .app { width: 92vw; max-width: 900px; background: #fff; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.12); overflow: hidden; }
-    header { padding: 18px 20px; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-2) 100%); color: #fff; }
-    header h1 { font-size: 20px; font-weight: 700; }
-    .progress { height: 8px; background: rgba(255,255,255,0.35); border-radius: 999px; margin-top: 12px; overflow: hidden;}
-    #progressFill { height:100%; width:0%; background: #fff; transition: width .25s ease; }
-
-    main { padding: 24px; }
-
-    /* Difficulty badge top-left */
-    .topbar { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
-    .difficulty-badge { padding: 6px 10px; border-radius: 10px; font-size: 12px; font-weight: 700; color: #fff; }
-    .diff-basic { background: #4CAF50; }       /* verde */
-    .diff-intermediate { background: #FBC02D; }/* amarillo */
-    .diff-advanced { background: #F44336; }    /* rojo */
-
-    #subtopicText { font-size: 13px; font-weight: 600; color: #667eea; padding: 6px 10px; background: #eef2ff; border-radius: 8px; display: inline-block; }
-
-    .question { font-size: 18px; font-weight: 700; color: var(--text); margin: 14px 0 18px; line-height: 1.45; }
-
-    .options { display: grid; gap: 12px; }
-    .option { background: #f8f9fa; border: 2px solid #e9ecef; border-radius: 12px; padding: 14px 16px; cursor: pointer; transition: .15s; }
-    .option:hover { border-color: var(--primary); background: #f0f8ff; }
-    .option.selected { border-color: var(--primary); background: #e3f2fd; }
-    .option.correct { border-color: #4CAF50; background: #e8f5e8; color: var(--green); }
-    .option.incorrect { border-color: #F44336; background: #ffebee; color: var(--red); }
-    .option.disabled { opacity: .7; cursor: not-allowed; }
-
-    .row { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-top: 16px; }
-    .btn { background: var(--primary); color:#fff; border:0; padding:12px 18px; border-radius: 10px; font-weight:700; cursor:pointer; transition:.2s;}
-    .btn:disabled { background:#c7c7c7; cursor:not-allowed; }
-    .score { display:flex; gap:12px; font-weight:700; }
-    .score-correct{ color: #4CAF50; } .score-incorrect{color:#F44336;}
-
-    .feedback { margin-top: 14px; padding: 12px; border-radius: 10px; border: 1px solid transparent; font-weight: 600;}
-    .feedback.correct { background:#e8f5e8; border-color:#4CAF50; color:#2e7d32;}
-    .feedback.incorrect { background:#ffebee; border-color:#F44336; color:#c62828;}
-
-    /* Screens */
-    .screen { display:none; }
-    #loadingScreen, #errorScreen { display:grid; place-items: center; color:#fff; height: 200px; }
-
-    /* Start */
-    #startScreen .controls { display:flex; gap:12px; align-items:center; justify-content:center; margin: 14px 0;}
-    .module-option { background:#f8f9fa; border:2px solid #e9ecef; border-radius:12px; padding:14px; margin:10px 0; cursor:pointer; }
-    .module-option.selected { background:#e3f2fd; border-color: var(--primary); }
-
-    /* End */
-    #endScreen .final-score { font-size: 42px; font-weight: 900; color: var(--primary); margin: 10px 0;}
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="app">
@@ -119,8 +58,8 @@
 
         <div class="row">
           <div class="score">
-            <span class="score-correct">✔ <span id="correctCount">0</span></span>
-            <span class="score-incorrect">✘ <span id="incorrectCount">0</span></span>
+            <span class="score-correct">✓ <span id="correctCount">0</span></span>
+            <span class="score-incorrect">✗ <span id="incorrectCount">0</span></span>
           </div>
           <button id="nextBtn" class="btn" disabled>Siguiente</button>
         </div>
@@ -136,10 +75,19 @@
           <button id="restartBtn" class="btn">Reiniciar</button>
         </div>
       </section>
+
+      <!-- Stats Detail Screen -->
+      <section id="statsDetailScreen" class="screen">
+        <h2>Estadísticas detalladas</h2>
+        <div id="statsModuleName" class="module-name"></div>
+        <div id="statsTableContainer"></div>
+        <div style="margin-top:20px; text-align:center;">
+          <button id="backToStartBtn" class="btn">← Regresar</button>
+        </div>
+      </section>
     </main>
   </div>
 
-  <!-- Carga tu JS principal (el que te pasé en el mensaje anterior) -->
   <script src="app.js"></script>
 </body>
 </html>
